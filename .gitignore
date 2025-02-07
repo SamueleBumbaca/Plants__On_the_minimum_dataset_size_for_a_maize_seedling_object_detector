@@ -1,0 +1,7 @@
+experiments/
+dataset/
+MDPI_template/
+test/
+yolo11n.pt
+yolov5lu.pt
+yolov8l.pt

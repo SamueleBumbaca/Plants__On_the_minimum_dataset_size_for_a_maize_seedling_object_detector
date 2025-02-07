@@ -1,0 +1,39 @@
+config_path: src/object_detection/config/experiment_config/config_yolov5lu_dataset_2_exp_dataset_size_3.yaml
+data:
+  bboxes_path: ./dataset/2/Handcrafted_dataset/bboxes.csv
+  dataset: '2'
+  dataset_size: '100'
+  path_to_dataset: ./dataset
+  shuffle_train: true
+  split: experiments/dataset_split/dataset_2_train_50_val_20_split.yaml
+  test_split: 0
+  train_split: '0.5'
+  val_split: '0.2'
+  yolo_dataset: ./dataset/2/yolo_datasets/train_50_val_20
+dataset:
+  binarization_method: HSV
+  dist_tolerance_inter_rows: 0.25
+  dist_tolerance_on_row: 0.05
+  image_size: 224
+  inter_row_distance: 0.75
+  load_orthomosaic: false
+  max_dist_on_row: 0.18
+  max_leaf_area: 0.01
+  min_dist_on_row: 0.12
+  min_leaf_area: 0.001
+  resolution: 0.005
+experiment:
+  id: yolov5lu_dataset_2_exp_dataset_size_3
+  note: dataset_size
+  seed: 123
+train:
+  batch_size: 16
+  max_epoch: 200
+  model: yolov5lu
+  model_checkpoint: null
+  n_workers: 8
+  num_classes: 2
+  optimizer: auto
+  patience: 15
+  seed: 123
+  use_pretrained: true
