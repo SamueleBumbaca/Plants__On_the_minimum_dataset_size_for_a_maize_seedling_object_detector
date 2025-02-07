@@ -17,7 +17,7 @@ class DETR_model(RTDETR):
                     cache='disk',
                     device=  0 if torch.cuda.is_available() else 'cpu',
                     workers = self.cfg['train']['n_workers'],
-                    project = join('experiments',self.cfg['experiment']['note']),
+                    project = join('experiments','models',self.cfg['experiment']['note']),
                     name = self.cfg['experiment']['id'],
                     pretrained = self.cfg['train']['use_pretrained'],
                     optimizer = self.cfg['train']['optimizer'],

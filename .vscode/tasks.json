@@ -2,9 +2,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Set PYTHONPATH",
+            "label": "Initialize and Set PYTHONPATH",
             "type": "shell",
-            "command": "export PYTHONPATH=\"${workspaceFolder}/src\"",
+            "command": "source ${env:CONDA_PREFIX}/etc/profile.d/conda.sh && conda activate virtual_env && export PYTHONPATH=\"${workspaceFolder}/src\"",
             "problemMatcher": [],
             "group": {
                 "kind": "build",

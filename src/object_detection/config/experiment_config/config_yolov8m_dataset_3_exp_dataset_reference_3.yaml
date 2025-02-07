@@ -1,0 +1,40 @@
+config_path: src/object_detection/config/experiment_config/config_yolov8m_dataset_3_exp_dataset_reference_3.yaml
+data:
+  bboxes_path: null
+  boxes_subset: null
+  dataset: '3'
+  dataset_size: all
+  path_to_dataset: ./dataset
+  shuffle_train: true
+  split: null
+  test_split: 0
+  train_split: '0.7'
+  val_split: '0.3'
+  yolo_dataset: ./dataset/3/yolo_datasets/DatasetSize_all_Train_70_Val_30
+dataset:
+  binarization_method: HSV
+  dist_tolerance_inter_rows: 0.25
+  dist_tolerance_on_row: 0.05
+  image_size: 224
+  inter_row_distance: 0.75
+  load_orthomosaic: false
+  max_dist_on_row: 0.18
+  max_leaf_area: 0.01
+  min_dist_on_row: 0.12
+  min_leaf_area: 0.001
+  resolution: 0.005
+experiment:
+  id: yolov8m_dataset_3_exp_dataset_reference_3
+  note: dataset_reference
+  seed: 123
+train:
+  batch_size: 16
+  max_epoch: 200
+  model: yolov8m
+  model_checkpoint: experiments/models/dataset_reference/yolov8m_dataset_3_exp_dataset_reference_3/weights/best.pt
+  n_workers: 8
+  num_classes: 2
+  optimizer: auto
+  patience: 15
+  seed: 123
+  use_pretrained: true
