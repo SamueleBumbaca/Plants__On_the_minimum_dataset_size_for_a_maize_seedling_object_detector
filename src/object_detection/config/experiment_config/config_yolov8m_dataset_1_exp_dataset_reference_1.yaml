@@ -1,0 +1,39 @@
+config_path: ./src/object_detection/config/experiment_config/config_yolov8m_dataset_1_exp_dataset_reference_1.yaml
+data:
+  bboxes_path: ./dataset/1/Handcrafted_dataset/bboxes.csv
+  dataset: '1'
+  yolo_dataset: null
+  shuffle_train: true
+  split: null
+  test_split: 0
+  train_split: '0.7'
+  val_split: '0.3'
+  dataset_size: null
+  bboxes_path: dataset/1/Handcrafted_dataset/bboxes.csv
+dataset:
+  binarization_method: HSV
+  dist_tolerance_inter_rows: 0.25
+  dist_tolerance_on_row: 0.05
+  image_size: 224
+  inter_row_distance: 0.75
+  load_orthomosaic: false
+  max_dist_on_row: 0.18
+  max_leaf_area: 0.01
+  min_dist_on_row: 0.12
+  min_leaf_area: 0.001
+  resolution: 0.005
+experiment:
+  id: yolov8m_dataset_1_exp_dataset_reference_1
+  seed: 123
+  note: dataset_reference
+train:
+  seed: 123
+  max_epoch: 200
+  patience: 15
+  model: yolov8m
+  model_checkpoint: experiments/models/dataset_reference/yolov8m_dataset_1_exp_dataset_reference_1/weights/best.pt
+  n_workers: 8
+  batch_size: 16
+  num_classes: 2
+  optimizer: 'auto'
+  use_pretrained: true
