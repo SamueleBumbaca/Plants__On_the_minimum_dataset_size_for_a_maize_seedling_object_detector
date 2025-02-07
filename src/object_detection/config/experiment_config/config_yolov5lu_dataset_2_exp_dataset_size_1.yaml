@@ -5,11 +5,11 @@ data:
   dataset_size: '100'
   path_to_dataset: ./dataset
   shuffle_train: true
-  split: experiments/dataset_split/dataset_2_train_10_val_10_split.yaml
+  split: experiments/dataset_split/Dataset_2_DatasetSize_100_Train_10_Val_10_Split.yaml
   test_split: 0
   train_split: '0.1'
   val_split: '0.1'
-  yolo_dataset: ./dataset/2/yolo_datasets/train_10_val_10
+  yolo_dataset: ./dataset/2/yolo_datasets/DatasetSize_100_Train_10_Val_10
 dataset:
   binarization_method: HSV
   dist_tolerance_inter_rows: 0.25
