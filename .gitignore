@@ -6,3 +6,5 @@ yolo11n.pt
 yolov5lu.pt
 yolov8l.pt
 yolov8m.pt
+src_310/api_token.txt
+src/object_detection/config

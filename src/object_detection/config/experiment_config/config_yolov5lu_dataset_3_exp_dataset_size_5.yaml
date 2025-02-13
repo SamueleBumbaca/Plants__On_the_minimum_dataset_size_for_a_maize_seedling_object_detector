@@ -26,6 +26,8 @@ experiment:
   id: yolov5lu_dataset_3_exp_dataset_size_5
   note: dataset_size
   seed: 123
+predict:
+  prediction_path: experiments/predictions/dataset_size/yolov5lu_dataset_3_exp_dataset_size_5.shp
 train:
   batch_size: 16
   max_epoch: 200
