@@ -221,20 +221,18 @@ georeferenced orthomosaics are orthomosaics computed with geographical coordinat
 making them scaled and oriented to a geographical coordinate system.
 It implies that the pixel coordinates of the orthomosaic correspond to the 
 geographical coordinates, possibly in metric scale.
-Using georeferenced orthomosaics make both HC and DL object detection easier, 
+Using georeferenced orthomosaics in maize seedling counting makes both HC and DL 
+object detection easier, 
 respectivelly because the metric scale can be used to locate the objects in the image 
 and prospective variance is reduced. It is proven that HC can be used to get an
 initial dataset to train a DL model, but the quality of the dataset is crucial for
 the performance of the DL model. No study on the minimum quality coming from HC
 dataset has been done yet.
 
-The modern approach to object detection involves the use of deep learning models, 
-such as Convolutional Neural Networks (CNNs) and Transformer-based models. CNNs, 
-including architectures like Faster-RCNN, YOLO  have been widely 
-used for their ability to capture spatial hierarchies in images. Transformer-based 
-models, such as DETR (Detection Transformer) and ViT (Vision Transformer), have 
-gained attention in the last years for their capability to model long-range dependencies 
-and achieve state-of-the-art performance in various vision tasks.
+Modern DL object detection uses CNN-based frameworks (e.g., Faster R-CNN, YOLO) 
+and Transformer-based approaches (e.g., DETR, ViT). 
+To effectivelly detect, these models must be trained 
+on large-scale annotated datasets to learn to detect objects
 Zero-shot and few-shot object detection are two emerging paradigms in object detection.
 Models in this category aim to detect classes with no or very few labeled examples. 
 They often leverage feature transfer or meta-learning components to generalize 
