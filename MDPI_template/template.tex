@@ -191,33 +191,42 @@ $^{2}$ \quad Affiliation 2; e-mail@e-mail.com}
 
 \section{Introduction}
 
-In the last decade, the use of object detectors in agricultural applications has 
-gained significant attention.
-Object detectors are algorithms designed to identify and locate objects within 
-an image.
-They are widely used in precision agriculture for tasks such as crop monitoring, 
-yield estimation, and disease detection.
-Here we focus on the task of counting maize seedlings in open field.
-
 Plant counting is a critical operation in precision agriculture, plant breeding, 
-and products evaluation. 
-Accurate plant counts can provide valuable information for crop management, yield 
-estimation, and disease detection to both farmers and researchers.
+and agronomical managing evaluation. 
+Accurate plant counts can provide valuable information for both farmers and researchers.
 This task was often performed manually by human operators. 
 Now a days it is the more and more common to use computer vision algorithms to 
 automate this process.
+To validate a method for counting, it is critical to set a benchmark for accuracy. 
+According to the European Plant Protection Organization, the benchmark for acceptance is 
+a coefficient of determination (r squared) of 0.85 when compared to manual counting. 
+This corresponds to a Root Mean Square Error (RMSE) of approximately 0.39.
 
-The development of these algorithms has evolved from traditional methods, such as 
-sliding window approaches and handcrafted features, 
-to modern deep learning-based techniques for improved accuracy and efficiency.
-
-One of the critical challenges in training effective object detectors is the availability 
+The most effective method for plant counting in open field by computer vision 
+is through object detection on georeferenced orthomosaics.
+object detection are algorithms designed to identify and locate objects within an image.
+The development of object detection algorithms has evolved from traditional methods, 
+here named handcrafted methods (HC), to modern deep learning-based (DL) techniques.
+Pratically all the state-of-the-art object detection methods are based on DL models.
+One of the critical challenges in training effective DL object detection models is the availability 
 of a sufficiently large and high-quality dataset. 
+
 This study aims to determine the minimum dataset size and quality required to train 
-a robust object detector for identifying maize seedlings in georeferenced orthomosaics. 
-Georeferenced orthomosaics are images created through photogrammetry, a process 
-that involves capturing georeferenced overlapping aerial images and stitching them together 
-to form a single, seamless image.
+a robust object detection model for identifying maize seedlings in georeferenced orthomosaics. 
+
+Orthomosaics are images created through aerial photogrammetry, a process 
+that involves capturing overlapping aerial images in nadiral view, 
+then stitching them together to form a single, seamless image.
+georeferenced orthomosaics are orthomosaics computed with geographical coordinates,
+making them scaled and oriented to a geographical coordinate system.
+It implies that the pixel coordinates of the orthomosaic correspond to the 
+geographical coordinates, possibly in metric scale.
+Using georeferenced orthomosaics make both HC and DL object detection easier, 
+respectivelly because the metric scale can be used to locate the objects in the image 
+and prospective variance is reduced. It is proven that HC can be used to get an
+initial dataset to train a DL model, but the quality of the dataset is crucial for
+the performance of the DL model. No study on the minimum quality coming from HC
+dataset has been done yet.
 
 The modern approach to object detection involves the use of deep learning models, 
 such as Convolutional Neural Networks (CNNs) and Transformer-based models. CNNs, 
@@ -557,7 +566,8 @@ All appendix sections must be cited in the main text. In the appendices, Figures
 %=====================================
 % References, variant A: external bibliography
 %=====================================
-% \bibliography{your_external_BibTeX_file}
+\bibliographystyle{mdpi}
+\bibliography{references}
 
 %=====================================
 % References, variant B: internal bibliography
