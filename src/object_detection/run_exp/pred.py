@@ -85,9 +85,16 @@ def main(experiment):
                 with open(config_path, 'w') as yaml_file:
                     yaml.dump(config, yaml_file)
                 model_path = config['train']['model_checkpoint']
+            # Set model type
+            if 'yolo' in config['train']['model']:
+                model_type = 'ultralytics'
+            elif  'rtdetr' in config['train']['model']:
+                model_type = 'rtdetr'
+            else:
+                model_type = 'torchvision'
             # Load the model
             detection_model = AutoDetectionModel.from_pretrained(
-                model_type= 'ultralytics' if 'yolo' in config['train']['model'] or 'rtdetr' in config['train']['model'] else 'torchvision',
+                model_type= model_type,
                 model_path=model_path,
                 confidence_threshold=0.3,
                 device=device,

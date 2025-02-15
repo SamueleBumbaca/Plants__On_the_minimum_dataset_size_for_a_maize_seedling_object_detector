@@ -93,6 +93,7 @@ def main(experiment):
                 count_accuracies.append(count_accuracy)
                 errors.append(len(gt_group) - len(group))
                 gt_values.append(len(gt_group))
+            rmse = np.sqrt(np.mean(np.square(errors)))
             avg_count_accuracy = np.mean(count_accuracies)
             sd_count_accuracy = np.std(count_accuracies)
             # Calculate R-squared
@@ -142,6 +143,7 @@ def main(experiment):
                 'model_id': model_id,
                 'score_threshold': score_thresh,
                 'r_squared': r_squared,
+                'rmse': rmse,
                 'errors': errors,
                 'gt_values': gt_values,
                 'count_accuracy_avg': avg_count_accuracy,

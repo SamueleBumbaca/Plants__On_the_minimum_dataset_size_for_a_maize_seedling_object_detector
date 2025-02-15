@@ -1,0 +1,4 @@
+PWD /home/samuelebumbaca/repositories/Paper2/agri-downstream/MDPI_template/Definitions
+INPUT /home/samuelebumbaca/.TinyTeX/texmf.cnf
+INPUT /home/samuelebumbaca/.TinyTeX/texmf-dist/web2c/texmf.cnf
+INPUT /home/samuelebumbaca/.TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt
