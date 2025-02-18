@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1739478527.83105 "/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/template.tex" "template.pdf" "template" 1739478530.29933 0
+["pdflatex"] 1739809270.2634 "/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/template.tex" "template.pdf" "template" 1739809272.83242 0
   "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm" 1136768653 1616 371d1ee60c04b008c8fd760060cd34f1 ""
@@ -243,14 +243,14 @@
   "/home/samuelebumbaca/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1736256976 5301270 511c52649f018c53de3d76e056eee341 ""
   "/home/samuelebumbaca/.TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1736250401 1968899 b435ce4de79ac699a4d6cb94a8fe39db ""
   "/home/samuelebumbaca/.TinyTeX/texmf.cnf" 1731421431.58214 679 e95db49b3971c649270bd42ba2e598f9 ""
-  "/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/template.tex" 1739478524.35923 45058 af5da7518323859edc020037f4361a7e ""
+  "/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/template.tex" 1739809267.29191 43975 60345e7c47c20ddabad091a97dc5c165 ""
   "Definitions/journalnames.tex" 1735617653.98868 104834 87e51b9227221d7fcd55ea01698908e5 ""
   "Definitions/logo-mdpi.eps" 1710933224 563678 6065ff936803124b091b05458e057116 ""
   "Definitions/logo-orcid.pdf" 1639997176 12671 39a20ba789123aa897c7efc569fb5270 ""
   "Definitions/mdpi.cls" 1734923675.54293 62123 0011ebf309508ba5dde3ca2319dda0b9 ""
-  "template.aux" 1739478530.10923 5555 7511952147aed6d9bccba441d46711a9 "pdflatex"
-  "template.out" 1739478530.10923 1699 bb8c1b704a0c056cd8b6d85a08ce89d4 "pdflatex"
-  "template.tex" 1739478524.35923 45058 af5da7518323859edc020037f4361a7e ""
+  "template.aux" 1739809272.63587 5800 ef4324bc4a51780d0f1b0f561d602ef8 "pdflatex"
+  "template.out" 1739809272.63587 1874 3745fa49c737042759feb16456b2d7c5 "pdflatex"
+  "template.tex" 1739809267.29191 43975 60345e7c47c20ddabad091a97dc5c165 ""
   (generated)
   "template.aux"
   "template.log"

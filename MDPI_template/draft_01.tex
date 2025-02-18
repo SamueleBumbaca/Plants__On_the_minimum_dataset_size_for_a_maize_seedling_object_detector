@@ -70,7 +70,6 @@
 %=================================================================
 % Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx, epstopdf, lastpage, ifthen, float, amsmath, amssymb, lineno, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, colortbl, soul, multirow, microtype, tikz, totcount, changepage, attrib, upgreek, array, tabularx, pbox, ragged2e, tocloft, marginnote, marginfix, enotez, amsthm, natbib, hyperref, cleveref, scrextend, url, geometry, newfloat, caption, draftwatermark, seqsplit
 % cleveref: load \crefname definitions after \begin{document}
-
 %=================================================================
 % Please use the following mathematics environments: Theorem, Lemma, Corollary, Proposition, Characterization, Property, Problem, Example, ExamplesandDefinitions, Hypothesis, Remark, Definition, Notation, Assumption
 %% For proofs, please use the proof environment (the amsthm package is loaded by the MDPI class).
@@ -196,19 +195,136 @@ The template details the sections that can be used in a manuscript. Note that th
 
 \section{Introduction}
 
-The introduction should briefly place the study in a broad context and highlight why it is important. It should define the purpose of the work and its significance. The current state of the research field should be reviewed carefully and key publications cited. Please highlight controversial and diverging hypotheses when necessary. Finally, briefly mention the main aim of the work and highlight the principal conclusions. As far as possible, please keep the introduction comprehensible to scientists outside your particular field of research. Citing a journal paper \citep{ref-journal}.  Now citing a book reference \citep{ref-book1,ref-book2} or other reference types \citep{ref-unpublish,ref-url}. Please use the command \citep{ref-proceeding,ref-thesis} for the following MDPI journals, which use author--date citation: Administrative Sciences, Arts, Behavioral Sciences, Businesses, Econometrics, Economies, Education Sciences, European Journal of Investigation in Health, Psychology and Education, Games, Genealogy, Histories, Humanities, Humans, IJFS, Journal of Intelligence, Journalism and Media, JRFM, Languages, Laws, Literature, Psychology International, Publications, Religions, Risks, Social Sciences, Tourism and Hospitality, Youth. 
+Plant counting is a critical operation in precision agriculture, plant breeding, 
+and agronomical managing evaluation. 
+Accurate plant counts can provide valuable information for both farmers and researchers.
+This task was often performed manually by human operators. 
+Now a days it is the more and more common to use computer vision algorithms to 
+automate this process.
+To validate a method for counting, it is critical to set a benchmark for accuracy. 
+According to the European Plant Protection Organization, the benchmark for acceptance is 
+a coefficient of determination (r squared) of 0.85 when compared to manual counting. 
+This corresponds to a Root Mean Square Error (RMSE) of approximately 0.39.
+
+The most effective method for plant counting in open field by computer vision 
+is through object detection on georeferenced orthomosaics.
+Object detection algorithms are designed to identify and locate objects within an image.
+Identification supports are usually bounding boxes, which are rectangles that enclose
+the object of interest, but they can also be points or other kind of polygons.
+Counting of maize plants is then performed by counting the number of bounding boxes 
+that enclose the objects of interest (the plant) in a image area.
+Orthomosaics are images created through aerial photogrammetry, a process 
+that involves capturing overlapping aerial images in nadiral view, 
+then stitching them together to form a single, seamless image.
+Georeferenced orthomosaics are orthomosaics computed with geographical coordinates,
+making them scaled and oriented to a geographical coordinate system.
+It implies that the pixel coordinates of the orthomosaic correspond to the 
+geographical coordinates, possibly in metric scale.
+Using georeferenced orthomosaics in maize seedling counting makes object detection 
+easier, because the metric scale can be used to locate the objects 
+in the image and prospective variance is reduced.
+
+Many studies have been conducted on object detection for plants in open field,
+but few have focused on minimum requirements for training a robust object detector.
+This study aims to determine the minimum dataset size and quality required to train 
+a robust object detection model for identifying maize seedlings in georeferenced orthomosaics,
+where the dataset size is defined by the amount of annotated images in the training set,
+and the quality of the dataset by the accuracy of the annotations in this same set.
+During this evaluation, the performance of the object detector will be measured
+to determine the optimal dataset size and quality for achieve the benchmark for acceptance.
+Models architecture will be also taken into account, as different models may require
+different dataset sizes and qualities to achieve the same performance.
+To do so we will briefly review the state-of-the-art in object detection 
+and the most common models used in this field.
+
+The development of object detection algorithms has evolved from not machine learning methods, 
+here named handcrafted methods (HC), to modern deep learning-based (DL) techniques.
+Pratically all the state-of-the-art object detection methods are based on DL models
+now a days.
+Modern DL object detection uses CNN-based frameworks (e.g., Faster R-CNN, YOLO) 
+and Transformer-based approaches (e.g., DETR).
+The main difference between CNN-based and Transformer-based models is the way they
+process the image. CNN-based models process the image in a grid-like fashion,
+while Transformer-based models process the image as a sequence of patches.
+On common benchmarks as COCO, PASCAL VOC, and ImageNet, Transformer-based models have shown 
+to be more accurate than CNN-based models.
+Nethertheless CNN-based models are still widely used in object detection, because they are
+more efficient in processing small images and have a lower computational cost. 
+One of the critical challenges in training effective DL object detection models is 
+the availability of a sufficiently large and high-quality dataset. 
+Despite the superiority of DL models on HC methods, it is proven that HC can be used 
+to get an initial dataset to train a DL model, effectivelly reducing the annotation burden, 
+and in some cases automating it.
+Recently, zero-shot and few-shot object detection have emerged as promising paradigms
+to alleviate the need for large annotated datasets.
+While traditional object detection models require extensive labeled data for training, 
+few-shot and zero-shot object detection aim to detect novel objects with little to 
+no labeled examples respectivelly.
+They often leverage feature transfer or meta-learning components to generalize 
+across classes under extreme data scarcity. This approach reduces the annotation 
+burden and is especially beneficial in domains where collecting exhaustive training 
+data is impractical.
+Zero-shot object detection detects new categories without any training samples by 
+leveraging semantic relationships or contextual information learned from known classes. 
+Few-shot approaches optimize models to learn quickly from a handful of labeled examples. 
+Some prominent zero-shot models include LSDA, ViLD, and ZSD; among the few-shot methods, 
+TFA, FSCE, and Meta R-CNN/DETR are commonly cited for their strong performance 
+under data-scarce conditions.
+Zero-shot actual state-of-the-art models are YOLO-World, OWLv2, and Grounding DINO.  
+DE-ViT and CD-ViTO are the latest models that have shown promising results in few-shot
+object detection.
+
+After setting the dataset size and quality minimum requirements for traditional 
+DL object detectors, we will evaluate if new zero-shot and few-shot object detection
+models can achieve the same benchmark for acceptance with less data and annotations.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Materials and Methods}
 
-Materials and Methods should be described with sufficient details to allow others to replicate and build on published results. Please note that publication of your manuscript implicates that you must make all materials, data, computer code, and protocols associated with the publication available to readers. Please disclose at the submission stage any restrictions on the availability of materials or information. New methods and protocols should be described in detail while well-established methods can be briefly described and appropriately cited.
+In order to investigate the minimum size and quality of the dataset required to train 
+a robust object detection model for maize seedlings, we conducted a series of experiments 
+using three different datasets.
+First we write a HC object detector to get an initial annotated dataset.
+The annotated datasets were used to train and evaluate traditional DL
+object detection models.
+Then we evaluate the performance of zero-shot and few-shot object detection models
+on the same datasets
 
-Research manuscripts reporting large datasets that are deposited in a publicly avail-able database should specify where the data have been deposited and provide the relevant accession numbers. If the accession numbers have not yet been obtained at the time of submission, please state that they will be provided during review. They must be provided prior to publication.
+\subsection{Orthomosaics and annotations}
 
-Interventionary studies involving animals or humans, and other studies require ethical approval must list the authority that provided approval and the corresponding ethical approval code.
-\begin{quote}
-This is an example of a quote.
-\end{quote}
+Description of the datasets
+
+\subsection{Handcrafted object detection}
+
+Many HC object detectors for maize seedlings count have been proposed 
+in the literature. For this work we wrote an HC algorithm to get accurate 
+annotated dataset, sacrifing the amount of images succesfully detected
+for the quality of the annotations.
+
+This HC algorithm is havelly based on agronomical knowledge and color thresholding.
+For the execution of this algorithm, the user must set the following parameters:
+
+\begin{itemize}
+    \item HSV minimum and maximum thresholds
+    \item minimum and maxiumum leaf area for plant
+    \item minimum distance between plants on rows
+    \item distance inter rows
+
+In summary, the HC algorithm is based on color thresholding, that rely on the
+manual setting of Hue, Saturation, and Value (HSV) color minimum and maximum
+thresholding. Thresholding creates a binary image that is subsequently regionalized
+by connected components. The connected components are then filtered by area.
+Centers of the areas are fitted with RANSAC to get the slope of the lines where
+plants lie. Only the tiles where the slope is within the interquartile range are
+considered for further processing. The centers of the filtered tiles are then fitted
+again with RANSAC to get the lines on the neighboring of the first line detected.
+
+This as most of HC algoritm is intrinsically limited by the color thresholding.
+Our HC is based on the color of the maize seedlings, which is green.
+
+
+
+\subsection{Classic Deep learning object detection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}

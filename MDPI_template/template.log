@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.7)  13 FEB 2025 21:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.7)  17 FEB 2025 17:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1158,12 +1158,12 @@ Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)             Command: <repstopdf --outfile=Definitions/logo-mdpi-eps-converted-to.pdf Definitions/logo-mdpi.eps>
 (epstopdf)             \includegraphics on input line 187.
 Package epstopdf Info: Output file is already uptodate.
-<Definitions/logo-mdpi-eps-converted-to.pdf, id=68, 74.2775pt x 49.18375pt>
+<Definitions/logo-mdpi-eps-converted-to.pdf, id=72, 74.2775pt x 49.18375pt>
 File: Definitions/logo-mdpi-eps-converted-to.pdf Graphic file (type pdf)
 <use Definitions/logo-mdpi-eps-converted-to.pdf>
 Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 187.
 (pdftex.def)             Requested size: 42.96877pt x 28.45274pt.
-<Definitions/logo-orcid.pdf, id=70, 102.3825pt x 102.3825pt>
+<Definitions/logo-orcid.pdf, id=74, 102.3825pt x 102.3825pt>
 File: Definitions/logo-orcid.pdf Graphic file (type pdf)
 <use Definitions/logo-orcid.pdf>
 Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 187.
@@ -1188,6 +1188,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1
 
 {/home/samuelebumbaca/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}{/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./Definitions/logo-mdpi-eps-converted-to.pdf> <./Definitions/logo-orcid.pdf>]
+Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
+(epstopdf)                    date: 2024-03-20 12:13:44
+(epstopdf)                    size: 563678 bytes
+(epstopdf)             Output file: <Definitions/logo-mdpi-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-01-07 14:48:22
+(epstopdf)                    size: 13159 bytes
+(epstopdf)             Command: <repstopdf --outfile=Definitions/logo-mdpi-eps-converted-to.pdf Definitions/logo-mdpi.eps>
+(epstopdf)             \includegraphics on input line 242.
+Package epstopdf Info: Output file is already uptodate.
+File: Definitions/logo-mdpi-eps-converted-to.pdf Graphic file (type pdf)
+<use Definitions/logo-mdpi-eps-converted-to.pdf>
+Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 242.
+(pdftex.def)             Requested size: 199.16928pt x 131.90251pt.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1204,24 +1218,11 @@ Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2025-01-07 14:48:22
 (epstopdf)                    size: 13159 bytes
 (epstopdf)             Command: <repstopdf --outfile=Definitions/logo-mdpi-eps-converted-to.pdf Definitions/logo-mdpi.eps>
-(epstopdf)             \includegraphics on input line 291.
+(epstopdf)             \includegraphics on input line 271.
 Package epstopdf Info: Output file is already uptodate.
 File: Definitions/logo-mdpi-eps-converted-to.pdf Graphic file (type pdf)
 <use Definitions/logo-mdpi-eps-converted-to.pdf>
-Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 291.
-(pdftex.def)             Requested size: 199.16928pt x 131.90251pt.
-Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
-(epstopdf)                    date: 2024-03-20 12:13:44
-(epstopdf)                    size: 563678 bytes
-(epstopdf)             Output file: <Definitions/logo-mdpi-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-01-07 14:48:22
-(epstopdf)                    size: 13159 bytes
-(epstopdf)             Command: <repstopdf --outfile=Definitions/logo-mdpi-eps-converted-to.pdf Definitions/logo-mdpi.eps>
-(epstopdf)             \includegraphics on input line 320.
-Package epstopdf Info: Output file is already uptodate.
-File: Definitions/logo-mdpi-eps-converted-to.pdf Graphic file (type pdf)
-<use Definitions/logo-mdpi-eps-converted-to.pdf>
-Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 320.
+Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 271.
 (pdftex.def)             Requested size: 219.08612pt x 145.09299pt.
 Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2024-03-20 12:13:44
@@ -1230,11 +1231,11 @@ Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2025-01-07 14:48:22
 (epstopdf)                    size: 13159 bytes
 (epstopdf)             Command: <repstopdf --outfile=Definitions/logo-mdpi-eps-converted-to.pdf Definitions/logo-mdpi.eps>
-(epstopdf)             \includegraphics on input line 322.
+(epstopdf)             \includegraphics on input line 273.
 Package epstopdf Info: Output file is already uptodate.
 File: Definitions/logo-mdpi-eps-converted-to.pdf Graphic file (type pdf)
 <use Definitions/logo-mdpi-eps-converted-to.pdf>
-Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 322.
+Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 273.
 (pdftex.def)             Requested size: 219.08612pt x 145.09299pt.
 Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2024-03-20 12:13:44
@@ -1243,11 +1244,11 @@ Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2025-01-07 14:48:22
 (epstopdf)                    size: 13159 bytes
 (epstopdf)             Command: <repstopdf --outfile=Definitions/logo-mdpi-eps-converted-to.pdf Definitions/logo-mdpi.eps>
-(epstopdf)             \includegraphics on input line 323.
+(epstopdf)             \includegraphics on input line 274.
 Package epstopdf Info: Output file is already uptodate.
 File: Definitions/logo-mdpi-eps-converted-to.pdf Graphic file (type pdf)
 <use Definitions/logo-mdpi-eps-converted-to.pdf>
-Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 323.
+Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 274.
 (pdftex.def)             Requested size: 219.08612pt x 145.09299pt.
 Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2024-03-20 12:13:44
@@ -1256,11 +1257,11 @@ Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2025-01-07 14:48:22
 (epstopdf)                    size: 13159 bytes
 (epstopdf)             Command: <repstopdf --outfile=Definitions/logo-mdpi-eps-converted-to.pdf Definitions/logo-mdpi.eps>
-(epstopdf)             \includegraphics on input line 325.
+(epstopdf)             \includegraphics on input line 276.
 Package epstopdf Info: Output file is already uptodate.
 File: Definitions/logo-mdpi-eps-converted-to.pdf Graphic file (type pdf)
 <use Definitions/logo-mdpi-eps-converted-to.pdf>
-Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 325.
+Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 276.
 (pdftex.def)             Requested size: 219.08612pt x 145.09299pt.
 
 
@@ -1272,6 +1273,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.18796pt}.
 
 [3]
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 428.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 428.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1281,21 +1287,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.18796pt}.
 
 [4]
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 477.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 477.
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 24.18796pt, for example:
-(fancyhdr)                \setlength{\headheight}{24.18796pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-12.18796pt}.
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 519--519
+Underfull \hbox (badness 10000) in paragraph at lines 470--470
 
  []
 
@@ -1308,7 +1300,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-12.18796pt}.
 
-[6]
+[5]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1317,7 +1309,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-12.18796pt}.
 
-[7] 
+[6] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./template.aux)
  ***********
@@ -1325,21 +1317,21 @@ LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `template.out' has not changed.
-(rerunfilecheck)             Checksum: BB8C1B704A0C056CD8B6D85A08CE89D4;1699.
+(rerunfilecheck)             Checksum: 3745FA49C737042759FEB16456B2D7C5;1874.
  ) 
 Here is how much of TeX's memory you used:
- 34028 strings out of 475247
- 636077 string characters out of 5766890
- 1108184 words of memory out of 5000000
- 55892 multiletter control sequences out of 15000+600000
- 629707 words of font info for 374 fonts, out of 8000000 for 9000
+ 34016 strings out of 475247
+ 636016 string characters out of 5766890
+ 1109119 words of memory out of 5000000
+ 55895 multiletter control sequences out of 15000+600000
+ 628912 words of font info for 364 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 123i,15n,135p,5171b,630s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 123i,15n,135p,5171b,699s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on template.pdf (7 pages, 133027 bytes).
+Output written on template.pdf (6 pages, 131609 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
- 156 compressed objects within 2 object streams
+ 188 PDF objects out of 1000 (max. 8388607)
+ 162 compressed objects within 2 object streams
  44 named destinations out of 1000 (max. 500000)
- 110215 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 110223 words of extra memory for PDF output out of 128383 (max. 10000000)
 

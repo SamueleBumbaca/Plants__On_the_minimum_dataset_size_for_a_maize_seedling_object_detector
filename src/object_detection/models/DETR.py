@@ -23,7 +23,7 @@ class DETR_model(RTDETR):
                     optimizer = self.cfg['train']['optimizer'],
                     seed = self.cfg['train']['seed'],
                     patience = self.cfg['train']['patience'],
-                    deterministic = True,
+                    deterministic = False,
                     single_cls = True,
                     multi_scale = False,
                     plots = False,

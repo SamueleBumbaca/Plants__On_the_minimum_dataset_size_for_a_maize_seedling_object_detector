@@ -33,14 +33,16 @@ def main(row, yaml_template_path, output_dir, experiment, csv_path, csv_reader):
             print(f'Using the training data size {dataset_size}')
             tsp = int(float(row['train_size'])*dataset_size)
             vsp = int(float(row['val_size'])*dataset_size)
+            dtq = int(float(row['dataset_quality'])*100)
         else:
             print('Using all the training data')
             dataset_size = 'all'
             tsp = int(float(row['train_size'])*100)
             vsp = int(float(row['val_size'])*100)
+            dtq = int(float(row['dataset_quality'])*100)
 
         # Create the YOLO dataset
-        yolo_dataset_folder = f'DatasetSize_{dataset_size}_Train_{tsp}_Val_{vsp}'
+        yolo_dataset_folder = f'DatasetSize_{dataset_size}_Train_{tsp}_Val_{vsp}_Quality_{dtq}'
         yolo_dataset_path = join(yaml_content['data']['path_to_dataset'], 
                                 yaml_content['data']['dataset'], 
                                 'yolo_datasets' , 
@@ -49,7 +51,7 @@ def main(row, yaml_template_path, output_dir, experiment, csv_path, csv_reader):
 
         # Set the dataset quality
         if row['dataset_quality']:
-            yaml_content['data']['dataset_quality'] = row['dataset_quality']
+            yaml_content['data']['dataset_quality'] = float(row['dataset_quality'])
         
         # Write the new YAML file
         with open(yaml_content['config_path'], 'w') as new_yaml_file:

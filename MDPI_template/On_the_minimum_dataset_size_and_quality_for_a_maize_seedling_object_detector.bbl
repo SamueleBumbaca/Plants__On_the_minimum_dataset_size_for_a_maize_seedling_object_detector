@@ -1,0 +1,14 @@
+\begin{thebibliography}{999}
+
+\bibitem[David et~al.(2021)David, Daubige, Joudelat, Burger, Comar, {de Solan}, and Baret]{davidPlantDetectionCounting2021}
+David, E.; Daubige, G.; Joudelat, F.; Burger, P.; Comar, A.; {de Solan}, B.; Baret, F.
+\newblock Plant Detection and Counting from High-Resolution {{RGB}} Images Acquired from {{UAVs}}: Comparison between Deep-Learning and Handcrafted Methods with Application to Maize, Sugar Beet, and Sunflowe,  2021.
+\newblock {\url{https://doi.org/10.1101/2021.04.27.441631}}.
+
+\bibitem[Chadebec and Allassonni{\`e}re(2021)]{chadebecDataAugmentationVariational2021}
+Chadebec, C.; Allassonni{\`e}re, S.
+\newblock Data {{Augmentation}} with {{Variational Autoencoders}} and {{Manifold Sampling}}.
+\newblock In Proceedings of the Deep {{Generative Models}}, and {{Data Augmentation}}, {{Labelling}}, and {{Imperfections}}; Engelhardt, S.; Oksuz, I.; Zhu, D.; Yuan, Y.; Mukhopadhyay, A.; Heller, N.; Huang, S.X.; Nguyen, H.; Sznitman, R.; Xue, Y., Eds., Cham,  2021; pp. 184--192.
+\newblock {\url{https://doi.org/10.1007/978-3-030-88210-5_17}}.
+
+\end{thebibliography}
