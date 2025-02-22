@@ -272,38 +272,36 @@ The development of object detection algorithms has evolved from not machine lear
 here named handcrafted methods (HC), to modern deep learning-based (DL) techniques.
 Pratically all the state-of-the-art object detection methods are based on DL models
 now a days. Nethertheless, HC methods are still used in some cases, in particular
-to extract the in-domain dataset for training a DL model.
+to extract the in-domain dataset for training a DL model. This practice has some pros and cons,
+in particular: it reduces the efford in manual labelling, but it may introduce bias in the training dataset. 
 Modern DL object detection uses CNN-based frameworks (e.g., Faster R-CNN \cite{FasterRCNNRealTime}, YOLO \cite{YouOnlyLook}) 
 and Transformer-based approaches (e.g., DETR \cite{carionEndtoEndObjectDetection2020}).
 The main difference between CNN-based and Transformer-based models is the way they
 process the image. CNN-based models process the image in a grid-like fashion,
 while Transformer-based models process the image as a sequence of patches.
 On common benchmarks as COCO, PASCAL VOC, and ImageNet, Transformer-based models have shown 
-to be more accurate than CNN-based models.
+to be more accurate than CNN-based models \cite{}.
 Nethertheless CNN-based models are still widely used in object detection, because they are
-more efficient in processing small images and have a lower computational cost. 
+more efficient in processing small images and have a lower computational cost \cite{}. 
 One of the critical challenges in training effective DL object detection models is 
 the availability of a sufficiently large and high-quality dataset. 
-Despite the superiority of DL models on HC methods, it is proven that HC can be used 
-to get an initial dataset to train a DL model, effectivelly reducing the annotation burden, 
-and in some cases automating it.
 Recently, zero-shot and few-shot object detection have emerged as promising paradigms
 to alleviate the need for large annotated datasets.
-While traditional object detection models require extensive labeled data for training, 
+While traditional object detection models (many-shots object detectors) require extensive labeled data for training, 
 few-shot and zero-shot object detection aim to detect novel objects with little to 
 no labeled examples respectivelly.
 They often leverage feature transfer or meta-learning components to generalize 
 across classes under extreme data scarcity. This approach reduces the annotation 
 burden and is especially beneficial in domains where collecting exhaustive training 
-data is impractical.
+data is impractical \cite{}.
 Zero-shot object detection detects new categories without any training samples by 
-leveraging semantic relationships or contextual information learned from known classes. 
-Few-shot approaches optimize models to learn quickly from a handful of labeled examples. 
+leveraging semantic relationships or contextual information learned from known classes \cite{}. 
+Few-shot approaches optimize models to learn quickly from a handful of labeled examples \cite{}. 
 % Some prominent zero-shot models include LSDA, ViLD, and ZSD; among the few-shot methods, 
 % TFA, FSCE, and Meta R-CNN/DETR are commonly cited for their strong performance 
 % under data-scarce conditions.
-Zero-shot actual state-of-the-art models are YOLO-World, OWLv2, and Grounding DINO.  
-DE-ViT and CD-ViTO are the latest models that have shown promising results in few-shot
+Zero-shot actual state-of-the-art object detector models are YOLO-World \cite{}, OWLv2 \cite{}, and Grounding DINO \cite{}.  
+DE-ViT \cite{} and CD-ViTO \cite{} are the latest models that have shown promising results in few-shot
 object detection.
 
 Many studies have been conducted on object detection for plants in open field
@@ -311,28 +309,28 @@ Many studies have been conducted on object detection for plants in open field
 but few have focused on minimum requirements for training a robust object detector
 \cite{davidPlantDetectionCounting2021,andvaagCountingCanolaGeneralizable2024}, and only one
 specifically tried to minimize the size of the training dataset to 600 512*512 RGB images \cite{karamiAutomaticPlantCounting2020}.
-Dataset size and quality predictability in DL is a controversial topic that has been proven to be
-addressable with empirical approaches \cite{hestnessDeepLearningScaling2017,mahmoodHowMuchMore2022}.
 It is well known that the performance of a DL model is directly related to the
-amount of data used for training \cite{sunRevisitingUnreasonableEffectiveness2017}, 
+amount of data used for training \cite{sunRevisitingUnreasonableEffectiveness2017} and 
 its quality \cite{alhazmiEffectsAnnotationQuality2021}.
-The model architecture is critical in dataset requirements as different models may require
+Dataset size and quality predictability in DL has been proven to be
+addressable with empirical approaches \cite{hestnessDeepLearningScaling2017,mahmoodHowMuchMore2022}.
+As already mentioned, model architecture is critical in dataset requirements as different models may require
 different dataset sizes and qualities to achieve the same performance \cite{nguyenEvaluationDeepLearning2020,brigatoCloseLookDeep2020}.
-Backbone is pivotal on downstream tasks as object detection. 
+Backbone is pivotal on downstream tasks as object detection \cite{}. 
 The importance of using a domain specific backbone has been proven also
 for plant/leaves segmentation on orthomosaics \cite{roggiolaniDomainSpecificPreTraining2023},
 but backbone training is still proibitive for many applications.
 
 Nethertheless, the most important factor affecting the dataset size for a plant counting
-object detector is the dataset source. It has been observed that using training samples from the same
+object detector is the dataset source \cite{}. It has been observed that using training samples from the same
 dataset as the inference (in-domain dataset) increases accuracy and reduce the need 
 for a large dataset in respect to collecting training samples from other 
 datasets (out-of-distribution dataset) \cite{davidPlantDetectionCounting2021,andvaagCountingCanolaGeneralizable2024}. 
 
-Plant counting is a challenging task, mostly because of data scarcity: public datasets
+Plant counting is affected as many DL application fields from data scarcity: public datasets
 are rare and often not suitable for the task because of the large environmental
-variability, their images are not orthorectified or scale is unknown. Even so we can find 
-some datasets that can be used for training a plant counting object detector.
+variability \cite{}, their images are not orthorectified or scale is unknown \cite{}. 
+Even so we can find some datasets that can be used for training a plant counting object detector \cite{}.
 We can reduce the variability that the model should learn by constrain the dataset
 to a specific crop at a specific growth stage. For this study we choose maize seedlings
 (Zea mais L.) at the V3-V5 (BBCH 13-15) growth stage. It is a common crop 
@@ -353,26 +351,72 @@ models can achieve the same benchmark for acceptance with less data and annotati
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Materials and Methods}
 
-Materials and Methods should be described with sufficient details to allow others 
-to replicate and build on published results. Please note that publication of your 
-manuscript implicates that you must make all materials, data, computer code, and 
-protocols associated with the publication available to readers. Please disclose 
-at the submission stage any restrictions on the availability of materials or information. 
-New methods and protocols should be described in detail while well-established methods 
-can be briefly described and appropriately cited.
+% Materials and Methods should be described with sufficient details to allow others 
+% to replicate and build on published results. Please note that publication of your 
+% manuscript implicates that you must make all materials, data, computer code, and 
+% protocols associated with the publication available to readers. Please disclose 
+% at the submission stage any restrictions on the availability of materials or information. 
+% New methods and protocols should be described in detail while well-established methods 
+% can be briefly described and appropriately cited.
 
-Research manuscripts reporting large datasets that are deposited in a publicly avail-able 
-database should specify where the data have been deposited and provide the relevant 
-accession numbers. If the accession numbers have not yet been obtained at the time 
-of submission, please state that they will be provided during review. They must 
-be provided prior to publication.
+% Research manuscripts reporting large datasets that are deposited in a publicly avail-able 
+% database should specify where the data have been deposited and provide the relevant 
+% accession numbers. If the accession numbers have not yet been obtained at the time 
+% of submission, please state that they will be provided during review. They must 
+% be provided prior to publication.
 
-Interventionary studies involving animals or humans, and other studies require ethical 
-approval must list the authority that provided approval and the corresponding ethical 
-approval code.
-\begin{quote}
-This is an example of a quote.
-\end{quote}
+% Interventionary studies involving animals or humans, and other studies require ethical 
+% approval must list the authority that provided approval and the corresponding ethical 
+% approval code.
+% \begin{quote}
+% This is an example of a quote.
+% \end{quote}
+
+In order to investigate the minimum size and quality of the dataset required to train 
+a robust object detection model for maize seedlings, we conducted a series of experiments
+where with recursivelly fit a series of models with increasing dataset size and quality.
+In this section we will first define the datasets used in the experiments, divided by 
+in-domain and out-of-distribution training datasets. 
+Then we will describe the handcrafted object detection algorithm used to get the 
+in-domain training datasets.
+Finally we will describe the architectures chosen to rapresent the 
+many-shots, few-shots, and zero-shots approaches.
+
+\subsection{Datasets}
+
+\subsection{Handcrafted object detection}
+
+Many HC object detectors for maize seedlings count have been proposed 
+in the literature. For this work we wrote an HC algorithm to get accurate 
+annotated dataset, sacrifing the amount of images succesfully detected
+for the quality of the annotations.
+
+This HC algorithm is havelly based on agronomical knowledge and color thresholding.
+For the execution of this algorithm, the user must set the following parameters:
+
+\begin{itemize}
+    \item HSV minimum and maximum thresholds
+    \item minimum and maxiumum leaf area for plant
+    \item minimum distance between plants on rows
+    \item distance inter rows
+
+In summary, the HC algorithm is based on color thresholding, that rely on the
+manual setting of Hue, Saturation, and Value (HSV) color minimum and maximum
+thresholding. Thresholding creates a binary image that is subsequently regionalized
+by connected components. The connected components are then filtered by area.
+Centers of the areas are fitted with RANSAC to get the slope of the lines where
+plants lie. Only the tiles where the slope is within the interquartile range are
+considered for further processing. The centers of the filtered tiles are then fitted
+again with RANSAC to get the lines on the neighboring of the first line detected.
+
+This as most of HC algoritm is intrinsically limited by the color thresholding.
+Our HC is based on the color of the maize seedlings, which is green.
+
+\subsection{many-shots object detectors}
+
+\subsection{few-shots object detectors}
+
+\subsection{zero-shots object detectors}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
