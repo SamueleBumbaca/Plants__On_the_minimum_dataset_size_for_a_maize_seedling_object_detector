@@ -74,37 +74,44 @@ def main(experiment):
         # Read the YAML file
         with open(config_path, 'r') as yaml_file:
             config = yaml.safe_load(yaml_file)
-        try:
-            # Set model path
+        # try:
+        # Set model path
+        model_path = config['train']['model_checkpoint']
+        if not model_path or not exists(model_path):
+            with open(log_path, 'a') as log_file:
+                log_file.write(f"{index}: Model checkpoint not found in {model_path}\n")
+                config['train']['model_checkpoint'] = join(exp_dir, model_id, 'weights', 'best.pt')
+                log_file.write(f"{index}: Using default model checkpoint in {config['train']['model_checkpoint']}\n")
+            with open(config_path, 'w') as yaml_file:
+                yaml.dump(config, yaml_file)
             model_path = config['train']['model_checkpoint']
-            if not model_path or not exists(model_path):
-                with open(log_path, 'a') as log_file:
-                    log_file.write(f"{index}: Model checkpoint not found in {model_path}\n")
-                    config['train']['model_checkpoint'] = join(exp_dir, model_id, 'weights', 'best.pt')
-                    log_file.write(f"{index}: Using default model checkpoint in {config['train']['model_checkpoint']}\n")
-                with open(config_path, 'w') as yaml_file:
-                    yaml.dump(config, yaml_file)
-                model_path = config['train']['model_checkpoint']
-            # Set model type
-            if 'yolo' in config['train']['model']:
-                model_type = 'ultralytics'
-            elif  'rtdetr' in config['train']['model']:
-                model_type = 'rtdetr'
-            else:
-                model_type = 'torchvision'
-            # Load the model
-            detection_model = AutoDetectionModel.from_pretrained(
-                model_type= model_type,
-                model_path=model_path,
-                confidence_threshold=0.3,
-                device=device,
-            )
-            # Set the dataset path
-            dataset_path = config['data']['path_to_dataset']
+        # Set model type
+        if 'yolo' in config['train']['model']:
+            model_type = 'ultralytics'
+        elif  'rtdetr' in config['train']['model']:
+            model_type = 'rtdetr'
+        else:
+            model_type = 'torchvision'
+        # Load the model
+        detection_model = AutoDetectionModel.from_pretrained(
+            model_type= model_type,
+            model_path=model_path,
+            confidence_threshold=0.3,
+            device=device,
+        )
+        # Set the dataset path
+        dataset_path = config['data']['path_to_dataset']
+        # If testing DavidEtAl dataset evaluate the model on all the datasets
+        if not config['data']['dataset'].isdigit():
+            datasets = [1, 2, 3] # That's because the other datasets are named 1, 2, 3
+        else:
+            datasets = [config['data']['dataset']]
+        # Iterate on datasets:
+        for dataset in datasets:
             # Set the raster path
-            raster_path = join(dataset_path, config['data']['dataset'], 'orthomosaic.tif')
+            raster_path = join(str(dataset_path), str(dataset), 'orthomosaic.tif')
             # Set the filed shape path
-            eval_tiles_shape_path = join(dataset_path, config['data']['dataset'], 'eval_tiles_buffered.shp')
+            eval_tiles_shape_path = join(str(dataset_path), str(dataset), 'eval_tiles_buffered.shp')
             # Load the field shape
             with fiona.open(eval_tiles_shape_path, "r") as shapefile:
                 shapes = [shapely_shape(feature["geometry"]) for feature in shapefile]
@@ -167,8 +174,13 @@ def main(experiment):
                 'properties': {'score': 'float',
                                 }
                 }
+            # Check if the prediction already exists
+            if exists(pred_path):
+                mode = 'a'
+            else:
+                mode = 'w'
             # Write the prediction
-            with fiona.open(pred_path, 'w', driver='ESRI Shapefile', crs=crs, schema=schema) as shp:
+            with fiona.open(pred_path, mode, driver='ESRI Shapefile', crs=crs, schema=schema) as shp:
                 for box, score in zip(eval_boxes, eval_scores):
                     minx, miny = box[0]
                     maxx, maxy = box[1]
@@ -183,10 +195,10 @@ def main(experiment):
             with open(config_path, 'w') as yaml_file:
                 yaml.dump(config, yaml_file)
 
-        except Exception as e:
-            with open(log_path, 'a') as log_file:
-                log_file.write(f"{index}: Error in model {model_id}: {e}\n")
-            continue
+        # except Exception as e:
+        #     with open(log_path, 'a') as log_file:
+        #         log_file.write(f"{index}: Error in model {model_id}: {e}\n")
+        #     continue
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

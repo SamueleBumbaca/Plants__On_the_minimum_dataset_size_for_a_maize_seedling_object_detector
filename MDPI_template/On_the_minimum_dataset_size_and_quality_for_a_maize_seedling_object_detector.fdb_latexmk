@@ -1,5 +1,13 @@
 # Fdb version 4
-["pdflatex"] 1739952113.7361 "/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/template.tex" "template.pdf" "template" 1739952116.60314 0
+["bibtex On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector"] 1740158156.21436 "On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.aux" "On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.bbl" "On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector" 1740158159.16607 0
+  "./Definitions/mdpi.bst" 1734396265.32207 23683 4afe8e0b352a18c39ff91c43fd26f4b2 ""
+  "./Unsupervised_plant_counting.bib" 1740157927.23038 81638 dc6a32ebbd32271cedeedc51ef290a14 ""
+  "On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.aux" 1740158158.78299 10118 8bc85302cf8cc2a819f719046b651f98 "pdflatex"
+  (generated)
+  "On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.bbl"
+  "On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.blg"
+  (rewritten before read)
+["pdflatex"] 1740158156.3305 "/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.tex" "On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.pdf" "On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector" 1740158159.16637 0
   "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm" 1136768653 1616 371d1ee60c04b008c8fd760060cd34f1 ""
@@ -9,6 +17,7 @@
   "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/tfm/adobe/palatino/pplr8c.tfm" 1136768653 1348 0e8eb69b4437626c0f6c9bed4a4e373c ""
   "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm" 1136768653 2796 d37c29814a6717720ee1a7c9a0b2c3b8 ""
   "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm" 1136768653 3820 ee5b9d58608ae328e43c6e2bfd4ff851 ""
+  "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/tfm/adobe/palatino/pplrc8t.tfm" 1136768653 6396 8f2d6400481d3b17b3e6693d0adfe2c9 ""
   "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm" 1136768653 2720 70000d5e623e601132eab3cded5b819b ""
   "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/tfm/adobe/palatino/pplri8t.tfm" 1136768653 3684 929c666381f7272e81481908b735ccba ""
   "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
@@ -46,6 +55,7 @@
   "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf" 1136768653 1380 037725697594405988999f61172f52de ""
   "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/vf/adobe/palatino/pplr8c.vf" 1136768653 3504 f65f653e1ad318a9d01b4af15300683a ""
   "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf" 1136768653 2324 a163806de13ddf37313d2ee968aa0a98 ""
+  "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/vf/adobe/palatino/pplrc8t.vf" 1136768653 3612 3b695ba1de8aa9e6cce1125ba31cb82d ""
   "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/vf/adobe/palatino/pplri8t.vf" 1136768653 2308 5bc0a90b83a3fd7d37d34ef3b64d7e8a ""
   "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/vf/public/mathpazo/zplmb7y.vf" 1136768653 1372 cf036438107a584126f60dd78cfc0118 ""
   "/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/vf/public/mathpazo/zplmr7m.vf" 1136768653 1812 de7624743c8bafe2ce204bec2f72ce7e ""
@@ -243,17 +253,18 @@
   "/home/samuelebumbaca/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1736256976 5301270 511c52649f018c53de3d76e056eee341 ""
   "/home/samuelebumbaca/.TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1736250401 1968899 b435ce4de79ac699a4d6cb94a8fe39db ""
   "/home/samuelebumbaca/.TinyTeX/texmf.cnf" 1731421431.58214 679 e95db49b3971c649270bd42ba2e598f9 ""
-  "/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/template.tex" 1739952110.53108 44125 864be0aa8b1b2d79dbe6ed41d0bf9d76 ""
+  "/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.tex" 1740158150.04821 53834 b75519e3b06d7d2362864f207611cad3 ""
   "Definitions/journalnames.tex" 1735617653.98868 104834 87e51b9227221d7fcd55ea01698908e5 ""
   "Definitions/logo-mdpi.eps" 1710933224 563678 6065ff936803124b091b05458e057116 ""
   "Definitions/logo-orcid.pdf" 1639997176 12671 39a20ba789123aa897c7efc569fb5270 ""
   "Definitions/mdpi.cls" 1734923675.54293 62123 0011ebf309508ba5dde3ca2319dda0b9 ""
-  "template.aux" 1739952116.38875 6068 ddcb55d1efe4c28bbe02430ca4e72cb9 "pdflatex"
-  "template.out" 1739952116.38875 1874 3745fa49c737042759feb16456b2d7c5 "pdflatex"
-  "template.tex" 1739952110.53108 44125 864be0aa8b1b2d79dbe6ed41d0bf9d76 ""
+  "On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.aux" 1740158158.78299 10118 8bc85302cf8cc2a819f719046b651f98 "pdflatex"
+  "On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.bbl" 1740158156.30585 11834 e61e6ac026f2a39007422ab30911ce0b "bibtex On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector"
+  "On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.out" 1740158158.78299 1699 bb8c1b704a0c056cd8b6d85a08ce89d4 "pdflatex"
+  "On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.tex" 1740158150.04821 53834 b75519e3b06d7d2362864f207611cad3 ""
   (generated)
-  "template.aux"
-  "template.log"
-  "template.out"
-  "template.pdf"
+  "On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.aux"
+  "On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.log"
+  "On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.out"
+  "On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.pdf"
   (rewritten before read)

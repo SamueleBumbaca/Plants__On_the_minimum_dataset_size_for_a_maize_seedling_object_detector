@@ -44,6 +44,10 @@ def main(experiment):
     # Load the experiment csv
     exp_df = pd.read_csv(exp_csv)
     for index, row in exp_df.iterrows():
+        if row['done'] != '_':
+            print(f'Skipping {row["model"]}_{row["dataset"]}_exp_{experiment}_{row["experiment"]}')
+            print('Model not trained')
+            continue
         # Get the model id
         model_id = f'{row["model"]}_dataset_{row["dataset"]}_exp_{experiment}_{row["experiment"]}'
         # Get the prediction path
