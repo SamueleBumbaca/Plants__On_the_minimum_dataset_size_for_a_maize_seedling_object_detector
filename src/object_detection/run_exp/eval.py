@@ -107,7 +107,8 @@ def main(experiment):
                 r_squared = float('nan')  # Avoid division by zero
             else:
                 r_squared = 1 - (ss_residual / ss_total)
-
+            # Calculate MAPE
+            mape = np.mean(np.abs(np.array(errors) / np.array(gt_values))) * 100
             # Convert ground truth and predictions to COCO format
             gt_annotations = geodataframe_to_coco(gt)
             pred_annotations = geodataframe_to_coco(pred_filtered, is_prediction=True)
@@ -148,6 +149,7 @@ def main(experiment):
                 'score_threshold': score_thresh,
                 'r_squared': r_squared,
                 'rmse': rmse,
+                'mape': mape,
                 'errors': errors,
                 'gt_values': gt_values,
                 'count_accuracy_avg': avg_count_accuracy,

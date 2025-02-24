@@ -280,9 +280,9 @@ The main difference between CNN-based and Transformer-based models is the way th
 process the image. CNN-based models process the image in a grid-like fashion,
 while Transformer-based models process the image as a sequence of patches.
 On common benchmarks as COCO, PASCAL VOC, and ImageNet, Transformer-based models have shown 
-to be more accurate than CNN-based models \cite{}.
+to be more accurate than CNN-based models CITE_HERE.
 Nethertheless CNN-based models are still widely used in object detection, because they are
-more efficient in processing small images and have a lower computational cost \cite{}. 
+more efficient in processing small images and have a lower computational cost CITE_HERE. 
 One of the critical challenges in training effective DL object detection models is 
 the availability of a sufficiently large and high-quality dataset. 
 Recently, zero-shot and few-shot object detection have emerged as promising paradigms
@@ -293,15 +293,15 @@ no labeled examples respectivelly.
 They often leverage feature transfer or meta-learning components to generalize 
 across classes under extreme data scarcity. This approach reduces the annotation 
 burden and is especially beneficial in domains where collecting exhaustive training 
-data is impractical \cite{}.
+data is impractical CITE_HERE.
 Zero-shot object detection detects new categories without any training samples by 
-leveraging semantic relationships or contextual information learned from known classes \cite{}. 
-Few-shot approaches optimize models to learn quickly from a handful of labeled examples \cite{}. 
+leveraging semantic relationships or contextual information learned from known classes CITE_HERE. 
+Few-shot approaches optimize models to learn quickly from a handful of labeled examples CITE_HERE. 
 % Some prominent zero-shot models include LSDA, ViLD, and ZSD; among the few-shot methods, 
 % TFA, FSCE, and Meta R-CNN/DETR are commonly cited for their strong performance 
 % under data-scarce conditions.
-Zero-shot actual state-of-the-art object detector models are YOLO-World \cite{}, OWLv2 \cite{}, and Grounding DINO \cite{}.  
-DE-ViT \cite{} and CD-ViTO \cite{} are the latest models that have shown promising results in few-shot
+Zero-shot actual state-of-the-art object detector models are YOLO-World CITE_HERE, OWLv2 CITE_HERE, and Grounding DINO CITE_HERE.  
+DE-ViT CITE_HERE and CD-ViTO CITE_HERE are the latest models that have shown promising results in few-shot
 object detection.
 
 Many studies have been conducted on object detection for plants in open field
@@ -316,21 +316,21 @@ Dataset size and quality predictability in DL has been proven to be
 addressable with empirical approaches \cite{hestnessDeepLearningScaling2017,mahmoodHowMuchMore2022}.
 As already mentioned, model architecture is critical in dataset requirements as different models may require
 different dataset sizes and qualities to achieve the same performance \cite{nguyenEvaluationDeepLearning2020,brigatoCloseLookDeep2020}.
-Backbone is pivotal on downstream tasks as object detection \cite{}. 
+Backbone is pivotal on downstream tasks as object detection CITE_HERE. 
 The importance of using a domain specific backbone has been proven also
 for plant/leaves segmentation on orthomosaics \cite{roggiolaniDomainSpecificPreTraining2023},
 but backbone training is still proibitive for many applications.
 
 Nethertheless, the most important factor affecting the dataset size for a plant counting
-object detector is the dataset source \cite{}. It has been observed that using training samples from the same
+object detector is the dataset source CITE_HERE. It has been observed that using training samples from the same
 dataset as the inference (in-domain dataset) increases accuracy and reduce the need 
 for a large dataset in respect to collecting training samples from other 
 datasets (out-of-distribution dataset) \cite{davidPlantDetectionCounting2021,andvaagCountingCanolaGeneralizable2024}. 
 
 Plant counting is affected as many DL application fields from data scarcity: public datasets
 are rare and often not suitable for the task because of the large environmental
-variability \cite{}, their images are not orthorectified or scale is unknown \cite{}. 
-Even so we can find some datasets that can be used for training a plant counting object detector \cite{}.
+variability CITE_HERE, their images are not orthorectified or scale is unknown CITE_HERE. 
+Even so we can find some datasets that can be used for training a plant counting object detector CITE_HERE.
 We can reduce the variability that the model should learn by constrain the dataset
 to a specific crop at a specific growth stage. For this study we choose maize seedlings
 (Zea mais L.) at the V3-V5 (BBCH 13-15) growth stage. It is a common crop 

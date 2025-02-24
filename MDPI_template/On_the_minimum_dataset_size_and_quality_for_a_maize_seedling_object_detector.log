@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.7)  21 FEB 2025 18:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.7)  23 FEB 2025 07:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1076,12 +1076,11 @@ Package caption Info: End \AtBeginDocument code.
 
 Package newfloat Info: `float' package detected.
 Package hyperref Info: Link coloring ON on input line 196.
-(./On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.out) (./On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.out)
 \@outlinefile=\write4
 \openout4 = `On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.out'.
 
 LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 196.
- (/home/samuelebumbaca/.TinyTeX/texmf-dist/tex/latex/psnfss/ts1ppl.fd
+(/home/samuelebumbaca/.TinyTeX/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1146,9 +1145,8 @@ LaTeX Font Info:    Overwriting symbol font `AMSb' in version `normal'
 (Font)                  U/msb/m/n --> U/msb/m/n on input line 196.
 LaTeX Font Info:    Overwriting symbol font `AMSb' in version `bold'
 (Font)                  U/msb/m/n --> U/msb/m/n on input line 196.
-Package marginnote Info: Margin note 1.1 is on absolute page 1 on input line 196.
 Package marginnote Info: right page because not two side mode on input line 196.
-Package marginnote Info: xpos seems to be 167.01753pt on input line 196.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 196.
 Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2024-03-20 12:13:44
 (epstopdf)                    size: 563678 bytes
@@ -1158,12 +1156,12 @@ Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)             Command: <repstopdf --outfile=Definitions/logo-mdpi-eps-converted-to.pdf Definitions/logo-mdpi.eps>
 (epstopdf)             \includegraphics on input line 196.
 Package epstopdf Info: Output file is already uptodate.
-<Definitions/logo-mdpi-eps-converted-to.pdf, id=68, 74.2775pt x 49.18375pt>
+<Definitions/logo-mdpi-eps-converted-to.pdf, id=12, 74.2775pt x 49.18375pt>
 File: Definitions/logo-mdpi-eps-converted-to.pdf Graphic file (type pdf)
 <use Definitions/logo-mdpi-eps-converted-to.pdf>
 Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 196.
 (pdftex.def)             Requested size: 42.96877pt x 28.45274pt.
-<Definitions/logo-orcid.pdf, id=70, 102.3825pt x 102.3825pt>
+<Definitions/logo-orcid.pdf, id=14, 102.3825pt x 102.3825pt>
 File: Definitions/logo-orcid.pdf Graphic file (type pdf)
 <use Definitions/logo-orcid.pdf>
 Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 196.
@@ -1178,6 +1176,34 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
+Package natbib Warning: Citation `PP13332024' on page 1 undefined on input line 243.
+
+
+Package natbib Warning: Citation `zouMaizeTasselsDetection2020' on page 1 undefined on input line 246.
+
+
+Package natbib Warning: Citation `liuIntegrateNetDeepLearning2022' on page 1 undefined on input line 248.
+
+
+Package natbib Warning: Citation `davidPlantDetectionCounting2021' on page 1 undefined on input line 248.
+
+
+Package natbib Warning: Citation `barretoAutomaticUAVbasedCounting2021' on page 1 undefined on input line 248.
+
+
+Package natbib Warning: Citation `liuEstimatingMaizeSeedling2022' on page 1 undefined on input line 249.
+
+
+Package natbib Warning: Citation `velumaniEstimatesMaizePlant2021' on page 1 undefined on input line 249.
+
+
+Package natbib Warning: Citation `zouMaizeTasselsDetection2020' on page 1 undefined on input line 251.
+
+
+Package natbib Warning: Citation `krausPhotogrammetryGeometryImages2011' on page 1 undefined on input line 263.
+
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.0pt, for example:
@@ -1189,6 +1215,259 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 {/home/samuelebumbaca/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}{/home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./Definitions/logo-mdpi-eps-converted-to.pdf> <./Definitions/logo-orcid.pdf>]
 
+Package natbib Warning: Citation `FasterRCNNRealTime' on page 2 undefined on input line 277.
+
+
+Package natbib Warning: Citation `YouOnlyLook' on page 2 undefined on input line 277.
+
+
+Package natbib Warning: Citation `carionEndtoEndObjectDetection2020' on page 2 undefined on input line 278.
+
+/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.tex:283: Missing $ inserted.
+<inserted text> 
+                $
+l.283 ...more accurate than CNN-based models CITE_
+                                                  HERE.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.tex:306: Missing $ inserted.
+<inserted text> 
+                $
+l.306 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (755.92354pt too wide) in paragraph at lines 271--306
+\OML/zplm/m/it/10 basedmodelsarestillwidelyusedinobjectdetection\OT1/ppl/m/n/10 (-20) , \OML/zplm/m/it/10 becausetheyaremoreefficientinprocessingsmallimagesandhavealowercomputationalcostCITE[]ERE\OT1/ppl/m/n/10 (-20) .\OML/zplm/m/it/10 OneofthecriticalchallengesintrainingeffectiveDLobjectdetectionmodelsistheavailabilityofasufficientlylargeandhigh \OMS/zplm/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (433.09674pt too wide) in paragraph at lines 271--306
+\OML/zplm/m/it/10 qualitydataset\OT1/ppl/m/n/10 (-20) .\OML/zplm/m/it/10 Recently\OT1/ppl/m/n/10 (-20) , \OML/zplm/m/it/10 zero \OMS/zplm/m/n/10 ^^@ \OML/zplm/m/it/10 shotandfew \OMS/zplm/m/n/10 ^^@ \OML/zplm/m/it/10 shotobjectdetectionhaveemergedaspromisingparadigmstoalleviatetheneedforlargeannotateddatasets\OT1/ppl/m/n/10 (-20) .\OML/zplm/m/it/10 Whiletraditionalobjectdetectionmodels\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 many \OMS/zplm/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (516.39453pt too wide) in paragraph at lines 271--306
+\OML/zplm/m/it/10 shotsobjectdetectors\OT1/zplm/m/n/10 )\OML/zplm/m/it/10 requireextensivelabeleddatafortraining\OT1/ppl/m/n/10 (-20) , \OML/zplm/m/it/10 few \OMS/zplm/m/n/10 ^^@ \OML/zplm/m/it/10 shotandzero \OMS/zplm/m/n/10 ^^@ \OML/zplm/m/it/10 shotobjectdetectionaimtodetectnovelobjectswithlittletonolabeledexamplesrespectivelly\OT1/ppl/m/n/10 (-20) .\OML/zplm/m/it/10 Theyoftenleveragefeaturetransferormeta \OMS/zplm/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (554.78912pt too wide) in paragraph at lines 271--306
+\OML/zplm/m/it/10 learningcomponentstogeneralizeacrossclassesunderextremedatascarcity\OT1/ppl/m/n/10 (-20) .\OML/zplm/m/it/10 ThisapproachreducestheannotationburdenandisespeciallybeneficialindomainswherecollectingexhaustivetrainingdataisimpracticalCITE[]ERE\OT1/ppl/m/n/10 (-20) .\OML/zplm/m/it/10 Zero \OMS/zplm/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (346.89177pt too wide) in paragraph at lines 271--306
+\OML/zplm/m/it/10 shotobjectdetectiondetectsnewcategorieswithoutanytrainingsamplesbyleveragingsemanticrelationshipsorcontextualinformationlearnedfromknownclassesCITE[]ERE\OT1/ppl/m/n/10 (-20) .\OML/zplm/m/it/10 Few \OMS/zplm/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (27.72603pt too wide) in paragraph at lines 271--306
+\OML/zplm/m/it/10 shotapproachesoptimizemodelstolearnquicklyfromahandfuloflabeledexamplesCITE[]ERE\OT1/ppl/m/n/10 (-20) .\OML/zplm/m/it/10 Zero \OMS/zplm/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (225.62189pt too wide) in paragraph at lines 271--306
+\OML/zplm/m/it/10 shotactualstate \OMS/zplm/m/n/10 ^^@ \OML/zplm/m/it/10 of \OMS/zplm/m/n/10 ^^@ \OML/zplm/m/it/10 the \OMS/zplm/m/n/10 ^^@ \OML/zplm/m/it/10 artobjectdetectormodelsareYOLO \OMS/zplm/m/n/10 ^^@ \OML/zplm/m/it/10 WorldCITE[]ERE\OT1/ppl/m/n/10 (-20) , \OML/zplm/m/it/10 OWLv\OT1/ppl/m/n/10 (-20) 2\OML/zplm/m/it/10 CITE[]ERE\OT1/ppl/m/n/10 (-20) , \OML/zplm/m/it/10 andGroundingDINOCITE[]ERE\OT1/ppl/m/n/10 (-20) .\OML/zplm/m/it/10 DE \OMS/zplm/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (45.21033pt too wide) in paragraph at lines 271--306
+\OML/zplm/m/it/10 ViTCITE[]EREandCD \OMS/zplm/m/n/10 ^^@ \OML/zplm/m/it/10 ViTOCITE[]EREarethelatestmodelsthathaveshownpromisingresultsinfew \OMS/zplm/m/n/10 ^^@
+ []
+
+
+Package natbib Warning: Citation `barretoAutomaticUAVbasedCounting2021' on page 2 undefined on input line 308.
+
+
+Package natbib Warning: Citation `gengResearchSegmentationMethod2024' on page 2 undefined on input line 308.
+
+
+Package natbib Warning: Citation `jiangDeepSeedlingDeepConvolutional2019' on page 2 undefined on input line 308.
+
+
+Package natbib Warning: Citation `katariIntegratingAutomatedLabeling2024' on page 2 undefined on input line 308.
+
+
+Package natbib Warning: Citation `kitanoCornPlantCounting2019' on page 2 undefined on input line 308.
+
+
+Package natbib Warning: Citation `liDCYOLOImprovedField2024' on page 2 undefined on input line 308.
+
+
+Package natbib Warning: Citation `liSeedlingMaizeCounting2022' on page 2 undefined on input line 308.
+
+
+Package natbib Warning: Citation `liuIntegrateNetDeepLearning2022' on page 2 undefined on input line 308.
+
+
+Package natbib Warning: Citation `liuEstimatingMaizeSeedling2022' on page 2 undefined on input line 308.
+
+
+Package natbib Warning: Citation `luTasselNetCountingMaize2017' on page 2 undefined on input line 308.
+
+
+Package natbib Warning: Citation `macheferMaskRCNNRefitting2020' on page 2 undefined on input line 308.
+
+
+Package natbib Warning: Citation `velumaniEstimatesMaizePlant2021' on page 2 undefined on input line 308.
+
+
+Package natbib Warning: Citation `wangPlotLevelMaizeEarly2023' on page 2 undefined on input line 308.
+
+
+Package natbib Warning: Citation `zhaoStudyLightweightModel2023' on page 2 undefined on input line 308.
+
+
+Package natbib Warning: Citation `davidPlantDetectionCounting2021' on page 2 undefined on input line 310.
+
+
+Package natbib Warning: Citation `andvaagCountingCanolaGeneralizable2024' on page 2 undefined on input line 310.
+
+
+Package natbib Warning: Citation `karamiAutomaticPlantCounting2020' on page 2 undefined on input line 311.
+
+
+Package natbib Warning: Citation `sunRevisitingUnreasonableEffectiveness2017' on page 2 undefined on input line 313.
+
+
+Package natbib Warning: Citation `alhazmiEffectsAnnotationQuality2021' on page 2 undefined on input line 314.
+
+
+Package natbib Warning: Citation `hestnessDeepLearningScaling2017' on page 2 undefined on input line 316.
+
+
+Package natbib Warning: Citation `mahmoodHowMuchMore2022' on page 2 undefined on input line 316.
+
+
+Package natbib Warning: Citation `nguyenEvaluationDeepLearning2020' on page 2 undefined on input line 318.
+
+
+Package natbib Warning: Citation `brigatoCloseLookDeep2020' on page 2 undefined on input line 318.
+
+/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.tex:319: Missing $ inserted.
+<inserted text> 
+                $
+l.319 ...ownstream tasks as object detection CITE_
+                                                  HERE.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.tex:321: LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.321 ...{roggiolaniDomainSpecificPreTraining2023}
+                                                  ,
+Please use the math alphabet \mathbf instead of the \bfseries command. 
+
+
+Package natbib Warning: Citation `roggiolaniDomainSpecificPreTraining2023' on page 2 undefined on input line 321.
+
+/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.tex:323: Missing $ inserted.
+<inserted text> 
+                $
+l.323 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (402.55544pt too wide) in paragraph at lines 307--323
+\T1/ppl/m/n/10 (-20) CITE$[]\OML/zplm/m/it/10 ERE\OT1/ppl/m/n/10 (-20) .\OML/zplm/m/it/10 Theimportanceofusingadomainspecificbackbonehasbeenprovenalsoforplant\OT1/zplm/m/n/10 /\OML/zplm/m/it/10 leavessegmentationonorthomosaics\OT1/zplm/m/n/10 [[]]\OT1/ppl/m/n/10 (-20) , \OML/zplm/m/it/10 butbackbonetrainingisstillproibitiveformanyapplications\OT1/ppl/m/n/10 (-20) .$ 
+ []
+
+/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.tex:325: Missing $ inserted.
+<inserted text> 
+                $
+l.325 object detector is the dataset source CITE_
+                                                 HERE. It has been observed ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.tex:328: LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.328 ...1,andvaagCountingCanolaGeneralizable2024}
+                                                  .
+Please use the math alphabet \mathbf instead of the \bfseries command. 
+
+
+Package natbib Warning: Citation `davidPlantDetectionCounting2021' on page 2 undefined on input line 328.
+
+
+/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.tex:328: LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.328 ...1,andvaagCountingCanolaGeneralizable2024}
+                                                  .
+Please use the math alphabet \mathbf instead of the \bfseries command. 
+
+
+Package natbib Warning: Citation `andvaagCountingCanolaGeneralizable2024' on page 2 undefined on input line 328.
+
+/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.tex:329: Missing $ inserted.
+<inserted text> 
+                $
+l.329 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (172.0313pt too wide) in paragraph at lines 324--329
+\T1/ppl/m/n/10 (-20) ob-ject de-tec-tor is the dataset source CITE$[]\OML/zplm/m/it/10 ERE\OT1/ppl/m/n/10 (-20) .\OML/zplm/m/it/10 Ithasbeenobservedthatusingtrainingsamplesfromthesamedatasetastheinference\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 in \OMS/zplm/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (162.33757pt too wide) in paragraph at lines 324--329
+\OML/zplm/m/it/10 domaindataset\OT1/zplm/m/n/10 )\OML/zplm/m/it/10 increasesaccuracyandreducetheneedforalargedatasetinrespecttocollectingtrainingsamplesfromotherdatasets\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 out \OMS/zplm/m/n/10 ^^@
+ []
+
+/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.tex:332: Missing $ inserted.
+<inserted text> 
+                $
+l.332 variability CITE_
+                       HERE, their images are not orthorectified or scale is...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.tex:339: Missing $ inserted.
+<inserted text> 
+                $
+l.339 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (1120.64793pt too wide) in paragraph at lines 330--339
+\T1/ppl/m/n/10 (-20) abil-ity CITE$[]\OML/zplm/m/it/10 ERE\OT1/ppl/m/n/10 (-20) , \OML/zplm/m/it/10 theirimagesarenotorthorectifiedorscaleisunknownCITE[]ERE\OT1/ppl/m/n/10 (-20) .\OML/zplm/m/it/10 EvensowecanfindsomedatasetsthatcanbeusedfortrainingaplantcountingobjectdetectorCITE[]ERE\OT1/ppl/m/n/10 (-20) .\OML/zplm/m/it/10 Wecanreducethevariabilitythatthemodelshouldlearnbyconstrainthedatasettoaspecificcropataspecificgrowthstage\OT1/ppl/m/n/10 (-20) .\OML/zplm/m/it/10 Forthisstudywechoosemaizeseedlings\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 ZeamaisL\OT1/ppl/m/n/10 (-20) .\OT1/zplm/m/n/10 )\OML/zplm/m/it/10 attheV\OT1/ppl/m/n/10 (-20) 3 \OMS/zplm/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (194.51472pt too wide) in paragraph at lines 330--339
+\OML/zplm/m/it/10 V\OT1/ppl/m/n/10 (-20) 5\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 BBCH\OT1/ppl/m/n/10 (-20) 13 \OMS/zplm/m/n/10 ^^@ \OT1/ppl/m/n/10 (-20) 15\OT1/zplm/m/n/10 )\OML/zplm/m/it/10 growthstage\OT1/ppl/m/n/10 (-20) .\OML/zplm/m/it/10 Itisacommoncropthatinthisparticulargrowthstageiseasytocountbecauseoflowoverlappingandfixedintra \OMS/zplm/m/n/10 ^^@
+ []
+
+
+
+
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 340.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 24.18796pt, for example:
@@ -1199,6 +1478,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [2]
 
 
+LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 428.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 24.18796pt, for example:
 (fancyhdr)                \setlength{\headheight}{24.18796pt}.
@@ -1206,6 +1488,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.18796pt}.
 
 [3]
+
+LaTeX Warning: Reference `fig1' on page 4 undefined on input line 449.
+
+
+LaTeX Warning: Reference `tab1' on page 4 undefined on input line 449.
+
 Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2024-03-20 12:13:44
 (epstopdf)                    size: 563678 bytes
@@ -1213,12 +1501,18 @@ Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2025-01-07 14:48:22
 (epstopdf)                    size: 13159 bytes
 (epstopdf)             Command: <repstopdf --outfile=Definitions/logo-mdpi-eps-converted-to.pdf Definitions/logo-mdpi.eps>
-(epstopdf)             \includegraphics on input line 409.
+(epstopdf)             \includegraphics on input line 453.
 Package epstopdf Info: Output file is already uptodate.
 File: Definitions/logo-mdpi-eps-converted-to.pdf Graphic file (type pdf)
 <use Definitions/logo-mdpi-eps-converted-to.pdf>
-Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 409.
+Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 453.
 (pdftex.def)             Requested size: 199.16928pt x 131.90251pt.
+
+LaTeX Warning: Reference `fig2' on page 4 undefined on input line 474.
+
+
+LaTeX Warning: Reference `tab2' on page 4 undefined on input line 474.
+
 Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2024-03-20 12:13:44
 (epstopdf)                    size: 563678 bytes
@@ -1226,11 +1520,11 @@ Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2025-01-07 14:48:22
 (epstopdf)                    size: 13159 bytes
 (epstopdf)             Command: <repstopdf --outfile=Definitions/logo-mdpi-eps-converted-to.pdf Definitions/logo-mdpi.eps>
-(epstopdf)             \includegraphics on input line 438.
+(epstopdf)             \includegraphics on input line 482.
 Package epstopdf Info: Output file is already uptodate.
 File: Definitions/logo-mdpi-eps-converted-to.pdf Graphic file (type pdf)
 <use Definitions/logo-mdpi-eps-converted-to.pdf>
-Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 438.
+Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 482.
 (pdftex.def)             Requested size: 219.08612pt x 145.09299pt.
 Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2024-03-20 12:13:44
@@ -1239,11 +1533,11 @@ Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2025-01-07 14:48:22
 (epstopdf)                    size: 13159 bytes
 (epstopdf)             Command: <repstopdf --outfile=Definitions/logo-mdpi-eps-converted-to.pdf Definitions/logo-mdpi.eps>
-(epstopdf)             \includegraphics on input line 440.
+(epstopdf)             \includegraphics on input line 484.
 Package epstopdf Info: Output file is already uptodate.
 File: Definitions/logo-mdpi-eps-converted-to.pdf Graphic file (type pdf)
 <use Definitions/logo-mdpi-eps-converted-to.pdf>
-Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 440.
+Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 484.
 (pdftex.def)             Requested size: 219.08612pt x 145.09299pt.
 Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2024-03-20 12:13:44
@@ -1252,11 +1546,11 @@ Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2025-01-07 14:48:22
 (epstopdf)                    size: 13159 bytes
 (epstopdf)             Command: <repstopdf --outfile=Definitions/logo-mdpi-eps-converted-to.pdf Definitions/logo-mdpi.eps>
-(epstopdf)             \includegraphics on input line 441.
+(epstopdf)             \includegraphics on input line 485.
 Package epstopdf Info: Output file is already uptodate.
 File: Definitions/logo-mdpi-eps-converted-to.pdf Graphic file (type pdf)
 <use Definitions/logo-mdpi-eps-converted-to.pdf>
-Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 441.
+Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 485.
 (pdftex.def)             Requested size: 219.08612pt x 145.09299pt.
 Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2024-03-20 12:13:44
@@ -1265,13 +1559,16 @@ Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2025-01-07 14:48:22
 (epstopdf)                    size: 13159 bytes
 (epstopdf)             Command: <repstopdf --outfile=Definitions/logo-mdpi-eps-converted-to.pdf Definitions/logo-mdpi.eps>
-(epstopdf)             \includegraphics on input line 443.
+(epstopdf)             \includegraphics on input line 487.
 Package epstopdf Info: Output file is already uptodate.
 File: Definitions/logo-mdpi-eps-converted-to.pdf Graphic file (type pdf)
 <use Definitions/logo-mdpi-eps-converted-to.pdf>
-Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 443.
+Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 487.
 (pdftex.def)             Requested size: 219.08612pt x 145.09299pt.
 
+
+
+LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 493.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1283,6 +1580,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [4]
 
 
+LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 548.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 24.18796pt, for example:
 (fancyhdr)                \setlength{\headheight}{24.18796pt}.
@@ -1290,6 +1590,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.18796pt}.
 
 [5]
+
+
+LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 554.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1335,6 +1638,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 
+LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 574.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 16.18796pt, for example:
 (fancyhdr)                \setlength{\headheight}{16.18796pt}.
@@ -1346,10 +1652,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 616.
+(Font)              scaled to size 9.37807pt on input line 660.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 616.
+(Font)              scaled to size 9.37807pt on input line 660.
 
+
+
+LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 683.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1362,11 +1671,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 691--691
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
 
  []
 
-(./On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.bbl
+
+
+
+LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 767.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1375,7 +1687,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-12.18796pt}.
 
-[9]
+[9] (./On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.bbl)
+
+Package natbib Warning: There were undefined citations.
+
+
+
+
+LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 897.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1384,38 +1703,63 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-12.18796pt}.
 
-[10])
+[10]
+
+/home/samuelebumbaca/repositories/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector/MDPI_template/On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.tex:897: LaTeX Error: \begin{itemize} on input line 397 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.897 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 24.18796pt, for example:
-(fancyhdr)                \setlength{\headheight}{24.18796pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-12.18796pt}.
-
-[11] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
  ***********
-Package rerunfilecheck Info: File `On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.out' has not changed.
-(rerunfilecheck)             Checksum: BB8C1B704A0C056CD8B6D85A08CE89D4;1699.
- ) 
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  744360009B9DA80C1562660714258C64;2493.
+
+Package lastpage Warning: Rerun to get the references right on input line 897.
+
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 397 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 34211 strings out of 475247
- 642556 string characters out of 5766890
- 1123394 words of memory out of 5000000
- 55970 multiletter control sequences out of 15000+600000
- 635480 words of font info for 423 fonts, out of 8000000 for 9000
+ 33992 strings out of 475247
+ 636679 string characters out of 5766890
+ 1109393 words of memory out of 5000000
+ 55854 multiletter control sequences out of 15000+600000
+ 629234 words of font info for 377 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 123i,15n,135p,5239b,794s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.pdf (11 pages, 153393 bytes).
+ 123i,15n,135p,5239b,979s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></home/samuelebumbaca/.TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.pdf (10 pages, 151143 bytes).
 PDF statistics:
- 296 PDF objects out of 1000 (max. 8388607)
- 264 compressed objects within 3 object streams
- 72 named destinations out of 1000 (max. 500000)
- 114311 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 153 PDF objects out of 1000 (max. 8388607)
+ 121 compressed objects within 2 object streams
+ 45 named destinations out of 1000 (max. 500000)
+ 106007 words of extra memory for PDF output out of 106986 (max. 10000000)
 
