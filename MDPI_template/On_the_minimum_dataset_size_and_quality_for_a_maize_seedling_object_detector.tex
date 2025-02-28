@@ -390,15 +390,22 @@ it as a strategy to get the training datasets.
 
 \subsection{Datasets}
 
+The datasets used in this study to train the object detection models for maize seedlings
+counting are nadiral or supposedly nadiral images of maize seedlings at the V3-V5 growth stage.
+The V3-V5 growth stage is defined by the BBCH scale as the stage where the third to fifth
+leaf is unfolded and the plant is 15-30 cm tall \cite{meierBBCHMonograph2018}.
+This growth stage is easy to determine, even from above because of the low overlapping
+of the leafs. 
+
 This study uses two dataset sources as training sets: the out-of-distribution dataset (OOD)
-and the in-domain dataset (ID). The OOD is a dataset that is not from the same source as the
-inference dataset, while the ID is a dataset that is from the same source as the inference dataset.
-The OOD dataset is composed of images from scientific literature \cite{liuEstimatingMaizeSeedling2022,davidPlantDetectionCounting2021}
-and from internet repositories \cite{Maize_seedingDatasetOverview,MaizeseedlingdetectionDatasetOverview}
-The ID dataset was collected during this study.
-The OOD scientific dataset and the ID dataset are composed by tiles of georeferenced orthomosaics 
-of maize seedlings of known scale, while the OOD internet dataset is composed by RGB images of maize seedlings
-of unknown scale.
+and the in-domain dataset (ID). The ID datasets are from the same source as the
+testing dataset, while the OOD datasets are not.
+The OOD datasets are composed of images from scientific literature \cite{liuEstimatingMaizeSeedling2022,davidPlantDetectionCounting2021}
+and from internet repositories \cite{Maize_seedingDatasetOverview,MaizeseedlingdetectionDatasetOverview}.
+The ID datasets were collected during this study.
+The OOD scientific datasets and the ID datasets are composed by patches of georeferenced orthomosaics 
+of known scale, while the OOD internet datasets are simple RGB images of unknown scale.
+The all OOD datasets came with annotations, while the ID datasets were manually annotated.
 
 \begin{table}[H]
 \caption{Summary of Datasets Used in the Study}
@@ -415,10 +422,59 @@ ID & Collected during this study, composed of tiles of georeferenced orthomosaic
 \end{tabularx}
 \end{table}
 
+To make the two kind of dataset comparables we chose to rescale the images to a scale of 0.005 m/pixel
+where the scale was known (scientific OOD and ID datasets), obtaining orthomosaics of different sizes.
+All the datasets were then cropped to 224*224 pixels tiles.
+Also the annotations were rescaled where needed and cropped.  
+
+The testing dataset is composed by a subset of the ID dataset tiles, not included in the training dataset.
 
 \subsection{many-shots object detectors}
 
+To rapresent the category and compare performance between pure-CNN and Transformer-mixed architectures
+that are effectivelly used as object detectors in real use-cases for their accuracy and efficiency,
+we chose to use three versions of YOLO and the real-time version of DETR in the Ultralytics implementation.
+The YOLO versions are YOLOv5, YOLOv8, and YOLO11, while the DETR version is RT-DETR.
+
+YOLOv5 CiteHere is a pure CNN-based architecture that represents a significant optimization 
+over previous YOLO versions with improved speed-accuracy tradeoffs and enhanced training stability. 
+It employs a CSPDarknet53 backbone that uses cross-stage partial connections to reduce computational 
+costs while maintaining feature representation power. YOLOv8 CiteHere introduced 
+architectural modifications including a decoupled detection head, a C2f module for feature processing, and several 
+advanced augmentation techniques, resulting in better performance on small objects like seedlings. 
+Its backbone is an improved CSPDarknet with enhanced SPPF (Spatial Pyramid Pooling - Fast) modules for 
+multi-scale feature extraction. YOLO11 CiteHere represents the latest evolution with significant 
+improvements in accuracy through adaptable block and module designs, adaptive head assignments, and enhanced 
+loss functions for optimizing detection at various scales. YOLO11 uses an advanced adaptable backbone with 
+improved feature pyramid networks for efficient multi-scale detection. RT-DETR CiteHere is a real-time 
+transformer-based detector that combines CNN backbone features (ResNet-based) with a streamlined 
+transformer decoder, striking a balance between the global reasoning capabilities of transformers and the efficiency 
+of CNN architectures, making it particularly effective for detecting objects with varying sizes and densities 
+in complex agricultural scenes.
+
+We used here the Ultralytics implementation of these models because the implementation is open-source CiteHere
+and it is widely used in the scientific community CiteHere.
+
+MakeTableHere
+
 \subsection{few-shots object detectors}
+
+Differently from the many-shots approach, the few-shots one was not deeply studied to tackle the problem of plant counting.
+In fact
+To test if few-shot approach can effectivelly reduce the amount of training samples to train a plant counting object detector
+we decided to use the state-of-the-art disputed cross-domain method few-shot model that have shown promising results in the literature.
+CD-ViTO is an advanced few-shot object detection model that specifically addresses the challenges of domain shift 
+between base and novel classes. The model employs a dual-branch vision transformer backbone that separately processes 
+visual and textual information, with a specialized feature fusion mechanism to integrate these modalities. CD-ViTO's architecture 
+contains a domain-adaptive feature alignment module that minimizes the distribution discrepancy between source and target 
+domains through adversarial learning techniques. Unlike previous few-shot approaches that rely primarily on meta-learning, 
+CD-ViTO leverages cross-domain adaptation strategies to better generalize from base to novel classes with minimal 
+examples (typically 1-10 shots). The backbone consists of a modified ViT (Vision Transformer) structure with domain-invariant 
+attention layers that help extract features robust to domain variations. In benchmark evaluations, CD-ViTO has demonstrated 
+superior performance compared to previous few-shot object detection methods, achieving up to 15\% higher AP scores on 
+cross-domain detection tasks and showing particular strength in agricultural applications where domain shifts are 
+common due to variations in growth conditions, illumination, and plant morphology.
+
 
 \subsection{zero-shots object detectors}
 
