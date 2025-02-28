@@ -27,6 +27,10 @@ def main(row, yaml_template_path, output_dir, experiment, csv_path, csv_reader):
         yaml_content['data']['dataset_size'] = row['dataset_size'] if row['dataset_size'] else 'all'
         yaml_content['train']['model'] = row['model']
         yaml_content['experiment']['note'] = experiment
+        if row['pre-trained'] == 'custom':
+            yaml_content['train']['backbone'] = row['backbone']
+        elif row['pre-trained'] == 'default':
+            yaml_content['train']['backbone'] = 'default'
         out_domain = row['out_domain']
 
         # If the dataset size is not specified, use all the data

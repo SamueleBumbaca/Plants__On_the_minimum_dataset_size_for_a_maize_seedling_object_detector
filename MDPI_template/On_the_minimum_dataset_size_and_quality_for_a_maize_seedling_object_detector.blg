@@ -1,0 +1,122 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.aux
+The style file: Definitions/mdpi.bst
+Database file #1: Unsupervised_plant_counting.bib
+Warning--string name "apr" is undefined
+--line 12 of file Unsupervised_plant_counting.bib
+Warning--string name "nov" is undefined
+--line 42 of file Unsupervised_plant_counting.bib
+Warning--string name "dec" is undefined
+--line 89 of file Unsupervised_plant_counting.bib
+Warning--string name "oct" is undefined
+--line 104 of file Unsupervised_plant_counting.bib
+Warning--string name "may" is undefined
+--line 120 of file Unsupervised_plant_counting.bib
+Warning--string name "sep" is undefined
+--line 221 of file Unsupervised_plant_counting.bib
+Warning--string name "jan" is undefined
+--line 254 of file Unsupervised_plant_counting.bib
+Warning--string name "dec" is undefined
+--line 273 of file Unsupervised_plant_counting.bib
+Warning--string name "aug" is undefined
+--line 320 of file Unsupervised_plant_counting.bib
+Warning--string name "nov" is undefined
+--line 355 of file Unsupervised_plant_counting.bib
+Warning--string name "feb" is undefined
+--line 373 of file Unsupervised_plant_counting.bib
+Warning--string name "oct" is undefined
+--line 390 of file Unsupervised_plant_counting.bib
+Warning--string name "jan" is undefined
+--line 421 of file Unsupervised_plant_counting.bib
+Warning--string name "dec" is undefined
+--line 440 of file Unsupervised_plant_counting.bib
+Warning--string name "oct" is undefined
+--line 472 of file Unsupervised_plant_counting.bib
+Warning--string name "nov" is undefined
+--line 488 of file Unsupervised_plant_counting.bib
+Warning--string name "sep" is undefined
+--line 522 of file Unsupervised_plant_counting.bib
+Warning--string name "feb" is undefined
+--line 540 of file Unsupervised_plant_counting.bib
+Warning--string name "nov" is undefined
+--line 557 of file Unsupervised_plant_counting.bib
+Warning--string name "oct" is undefined
+--line 573 of file Unsupervised_plant_counting.bib
+Warning--string name "nov" is undefined
+--line 624 of file Unsupervised_plant_counting.bib
+Warning--string name "jan" is undefined
+--line 641 of file Unsupervised_plant_counting.bib
+Warning--string name "jun" is undefined
+--line 662 of file Unsupervised_plant_counting.bib
+Warning--string name "dec" is undefined
+--line 710 of file Unsupervised_plant_counting.bib
+Warning--string name "jan" is undefined
+--line 740 of file Unsupervised_plant_counting.bib
+Warning--string name "nov" is undefined
+--line 789 of file Unsupervised_plant_counting.bib
+Warning--string name "may" is undefined
+--line 822 of file Unsupervised_plant_counting.bib
+Warning--string name "dec" is undefined
+--line 850 of file Unsupervised_plant_counting.bib
+Warning--string name "aug" is undefined
+--line 873 of file Unsupervised_plant_counting.bib
+Warning--string name "jul" is undefined
+--line 904 of file Unsupervised_plant_counting.bib
+Warning--string name "oct" is undefined
+--line 958 of file Unsupervised_plant_counting.bib
+Warning--string name "sep" is undefined
+--line 974 of file Unsupervised_plant_counting.bib
+Warning--string name "mar" is undefined
+--line 1025 of file Unsupervised_plant_counting.bib
+Warning--string name "jan" is undefined
+--line 1034 of file Unsupervised_plant_counting.bib
+Warning--string name "oct" is undefined
+--line 1054 of file Unsupervised_plant_counting.bib
+Warning--string name "aug" is undefined
+--line 1071 of file Unsupervised_plant_counting.bib
+Warning--I didn't find a database entry for "velumaniEstimatesMaizePlant2021"
+Warning--empty author in PP13332024
+Warning--empty publisher in zhangMetaDETRFewShotObject2021
+You've used 51 entries,
+            2887 wiz_defined-function locations,
+            936 strings with 19335 characters,
+and the built_in function-call counts, 22911 in all, are:
+= -- 1883
+> -- 1715
+< -- 14
++ -- 759
+- -- 465
+* -- 2046
+:= -- 3417
+add.period$ -- 173
+call.type$ -- 51
+change.case$ -- 51
+chr.to.int$ -- 50
+cite$ -- 61
+duplicate$ -- 938
+empty$ -- 1698
+format.name$ -- 557
+if$ -- 4886
+int.to.chr$ -- 2
+int.to.str$ -- 51
+missing$ -- 34
+newline$ -- 278
+num.names$ -- 131
+pop$ -- 610
+preamble$ -- 0
+purify$ -- 51
+quote$ -- 0
+skip$ -- 781
+stack$ -- 0
+substring$ -- 786
+swap$ -- 248
+text.length$ -- 10
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 351
+warning$ -- 2
+while$ -- 140
+width$ -- 0
+write$ -- 672
+(There were 39 warnings)

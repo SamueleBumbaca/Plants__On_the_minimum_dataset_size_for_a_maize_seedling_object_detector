@@ -77,7 +77,7 @@
 
 %=================================================================
 % Full title of the paper (Capitalized)
-\Title{On the minimum dataset size and quality for a maize seedling object detector}
+\Title{On the minimum dataset size and quality for a plant counting object detector}
 
 % MDPI internal command: Title for citation in the left column
 \TitleCitation{Title}
@@ -204,9 +204,12 @@ in the main text and should not exaggerate the main conclusions.}
 % (e.g., the positioning of the Materials and Methods section). Please check the instructions 
 % on the authors' page of the journal to verify the correct order and names. For any 
 % questions, please contact the editorial office of the journal or support@mdpi.com. 
-% For LaTeX-related questions please contact latex@mdpi.com.%\endnote{This is an endnote.} % To use endnotes, please un-comment \printendnotes below (before References). Only journal Laws uses \footnote.
+% For LaTeX-related questions please contact latex@mdpi.com.%\endnote{This is an endnote.} 
+% To use endnotes, please un-comment \printendnotes below (before References). 
+% Only journal Laws uses \footnote.
 
-% % The order of the section titles is different for some journals. Please refer to the "Instructions for Authors” on the journal homepage.
+% The order of the section titles is different for some journals. Please refer to 
+% the "Instructions for Authors” on the journal homepage.
 
 \section{Introduction}
 
@@ -227,87 +230,79 @@ in the main text and should not exaggerate the main conclusions.}
 % Social Sciences, Tourism and Hospitality, Youth. 
 
 Plant counting is a critical operation in precision agriculture, plant breeding, 
-and agronomical evaluation. 
+and agronomical managing evaluation. 
 Accurate plant counts can provide valuable information for both farmers and researchers.
 This task was often performed manually by human operators. 
 Now a days this process can be automated by the use of computer vision algorithms.
 To validate a method for counting, it is critical to set a benchmark for accuracy. 
 A benchamrk can be defined by the accuracy of manual counting, international standards, 
 or by comparison with other methods.
-Accuracy of plant manual counting depends on human performance, so difficult to 
-define, but it is often taken as golden sample. 
+Accuracy of plant manual counting is difficult to determine, because it depends on
+many factors and no clear results are shown in litterature, but it is often taken as golden sample. 
 According to the European Plant Protection Organization, the benchmark for acceptance is 
 a coefficient of determination (r squared) of 0.85 when compared to manual counting \cite{PP13332024}.
 This corresponds to a Root Mean Square Error (RMSE) of approximately 0.39.
 Also scientific literature mention a r-squared value of 0.85 with ground truth (manual counting) 
 as a benchmark for acceptance \cite{zouMaizeTasselsDetection2020}.
-Litterature shows that benchmark for acceptance can be achieved with computer vision object detection
+Litterature shows that benchmark for acceptance can be achieved with object detection
  \cite{liuIntegrateNetDeepLearning2022,davidPlantDetectionCounting2021,barretoAutomaticUAVbasedCounting2021}
-or regression models \cite{liuEstimatingMaizeSeedling2022,EstimatesMaizePlant}.
+or regression models \cite{liuEstimatingMaizeSeedling2022,velumaniEstimatesMaizePlant2021}.
 A superiority of object detection over regression models in terms of accuracy was found
 \cite{zouMaizeTasselsDetection2020}. Object detection is also more versatile than
-regression models, because, object detection model inference on georeferenced orthomosaics can be used to
+regression models, because, inference on georeferenced orthomosaics can be used to
 verify plant presence through its coordinates throughout the vegetative phases.
-This is not possible with regression models, because they can only predict the number of plants in an image.
 
-The ability to identify and locate the objects within an image are the main features of object detection models.
-The validation of this ability rely on metrics as Intersection over Union (IoU),
-Average Precision (AP), and Average Recall (AR) \cite{linMicrosoftCOCOCommon2015} rather than
-the coefficient of determination. 
+Object detection algorithms are designed to identify and locate objects within an image.
 Identification supports are usually bounding boxes, which are rectangles that enclose
 the object of interest, but they can also be points or other kind of polygons.
 Counting of plants is then commonly performed by counting the number of bounding boxes 
 that enclose the objects of interest (the plant) in a image area.
 Georeferenced orthomosaics are images created through aerial photogrammetry, a process 
-that involves capturing overlapping aerial georeferenced images taken by nadiral view
-(and/or picturing georeferenced ground control points), and performing boundle adjustment to form 
+that involves capturing overlapping aerial georeferenced images taken in nadiral view
+and georeferenced ground control points, then performing boundle adjustment to form 
 a single, seamless image \cite{krausPhotogrammetryGeometryImages2011}.
 Georeferenced orthomosaics are scaled and oriented to a geographical coordinate system.
 It implies that the pixel coordinates and size correspond to 
 geographical coordinates and are projectables in a metric system.
 Using georeferenced orthomosaics in seedling counting makes object detection 
 easier, because the metric scale can be used to locate the objects 
-in the image and prospective variance is reduced to zero.
+in the image and prospective variance is reduced.
 
 The development of object detection algorithms has evolved from not machine learning methods, 
 here named handcrafted methods (HC), to modern deep learning-based (DL) techniques.
 Pratically all the state-of-the-art object detection methods are based on DL models
-now a days. Nethertheless, HC methods are still used in some cases \cite{davidPlantDetectionCounting2021}. 
+now a days. Nethertheless, HC methods are still used in some cases, in particular
+to extract the in-domain dataset for training a DL model. This practice has some pros and cons,
+in particular: it reduces the efford in manual labelling, but it may introduce bias in the training dataset. 
 Modern DL object detection uses CNN-based frameworks (e.g., Faster R-CNN \cite{FasterRCNNRealTime}, YOLO \cite{YouOnlyLook}) 
 and Transformer-based approaches (e.g., DETR \cite{carionEndtoEndObjectDetection2020}).
 The main difference between CNN-based and Transformer-based models is the way they
 process the image. CNN-based models process the image in a grid-like fashion,
 while Transformer-based models process the image as a sequence of patches.
-On common benchmarks as COCO \cite{linMicrosoftCOCOCommon2015}, PASCAL VOC \cite{jingSelfsupervisedVisualFeature2019}, 
-and ImageNet \cite{14090575ImageNetLarge}, Transformer-based models have shown 
-to be more accurate than CNN-based models \cite{zongDETRsCollaborativeHybrid2023} .
+On common benchmarks as COCO, PASCAL VOC, and ImageNet, Transformer-based models have shown 
+to be more accurate than CNN-based models CiteHere .
 Nethertheless CNN-based models are still widely used in object detection, because they are
-more efficient in processing small images and have a lower computational cost \cite{khanSurveyVisionTransformers2023}.
+more efficient in processing small images and have a lower computational cost CiteHere . 
 One of the critical challenges in training effective DL object detection models is 
 the availability of a sufficiently large and high-quality dataset. 
 Recently, zero-shot and few-shot object detection have emerged as promising paradigms
-to alleviate the need for large annotated datasets .
+to alleviate the need for large annotated datasets.
 While traditional object detection models (many-shots object detectors) require extensive labeled data for training, 
 few-shot and zero-shot object detection aim to detect novel objects with little to 
 no labeled examples respectivelly.
 They often leverage feature transfer or meta-learning components to generalize 
-across classes under extreme data scarcity \cite{liMetaSGDLearningLearn2017}. This approach reduces the annotation 
+across classes under extreme data scarcity. This approach reduces the annotation 
 burden and is especially beneficial in domains where collecting exhaustive training 
-data is impractical.
+data is impractical CiteHere .
 Zero-shot object detection detects new categories without any training samples by 
-leveraging semantic relationships or contextual information learned from known classes \cite{bansalZeroShotObjectDetection2018}. 
-Few-shot approaches optimize models to learn quickly from a handful of labeled examples \cite{huangSurveySelfSupervisedFewShot2022}.
-Meta learning is a common approach in few-shot object detection 
-\cite{MetaLearningBasedIncrementalFewShot,wuMetaRCNNMetaLearning2020,fuMetaSSDFastAdaptation2019,zhangMetaDETRFewShotObject2021}, 
-while Cross-Domain Few-Shot Object Detection (CD-FSOD) has recently surpassed this
-approach by leveraging domain adaptation techniques \cite{saBroaderStudyCrossdomain2023}.
+leveraging semantic relationships or contextual information learned from known classes CiteHere . 
+Few-shot approaches optimize models to learn quickly from a handful of labeled examples CiteHere . 
 % Some prominent zero-shot models include LSDA, ViLD, and ZSD; among the few-shot methods, 
 % TFA, FSCE, and Meta R-CNN/DETR are commonly cited for their strong performance 
 % under data-scarce conditions.
-Zero-shot actual state-of-the-art object detector models are YOLO-World \cite{kangFewshotObjectDetection2019} , 
-OWLv2 \cite{mindererScalingOpenVocabularyObject2023} , and Grounding DINO \cite{liuGroundingDINOMarrying2025} .  
-DE-ViT \cite{xuDeViTDecomposingVision2023}  and CD-ViTO \cite{fuCrossDomainFewShotObject2024}  
-are the latest models that have shown promising results in few-shot object detection.
+Zero-shot actual state-of-the-art object detector models are YOLO-World CiteHere , OWLv2 CiteHere , and Grounding DINO CiteHere .  
+DE-ViT CiteHere  and CD-ViTO CiteHere  are the latest models that have shown promising results in few-shot
+object detection.
 
 Many studies have been conducted on object detection for plants in open field
 \cite{barretoAutomaticUAVbasedCounting2021,gengResearchSegmentationMethod2024,jiangDeepSeedlingDeepConvolutional2019,katariIntegratingAutomatedLabeling2024,kitanoCornPlantCounting2019,liDCYOLOImprovedField2024,liSeedlingMaizeCounting2022,liuIntegrateNetDeepLearning2022,liuEstimatingMaizeSeedling2022,luTasselNetCountingMaize2017,macheferMaskRCNNRefitting2020,velumaniEstimatesMaizePlant2021,wangPlotLevelMaizeEarly2023,zhaoStudyLightweightModel2023},
@@ -321,7 +316,7 @@ Dataset size and quality predictability in DL has been proven to be
 addressable with empirical approaches \cite{hestnessDeepLearningScaling2017,mahmoodHowMuchMore2022}.
 As already mentioned, model architecture is critical in dataset requirements as different models may require
 different dataset sizes and qualities to achieve the same performance \cite{nguyenEvaluationDeepLearning2020,brigatoCloseLookDeep2020}.
-Backbone is pivotal on downstream tasks as object detection \cite{duSpineNetLearningScalePermuted2020}. 
+Backbone is pivotal on downstream tasks as object detection CiteHere . 
 The importance of using a domain specific backbone has been proven also
 for plant/leaves segmentation on orthomosaics \cite{roggiolaniDomainSpecificPreTraining2023},
 but backbone training is still proibitive for many applications.
@@ -349,10 +344,9 @@ images in the training set, and the accuracy of the annotations.
 Also the effect of training dataset source will be evaluated in this study.
 Models architecture and size will be taken into account, as long as the object detection
 downstream task is concerned. 
-After setting the dataset size and quality minimum requirements for many-shots
-object detectors, we will evaluate if new zero-shot and few-shot object detection
+After setting the dataset size and quality minimum requirements for traditional 
+DL object detectors, we will evaluate if new zero-shot and few-shot object detection
 models can achieve the same benchmark for acceptance with less data and annotations.
-We will also discuss the need for HC method in a DL object detection pipeline.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Materials and Methods}
@@ -383,52 +377,19 @@ a robust object detection model for maize seedlings, we conducted a series of ex
 where with recursivelly fit a series of models with increasing dataset size and quality.
 In this section we will first define the datasets used in the experiments, divided by 
 in-domain and out-of-distribution training datasets. 
-Then we will describe the architectures chosen to rapresent the 
+Then we will describe the handcrafted object detection algorithm used to get the 
+in-domain training datasets.
+Finally we will describe the architectures chosen to rapresent the 
 many-shots, few-shots, and zero-shots approaches.
-Finally we will describe a HC object detection algorithm to evaluate 
-it as a strategy to get the training datasets.
 
 \subsection{Datasets}
 
-This study uses two dataset sources as training sets: the out-of-distribution dataset (OOD)
-and the in-domain dataset (ID). The OOD is a dataset that is not from the same source as the
-inference dataset, while the ID is a dataset that is from the same source as the inference dataset.
-The OOD dataset is composed of images from scientific literature \cite{liuEstimatingMaizeSeedling2022,davidPlantDetectionCounting2021}
-and from internet repositories \cite{Maize_seedingDatasetOverview,MaizeseedlingdetectionDatasetOverview}
-The ID dataset was collected during this study.
-The OOD scientific dataset and the ID dataset are composed by tiles of georeferenced orthomosaics 
-of maize seedlings of known scale, while the OOD internet dataset is composed by RGB images of maize seedlings
-of unknown scale.
-
-\begin{table}[H]
-\caption{Summary of Datasets Used in the Study}
-\label{tab:datasets}
-\centering
-\begin{tabularx}{\textwidth}{lX}
-\toprule
-\textbf{Dataset} & \textbf{Description} \\
-\midrule
-OOD Scientific & Composed of tiles of georeferenced orthomosaics of maize seedlings from scientific literature \cite{liuEstimatingMaizeSeedling2022,davidPlantDetectionCounting2021}. \\
-OOD Internet & Composed of RGB images of maize seedlings from internet repositories \cite{Maize_seedingDatasetOverview,MaizeseedlingdetectionDatasetOverview}. \\
-ID & Collected during this study, composed of tiles of georeferenced orthomosaics of maize seedlings of known scale. \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-
-\subsection{many-shots object detectors}
-
-\subsection{few-shots object detectors}
-
-\subsection{zero-shots object detectors}
-
-\subsection{Handcrafted object detector}
+\subsection{Handcrafted object detection}
 
 Many HC object detectors for maize seedlings count have been proposed 
-in the literature. Unlike other works \cite{davidPlantDetectionCounting2021} 
-we wrote an HC algorithm to get accurate annotated dataset, 
-sacrifing the amount of images succesfully detected
-for the quality of the annotations. 
+in the literature. For this work we wrote an HC algorithm to get accurate 
+annotated dataset, sacrifing the amount of images succesfully detected
+for the quality of the annotations.
 
 This HC algorithm is havelly based on agronomical knowledge and color thresholding.
 For the execution of this algorithm, the user must set the following parameters:
@@ -438,7 +399,6 @@ For the execution of this algorithm, the user must set the following parameters:
     \item minimum and maxiumum leaf area for plant
     \item minimum distance between plants on rows
     \item distance inter rows
-\end{itemize}
 
 In summary, the HC algorithm is based on color thresholding, that rely on the
 manual setting of Hue, Saturation, and Value (HSV) color minimum and maximum
@@ -452,197 +412,203 @@ again with RANSAC to get the lines on the neighboring of the first line detected
 This as most of HC algoritm is intrinsically limited by the color thresholding.
 Our HC is based on the color of the maize seedlings, which is green.
 
+\subsection{many-shots object detectors}
+
+\subsection{few-shots object detectors}
+
+\subsection{zero-shots object detectors}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
 
-% This section may be divided by subheadings. It should provide a concise and precise 
-% description of the experimental results, their interpretation as well as the experimental 
-% conclusions that can be drawn.
+This section may be divided by subheadings. It should provide a concise and precise 
+description of the experimental results, their interpretation as well as the experimental 
+conclusions that can be drawn.
 
-% \subsection{Subsection}
-% \subsubsection{Subsubsection}
+\subsection{Subsection}
+\subsubsection{Subsubsection}
 
-% Bulleted lists look like this:
-% \begin{itemize}
-% \item	First bullet;
-% \item	Second bullet;
-% \item	Third bullet.
-% \end{itemize}
+Bulleted lists look like this:
+\begin{itemize}
+\item	First bullet;
+\item	Second bullet;
+\item	Third bullet.
+\end{itemize}
 
-% Numbered lists can be added as follows:
-% \begin{enumerate}
-% \item	First item; 
-% \item	Second item;
-% \item	Third item.
-% \end{enumerate}
+Numbered lists can be added as follows:
+\begin{enumerate}
+\item	First item; 
+\item	Second item;
+\item	Third item.
+\end{enumerate}
 
-% The text continues here.
+The text continues here.
 
-% \subsection{Figures, Tables and Schemes}
+\subsection{Figures, Tables and Schemes}
 
-% All figures and tables should be cited in the main text as Figure~\ref{fig1}, Table~\ref{tab1}, etc.
+All figures and tables should be cited in the main text as Figure~\ref{fig1}, Table~\ref{tab1}, etc.
 
-% \begin{figure}[H]
-% %\isPreprints{\centering}{} % Only used for preprints
-% \includegraphics[width=7 cm]{Definitions/logo-mdpi}
-% \caption{This is a figure. Schemes follow the same formatting.\label{fig1}}
-% \end{figure}   
-% \unskip
+\begin{figure}[H]
+%\isPreprints{\centering}{} % Only used for preprints
+\includegraphics[width=7 cm]{Definitions/logo-mdpi}
+\caption{This is a figure. Schemes follow the same formatting.\label{fig1}}
+\end{figure}   
+\unskip
 
-% \begin{table}[H] 
-% %\small % Change table font size
-% \caption{This is a table caption. Tables should be placed in the main text near to the first time they are~cited.\label{tab1}}
-% %\isPreprints{\centering}{} % Only used for preprints
-% \begin{tabularx}{\textwidth}{CCC}
-% \toprule
-% \textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}\\
-% \midrule
-% Entry 1		& Data			& Data\\
-% Entry 2		& Data			& Data \textsuperscript{1}\\
-% \bottomrule
-% \end{tabularx}
+\begin{table}[H] 
+%\small % Change table font size
+\caption{This is a table caption. Tables should be placed in the main text near to the first time they are~cited.\label{tab1}}
+%\isPreprints{\centering}{} % Only used for preprints
+\begin{tabularx}{\textwidth}{CCC}
+\toprule
+\textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}\\
+\midrule
+Entry 1		& Data			& Data\\
+Entry 2		& Data			& Data \textsuperscript{1}\\
+\bottomrule
+\end{tabularx}
 
-% \noindent{\footnotesize{\textsuperscript{1} Tables may have a footer.}}
-% \end{table}
+\noindent{\footnotesize{\textsuperscript{1} Tables may have a footer.}}
+\end{table}
 
-% The text continues here (Figure~\ref{fig2} and Table~\ref{tab2}).
+The text continues here (Figure~\ref{fig2} and Table~\ref{tab2}).
 
-% % Example of a figure that spans the whole page width and with subfigures. The same concept works for tables, too.
-% \begin{figure}[H]
-% \centering
-% %\isPreprints{}{% This command is only used for ``preprints''.
-% \begin{adjustwidth}{-\extralength}{0cm}
-% %} % If the paper is ``preprints'', please uncomment this parenthesis.
-% \subfloat[\centering]{\includegraphics[width=7.7cm]{Definitions/logo-mdpi}}
-% \hfill
-% \subfloat[\centering]{\includegraphics[width=7.7cm]{Definitions/logo-mdpi}}\\
-% \subfloat[\centering]{\includegraphics[width=7.7cm]{Definitions/logo-mdpi}}
-% \hfill
-% \subfloat[\centering]{\includegraphics[width=7.7cm]{Definitions/logo-mdpi}}
-% %\isPreprints{}{% This command is only used for ``preprints''.
-% \end{adjustwidth}
-% %} % If the paper is ``preprints'', please uncomment this parenthesis.
-% \caption{This is a wide figure. Schemes follow the same formatting. If there are multiple panels, they should be listed as: (\textbf{a}) Description of what is contained in the first panel. (\textbf{b}) Description of what is contained in the second panel. (\textbf{c}) Description of what is contained in the third panel. (\textbf{d}) Description of what is contained in the fourth panel. Figures should be placed in the main text near to the first time they are cited. A caption on a single line should be centered.\label{fig2}}
-% \end{figure} 
+% Example of a figure that spans the whole page width and with subfigures. The same concept works for tables, too.
+\begin{figure}[H]
+\centering
+%\isPreprints{}{% This command is only used for ``preprints''.
+\begin{adjustwidth}{-\extralength}{0cm}
+%} % If the paper is ``preprints'', please uncomment this parenthesis.
+\subfloat[\centering]{\includegraphics[width=7.7cm]{Definitions/logo-mdpi}}
+\hfill
+\subfloat[\centering]{\includegraphics[width=7.7cm]{Definitions/logo-mdpi}}\\
+\subfloat[\centering]{\includegraphics[width=7.7cm]{Definitions/logo-mdpi}}
+\hfill
+\subfloat[\centering]{\includegraphics[width=7.7cm]{Definitions/logo-mdpi}}
+%\isPreprints{}{% This command is only used for ``preprints''.
+\end{adjustwidth}
+%} % If the paper is ``preprints'', please uncomment this parenthesis.
+\caption{This is a wide figure. Schemes follow the same formatting. If there are multiple panels, they should be listed as: (\textbf{a}) Description of what is contained in the first panel. (\textbf{b}) Description of what is contained in the second panel. (\textbf{c}) Description of what is contained in the third panel. (\textbf{d}) Description of what is contained in the fourth panel. Figures should be placed in the main text near to the first time they are cited. A caption on a single line should be centered.\label{fig2}}
+\end{figure} 
 
-% \begin{table}[H]
-% \caption{This is a wide table.\label{tab2}}
-% %\isPreprints{\centering}{% This command is only used for ``preprints''.
-% 	\begin{adjustwidth}{-\extralength}{0cm}
-% %} % If the paper is ``preprints'', please uncomment this parenthesis.
-% %\isPreprints{\begin{tabularx}{\textwidth}{CCCC}}{% This command is only used for ``preprints''.
-% 		\begin{tabularx}{\fulllength}{CCCC}
-% %} % If the paper is ``preprints'', please uncomment this parenthesis.
-% 			\toprule
-% 			\textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}     & \textbf{Title 4}\\
-% 			\midrule
-% \multirow[m]{3}{*}{Entry 1 *}	& Data			& Data			& Data\\
-% 			  	                   & Data			& Data			& Data\\
-% 			             	      & Data			& Data			& Data\\
-%                    \midrule
-% \multirow[m]{3}{*}{Entry 2}    & Data			& Data			& Data\\
-% 			  	                  & Data			& Data			& Data\\
-% 			             	     & Data			& Data			& Data\\
-% 			\bottomrule
-% 		\end{tabularx}
-% %		\isPreprints{}{% This command is only used for ``preprints''.
-% 	\end{adjustwidth}
-% %} % If the paper is ``preprints'', please uncomment this parenthesis.
-% 	\noindent{\footnotesize{* Tables may have a footer.}}
-% \end{table}
+\begin{table}[H]
+\caption{This is a wide table.\label{tab2}}
+%\isPreprints{\centering}{% This command is only used for ``preprints''.
+	\begin{adjustwidth}{-\extralength}{0cm}
+%} % If the paper is ``preprints'', please uncomment this parenthesis.
+%\isPreprints{\begin{tabularx}{\textwidth}{CCCC}}{% This command is only used for ``preprints''.
+		\begin{tabularx}{\fulllength}{CCCC}
+%} % If the paper is ``preprints'', please uncomment this parenthesis.
+			\toprule
+			\textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}     & \textbf{Title 4}\\
+			\midrule
+\multirow[m]{3}{*}{Entry 1 *}	& Data			& Data			& Data\\
+			  	                   & Data			& Data			& Data\\
+			             	      & Data			& Data			& Data\\
+                   \midrule
+\multirow[m]{3}{*}{Entry 2}    & Data			& Data			& Data\\
+			  	                  & Data			& Data			& Data\\
+			             	     & Data			& Data			& Data\\
+			\bottomrule
+		\end{tabularx}
+%		\isPreprints{}{% This command is only used for ``preprints''.
+	\end{adjustwidth}
+%} % If the paper is ``preprints'', please uncomment this parenthesis.
+	\noindent{\footnotesize{* Tables may have a footer.}}
+\end{table}
 
-% %\begin{listing}[H]
-% %\caption{Title of the listing}
-% %\rule{\columnwidth}{1pt}
-% %\raggedright Text of the listing. In font size footnotesize, small, or normalsize. Preferred format: left aligned and single spaced. Preferred border format: top border line and bottom border line.
-% %\rule{\columnwidth}{1pt}
-% %\end{listing}
+%\begin{listing}[H]
+%\caption{Title of the listing}
+%\rule{\columnwidth}{1pt}
+%\raggedright Text of the listing. In font size footnotesize, small, or normalsize. Preferred format: left aligned and single spaced. Preferred border format: top border line and bottom border line.
+%\rule{\columnwidth}{1pt}
+%\end{listing}
 
-% Text.
+Text.
 
-% Text.
+Text.
 
-% \subsection{Formatting of Mathematical Components}
+\subsection{Formatting of Mathematical Components}
 
-% This is the example 1 of equation:
-% \begin{linenomath}
-% \begin{equation}
-% a = 1,
-% \end{equation}
-% \end{linenomath}
-% the text following an equation need not be a new paragraph. Please punctuate equations as regular text.
-% %% If the documentclass option "submit" is chosen, please insert a blank line before and after any math environment (equation and eqnarray environments). This ensures correct linenumbering. The blank line should be removed when the documentclass option is changed to "accept" because the text following an equation should not be a new paragraph.
+This is the example 1 of equation:
+\begin{linenomath}
+\begin{equation}
+a = 1,
+\end{equation}
+\end{linenomath}
+the text following an equation need not be a new paragraph. Please punctuate equations as regular text.
+%% If the documentclass option "submit" is chosen, please insert a blank line before and after any math environment (equation and eqnarray environments). This ensures correct linenumbering. The blank line should be removed when the documentclass option is changed to "accept" because the text following an equation should not be a new paragraph.
 
-% This is the example 2 of equation:
-% %\isPreprints{}{% This command is only used for ``preprints''.
-% \begin{adjustwidth}{-\extralength}{0cm}
-% %} % If the paper is ``preprints'', please uncomment this parenthesis.
-% \begin{equation}
-% a = b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + w + x + y + z
-% \end{equation}
-% %\isPreprints{}{% This command is only used for ``preprints''.
-% \end{adjustwidth}
-% %} % If the paper is ``preprints'', please uncomment this parenthesis.
+This is the example 2 of equation:
+%\isPreprints{}{% This command is only used for ``preprints''.
+\begin{adjustwidth}{-\extralength}{0cm}
+%} % If the paper is ``preprints'', please uncomment this parenthesis.
+\begin{equation}
+a = b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + w + x + y + z
+\end{equation}
+%\isPreprints{}{% This command is only used for ``preprints''.
+\end{adjustwidth}
+%} % If the paper is ``preprints'', please uncomment this parenthesis.
 
-% % Example of a page in landscape format (with table and table footnote).
-% \startlandscape
-% \begin{table}[H] %% Table in wide page
-% %\isPreprints{\centering}{} % This command is only used for ``preprints''.
-% \caption{This is a very wide table.\label{tab3}}
-% 	\begin{tabularx}{\textwidth}{CCCC}
-% 		\toprule
-% 		\textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}	& \textbf{Title 4}\\
-% 		\midrule
-% 		Entry 1		& Data			& Data			& This cell has some longer content that runs over two lines.\\
-% 		Entry 2		& Data			& Data			& Data\textsuperscript{1}\\
-% 		\bottomrule
-% 	\end{tabularx}
-% %\isPreprints{}{% This command is only used for ``preprints''.
-% 	\begin{adjustwidth}{+\extralength}{0cm}
-% %} % If the paper is ``preprints'', please uncomment this parenthesis.
-% 		\noindent\footnotesize{\textsuperscript{1} This is a table footnote.}
-% %\isPreprints{}{% This command is only used for ``preprints''.
-% 	\end{adjustwidth}
-% %} % If the paper is ``preprints'', please uncomment this parenthesis.
-% \end{table}
-% \finishlandscape
+% Example of a page in landscape format (with table and table footnote).
+\startlandscape
+\begin{table}[H] %% Table in wide page
+%\isPreprints{\centering}{} % This command is only used for ``preprints''.
+\caption{This is a very wide table.\label{tab3}}
+	\begin{tabularx}{\textwidth}{CCCC}
+		\toprule
+		\textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}	& \textbf{Title 4}\\
+		\midrule
+		Entry 1		& Data			& Data			& This cell has some longer content that runs over two lines.\\
+		Entry 2		& Data			& Data			& Data\textsuperscript{1}\\
+		\bottomrule
+	\end{tabularx}
+%\isPreprints{}{% This command is only used for ``preprints''.
+	\begin{adjustwidth}{+\extralength}{0cm}
+%} % If the paper is ``preprints'', please uncomment this parenthesis.
+		\noindent\footnotesize{\textsuperscript{1} This is a table footnote.}
+%\isPreprints{}{% This command is only used for ``preprints''.
+	\end{adjustwidth}
+%} % If the paper is ``preprints'', please uncomment this parenthesis.
+\end{table}
+\finishlandscape
 
 
-% Please punctuate equations as regular text. Theorem-type environments (including propositions, 
-% lemmas, corollaries etc.) can be formatted as follows:
-% %% Example of a theorem:
-% \begin{Theorem}
-% Example text of a theorem.
-% \end{Theorem}
+Please punctuate equations as regular text. Theorem-type environments (including propositions, 
+lemmas, corollaries etc.) can be formatted as follows:
+%% Example of a theorem:
+\begin{Theorem}
+Example text of a theorem.
+\end{Theorem}
 
-% The text continues here. Proofs must be formatted as follows:
+The text continues here. Proofs must be formatted as follows:
 
-% %% Example of a proof:
-% \begin{proof}[Proof of Theorem 1]
-% Text of the proof. Note that the phrase ``of Theorem 1'' is optional if it is clear 
-% which theorem is being referred to.
-% \end{proof}
-% The text continues here.
+%% Example of a proof:
+\begin{proof}[Proof of Theorem 1]
+Text of the proof. Note that the phrase ``of Theorem 1'' is optional if it is clear 
+which theorem is being referred to.
+\end{proof}
+The text continues here.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
 
-% Authors should discuss the results and how they can be interpreted from the perspective 
-% of previous studies and of the working hypotheses. The findings and their implications 
-% should be discussed in the broadest context possible. Future research directions 
-% may also be highlighted.
+Authors should discuss the results and how they can be interpreted from the perspective 
+of previous studies and of the working hypotheses. The findings and their implications 
+should be discussed in the broadest context possible. Future research directions 
+may also be highlighted.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
 
-% This section is not mandatory, but can be added to the manuscript if the discussion 
-% is unusually long or complex.
+This section is not mandatory, but can be added to the manuscript if the discussion 
+is unusually long or complex.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{Patents}
+\section{Patents}
 
-% This section is not mandatory, but may be added if there are patents resulting from 
-% the work reported in this manuscript.
+This section is not mandatory, but may be added if there are patents resulting from 
+the work reported in this manuscript.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{6pt} 
@@ -815,9 +781,9 @@ Tables, etc. should be labeled, starting with ``A''---e.g., Figure A1, Figure A2
 %=====================================
 \bibliography{Unsupervised_plant_counting}
 
-% %=====================================
-% % References, variant B: internal bibliography
-% %=====================================
+%=====================================
+% References, variant B: internal bibliography
+%=====================================
 
 % % ACS format
 % \isAPAandChicago{}{%

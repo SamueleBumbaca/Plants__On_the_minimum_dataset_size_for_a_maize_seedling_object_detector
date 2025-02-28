@@ -1,0 +1,4 @@
+model_id,count_accuracy,precision,recall,f1,map
+yolov8m_dataset_1_exp_dataset_reference_1,1.0,1.0,1.0,1.0,1.0
+yolov8m_dataset_2_exp_dataset_reference_2,1.0,1.0,1.0,1.0,1.0
+yolov8m_dataset_3_exp_dataset_reference_3,1.0,1.0,1.0,1.0,1.0
