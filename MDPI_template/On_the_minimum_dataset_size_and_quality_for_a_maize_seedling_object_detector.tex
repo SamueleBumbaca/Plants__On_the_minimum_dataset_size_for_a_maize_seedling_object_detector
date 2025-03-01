@@ -289,8 +289,9 @@ Recently, zero-shot and few-shot object detection have emerged as promising para
 to alleviate the need for large annotated datasets .
 While traditional object detection models (many-shots object detectors) require extensive labeled data for training, 
 few-shot and zero-shot object detection aim to detect novel objects with little to 
-no labeled examples respectivelly.
-They often leverage feature transfer or meta-learning components to generalize 
+no labeled examples respectivelly. The term "shot" refers to the number of annotations (plants for this study) 
+used to train the model over all the images.
+Zero and few-shots approaches often leverage feature transfer or meta-learning components to generalize 
 across classes under extreme data scarcity \cite{liMetaSGDLearningLearn2017}. This approach reduces the annotation 
 burden and is especially beneficial in domains where collecting exhaustive training 
 data is impractical.
@@ -311,10 +312,19 @@ are the latest models that have shown promising results in few-shot object detec
 
 Many studies have been conducted on object detection for plants in open field
 \cite{barretoAutomaticUAVbasedCounting2021,gengResearchSegmentationMethod2024,jiangDeepSeedlingDeepConvolutional2019,katariIntegratingAutomatedLabeling2024,kitanoCornPlantCounting2019,liDCYOLOImprovedField2024,liSeedlingMaizeCounting2022,liuIntegrateNetDeepLearning2022,liuEstimatingMaizeSeedling2022,luTasselNetCountingMaize2017,macheferMaskRCNNRefitting2020,velumaniEstimatesMaizePlant2021,wangPlotLevelMaizeEarly2023,zhaoStudyLightweightModel2023},
-but few have focused on minimum requirements for training a robust object detector
-\cite{davidPlantDetectionCounting2021,andvaagCountingCanolaGeneralizable2024}, and only one
-specifically tried to minimize the size of the training dataset to 600 512*512 RGB images \cite{karamiAutomaticPlantCounting2020}.
-It is well known that the performance of a DL model is directly related to the
+but few have focused on dataset minimum requirements for training a robust plant object detector
+\cite{davidPlantDetectionCounting2021,andvaagCountingCanolaGeneralizable2024},
+Some study focused on few-shots approach for plant counting 
+CiteHere(One to All: Toward a Unified Model for Counting Cereal Crop Heads Based on Few-Shot Learning)
+CiteHere(AdaTreeFormer: Few shot domain adaptation for tree counting from a single high-resolution image)
+but only two specifically accounting on few-shots method for maize seedling counting \cite{karamiAutomaticPlantCounting2020}
+CiteHere(Advancing Image Recognition: Towards Lightweight Few-shot Learning Model for Maize Seedling Detection).
+These lasts set the few-shot benchmark for maize seedling counting at 600 examples.
+No zero-shot benchmark for maize seedling counting has been set yet, and no research has been done yet.
+
+Even if no research has been made in order to minimize or set a benchamrk for the dataset size and quality
+required to train a maize seedling object detector,
+it is well known that the performance of a DL model is directly related to the
 amount of data used for training \cite{sunRevisitingUnreasonableEffectiveness2017} and 
 its quality \cite{alhazmiEffectsAnnotationQuality2021}.
 Dataset size and quality predictability in DL has been proven to be
@@ -325,9 +335,15 @@ Backbone is pivotal on downstream tasks as object detection \cite{duSpineNetLear
 The importance of using a domain specific backbone has been proven also
 for plant/leaves segmentation on orthomosaics \cite{roggiolaniDomainSpecificPreTraining2023},
 but backbone training is still proibitive for many applications.
+No backbone weights specialized on agricultural orthomosaics has been published yet,
+as for the most of the specialized domains. So, because of limited resourches, 
+ùonly the use of a general backbone is possible for this study, 
+even if a decreasing in dataset size requirements is expected with a domain specific 
+backbone \cite{roggiolaniDomainSpecificPreTraining2023}.
 
 Nethertheless, the most important factor affecting the dataset size for a plant counting
-object detector is the dataset source CiteHere . It has been observed that using training samples from the same
+object detector is the dataset source \cite{davidPlantDetectionCounting2021,andvaagCountingCanolaGeneralizable2024}. 
+It has been observed that using training samples from the same
 dataset as the inference (in-domain dataset) increases accuracy and reduce the need 
 for a large dataset in respect to collecting training samples from other 
 datasets (out-of-distribution dataset) \cite{davidPlantDetectionCounting2021,andvaagCountingCanolaGeneralizable2024}. 
