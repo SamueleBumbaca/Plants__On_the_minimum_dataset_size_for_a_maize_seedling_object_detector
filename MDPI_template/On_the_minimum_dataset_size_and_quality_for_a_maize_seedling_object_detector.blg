@@ -1,125 +1,185 @@
-This is BibTeX, Version 0.99d
+This is BibTeX, Version 0.99d (TeX Live 2024)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: On_the_minimum_dataset_size_and_quality_for_a_maize_seedling_object_detector.aux
-Reallocating 'name_of_file' (item size: 1) to 17 items.
 The style file: Definitions/mdpi.bst
-Reallocating 'name_of_file' (item size: 1) to 28 items.
 Database file #1: Unsupervised_plant_counting.bib
+Warning--string name "oct" is undefined
+--line 12 of file Unsupervised_plant_counting.bib
 Warning--string name "apr" is undefined
---line 23 of file Unsupervised_plant_counting.bib
-Warning--string name "nov" is undefined
---line 83 of file Unsupervised_plant_counting.bib
-Warning--string name "dec" is undefined
---line 177 of file Unsupervised_plant_counting.bib
-Warning--string name "oct" is undefined
---line 207 of file Unsupervised_plant_counting.bib
-Warning--string name "may" is undefined
---line 239 of file Unsupervised_plant_counting.bib
-Warning--string name "sep" is undefined
---line 441 of file Unsupervised_plant_counting.bib
-Warning--string name "jan" is undefined
---line 507 of file Unsupervised_plant_counting.bib
-Warning--string name "dec" is undefined
---line 545 of file Unsupervised_plant_counting.bib
+--line 29 of file Unsupervised_plant_counting.bib
 Warning--string name "aug" is undefined
---line 639 of file Unsupervised_plant_counting.bib
+--line 59 of file Unsupervised_plant_counting.bib
 Warning--string name "nov" is undefined
---line 709 of file Unsupervised_plant_counting.bib
-Warning--string name "feb" is undefined
---line 745 of file Unsupervised_plant_counting.bib
-Warning--string name "oct" is undefined
---line 779 of file Unsupervised_plant_counting.bib
-Warning--string name "jan" is undefined
---line 841 of file Unsupervised_plant_counting.bib
+--line 92 of file Unsupervised_plant_counting.bib
+Warning--string name "mar" is undefined
+--line 112 of file Unsupervised_plant_counting.bib
+Warning--string name "aug" is undefined
+--line 147 of file Unsupervised_plant_counting.bib
 Warning--string name "dec" is undefined
---line 879 of file Unsupervised_plant_counting.bib
+--line 172 of file Unsupervised_plant_counting.bib
+Warning--string name "apr" is undefined
+--line 205 of file Unsupervised_plant_counting.bib
 Warning--string name "oct" is undefined
---line 943 of file Unsupervised_plant_counting.bib
-Warning--string name "nov" is undefined
---line 975 of file Unsupervised_plant_counting.bib
-Warning--string name "sep" is undefined
---line 1043 of file Unsupervised_plant_counting.bib
-Warning--string name "feb" is undefined
---line 1079 of file Unsupervised_plant_counting.bib
-Warning--string name "nov" is undefined
---line 1113 of file Unsupervised_plant_counting.bib
-Warning--string name "oct" is undefined
---line 1145 of file Unsupervised_plant_counting.bib
-Warning--string name "nov" is undefined
---line 1247 of file Unsupervised_plant_counting.bib
-Warning--string name "jan" is undefined
---line 1281 of file Unsupervised_plant_counting.bib
-Warning--string name "jun" is undefined
---line 1323 of file Unsupervised_plant_counting.bib
-Warning--string name "dec" is undefined
---line 1419 of file Unsupervised_plant_counting.bib
-Warning--string name "jan" is undefined
---line 1479 of file Unsupervised_plant_counting.bib
-Warning--string name "nov" is undefined
---line 1577 of file Unsupervised_plant_counting.bib
+--line 222 of file Unsupervised_plant_counting.bib
 Warning--string name "may" is undefined
---line 1643 of file Unsupervised_plant_counting.bib
+--line 238 of file Unsupervised_plant_counting.bib
+Warning--string name "apr" is undefined
+--line 303 of file Unsupervised_plant_counting.bib
+Warning--string name "may" is undefined
+--line 331 of file Unsupervised_plant_counting.bib
+Warning--string name "jun" is undefined
+--line 361 of file Unsupervised_plant_counting.bib
+Warning--string name "sep" is undefined
+--line 424 of file Unsupervised_plant_counting.bib
+Warning--string name "apr" is undefined
+--line 457 of file Unsupervised_plant_counting.bib
+Warning--string name "jan" is undefined
+--line 477 of file Unsupervised_plant_counting.bib
+Warning--string name "nov" is undefined
+--line 497 of file Unsupervised_plant_counting.bib
+Warning--string name "jun" is undefined
+--line 524 of file Unsupervised_plant_counting.bib
 Warning--string name "dec" is undefined
---line 1699 of file Unsupervised_plant_counting.bib
+--line 541 of file Unsupervised_plant_counting.bib
+Warning--string name "aug" is undefined
+--line 588 of file Unsupervised_plant_counting.bib
+Warning--string name "jun" is undefined
+--line 613 of file Unsupervised_plant_counting.bib
+Warning--string name "nov" is undefined
+--line 648 of file Unsupervised_plant_counting.bib
+Warning--string name "feb" is undefined
+--line 666 of file Unsupervised_plant_counting.bib
+Warning--string name "jan" is undefined
+--line 683 of file Unsupervised_plant_counting.bib
+Warning--string name "oct" is undefined
+--line 693 of file Unsupervised_plant_counting.bib
+Warning--string name "jan" is undefined
+--line 724 of file Unsupervised_plant_counting.bib
+Warning--string name "oct" is undefined
+--line 744 of file Unsupervised_plant_counting.bib
+Warning--string name "dec" is undefined
+--line 761 of file Unsupervised_plant_counting.bib
+Warning--string name "oct" is undefined
+--line 793 of file Unsupervised_plant_counting.bib
+Warning--string name "may" is undefined
+--line 808 of file Unsupervised_plant_counting.bib
+Warning--string name "nov" is undefined
+--line 828 of file Unsupervised_plant_counting.bib
+Warning--string name "sep" is undefined
+--line 862 of file Unsupervised_plant_counting.bib
+Warning--string name "feb" is undefined
+--line 879 of file Unsupervised_plant_counting.bib
+Warning--string name "feb" is undefined
+--line 897 of file Unsupervised_plant_counting.bib
+Warning--string name "nov" is undefined
+--line 914 of file Unsupervised_plant_counting.bib
+Warning--string name "nov" is undefined
+--line 931 of file Unsupervised_plant_counting.bib
+Warning--string name "oct" is undefined
+--line 947 of file Unsupervised_plant_counting.bib
+Warning--string name "nov" is undefined
+--line 998 of file Unsupervised_plant_counting.bib
+Warning--string name "jan" is undefined
+--line 1015 of file Unsupervised_plant_counting.bib
+Warning--string name "jun" is undefined
+--line 1036 of file Unsupervised_plant_counting.bib
+Warning--string name "feb" is undefined
+--line 1072 of file Unsupervised_plant_counting.bib
+Warning--string name "dec" is undefined
+--line 1102 of file Unsupervised_plant_counting.bib
+Warning--string name "aug" is undefined
+--line 1140 of file Unsupervised_plant_counting.bib
+Warning--string name "jan" is undefined
+--line 1157 of file Unsupervised_plant_counting.bib
+Warning--string name "feb" is undefined
+--line 1196 of file Unsupervised_plant_counting.bib
+Warning--string name "nov" is undefined
+--line 1224 of file Unsupervised_plant_counting.bib
+Warning--string name "sep" is undefined
+--line 1238 of file Unsupervised_plant_counting.bib
+Warning--string name "may" is undefined
+--line 1275 of file Unsupervised_plant_counting.bib
+Warning--string name "dec" is undefined
+--line 1303 of file Unsupervised_plant_counting.bib
+Warning--string name "jul" is undefined
+--line 1351 of file Unsupervised_plant_counting.bib
+Warning--string name "aug" is undefined
+--line 1368 of file Unsupervised_plant_counting.bib
+Warning--string name "jul" is undefined
+--line 1385 of file Unsupervised_plant_counting.bib
+Warning--string name "dec" is undefined
+--line 1403 of file Unsupervised_plant_counting.bib
+Warning--string name "jan" is undefined
+--line 1418 of file Unsupervised_plant_counting.bib
+Warning--string name "aug" is undefined
+--line 1450 of file Unsupervised_plant_counting.bib
+Warning--string name "nov" is undefined
+--line 1466 of file Unsupervised_plant_counting.bib
+Warning--string name "jul" is undefined
+--line 1499 of file Unsupervised_plant_counting.bib
+Warning--string name "oct" is undefined
+--line 1519 of file Unsupervised_plant_counting.bib
+Warning--string name "oct" is undefined
+--line 1564 of file Unsupervised_plant_counting.bib
+Warning--string name "jan" is undefined
+--line 1579 of file Unsupervised_plant_counting.bib
+Warning--string name "sep" is undefined
+--line 1590 of file Unsupervised_plant_counting.bib
+Warning--string name "feb" is undefined
+--line 1665 of file Unsupervised_plant_counting.bib
+Warning--string name "mar" is undefined
+--line 1682 of file Unsupervised_plant_counting.bib
+Warning--string name "apr" is undefined
+--line 1691 of file Unsupervised_plant_counting.bib
+Warning--string name "jan" is undefined
+--line 1708 of file Unsupervised_plant_counting.bib
+Warning--string name "oct" is undefined
+--line 1728 of file Unsupervised_plant_counting.bib
 Warning--string name "aug" is undefined
 --line 1745 of file Unsupervised_plant_counting.bib
-Warning--string name "jul" is undefined
---line 1807 of file Unsupervised_plant_counting.bib
-Warning--string name "oct" is undefined
---line 1915 of file Unsupervised_plant_counting.bib
-Warning--string name "sep" is undefined
---line 1947 of file Unsupervised_plant_counting.bib
-Warning--string name "mar" is undefined
---line 2049 of file Unsupervised_plant_counting.bib
-Warning--string name "jan" is undefined
---line 2067 of file Unsupervised_plant_counting.bib
-Warning--string name "oct" is undefined
---line 2107 of file Unsupervised_plant_counting.bib
-Warning--string name "aug" is undefined
---line 2141 of file Unsupervised_plant_counting.bib
-Warning--I didn't find a database entry for "velumaniEstimatesMaizePlant2021"
-Warning--I didn't find a database entry for "meierBBCHMonograph2018"
 Warning--empty author in PP13332024
+Warning--empty title in fao2024
 Warning--empty publisher in zhangMetaDETRFewShotObject2021
-You've used 51 entries,
+Warning--empty journal in wuOptimizingConnectedComponent2005
+You've used 87 entries,
             2887 wiz_defined-function locations,
-            938 strings with 19379 characters,
-and the built_in function-call counts, 22911 in all, are:
-= -- 1883
-> -- 1715
-< -- 14
-+ -- 759
-- -- 465
-* -- 2046
-:= -- 3417
-add.period$ -- 173
-call.type$ -- 51
-change.case$ -- 51
-chr.to.int$ -- 50
-cite$ -- 61
-duplicate$ -- 938
-empty$ -- 1698
-format.name$ -- 557
-if$ -- 4886
+            1192 strings with 30907 characters,
+and the built_in function-call counts, 40023 in all, are:
+= -- 3196
+> -- 3215
+< -- 28
++ -- 1402
+- -- 877
+* -- 3699
+:= -- 6073
+add.period$ -- 290
+call.type$ -- 87
+change.case$ -- 87
+chr.to.int$ -- 86
+cite$ -- 100
+duplicate$ -- 1559
+empty$ -- 2852
+format.name$ -- 1051
+if$ -- 8446
 int.to.chr$ -- 2
-int.to.str$ -- 51
-missing$ -- 34
-newline$ -- 278
-num.names$ -- 131
-pop$ -- 610
+int.to.str$ -- 87
+missing$ -- 52
+newline$ -- 467
+num.names$ -- 238
+pop$ -- 1026
 preamble$ -- 0
-purify$ -- 51
+purify$ -- 87
 quote$ -- 0
-skip$ -- 781
+skip$ -- 1382
 stack$ -- 0
-substring$ -- 786
-swap$ -- 248
-text.length$ -- 10
+substring$ -- 1227
+swap$ -- 390
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 351
-warning$ -- 2
-while$ -- 140
+type$ -- 603
+warning$ -- 4
+while$ -- 243
 width$ -- 0
-write$ -- 672
-(There were 40 warnings)
+write$ -- 1150
+(There were 71 warnings)

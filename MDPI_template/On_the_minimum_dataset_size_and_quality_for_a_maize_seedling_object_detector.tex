@@ -70,6 +70,9 @@
 %=================================================================
 % Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx, epstopdf, lastpage, ifthen, float, amsmath, amssymb, lineno, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, colortbl, soul, multirow, microtype, tikz, totcount, changepage, attrib, upgreek, array, tabularx, pbox, ragged2e, tocloft, marginnote, marginfix, enotez, amsthm, natbib, hyperref, cleveref, scrextend, url, geometry, newfloat, caption, draftwatermark, seqsplit
 % cleveref: load \crefname definitions after \begin{document}
+% Add listings package support for algorithms
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
 
 %=================================================================
 % Please use the following mathematics environments: Theorem, Lemma, Corollary, Proposition, Characterization, Property, Problem, Example, ExamplesandDefinitions, Hypothesis, Remark, Definition, Notation, Assumption
@@ -196,51 +199,27 @@ in the main text and should not exaggerate the main conclusions.}
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \setcounter{section}{-1} %% Remove this when starting to work on the template.
-% \section{How to Use this Template}
+\section{Introduction} 
 
-% The template details the sections that can be used in a manuscript. Note that the 
-% order and names of article sections may differ from the requirements of the journal 
-% (e.g., the positioning of the Materials and Methods section). Please check the instructions 
-% on the authors' page of the journal to verify the correct order and names. For any 
-% questions, please contact the editorial office of the journal or support@mdpi.com. 
-% For LaTeX-related questions please contact latex@mdpi.com.%\endnote{This is an endnote.} % To use endnotes, please un-comment \printendnotes below (before References). Only journal Laws uses \footnote.
-
-% % The order of the section titles is different for some journals. Please refer to the "Instructions for Authors” on the journal homepage.
-
-\section{Introduction}
-
-% The introduction should briefly place the study in a broad context and highlight 
-% why it is important. It should define the purpose of the work and its significance. 
-% The current state of the research field should be reviewed carefully and key publications 
-% cited. Please highlight controversial and diverging hypotheses when necessary. Finally, 
-% briefly mention the main aim of the work and highlight the principal conclusions. 
-% As far as possible, please keep the introduction comprehensible to scientists outside 
-% your particular field of research. Citing a journal paper \citep{ref-journal}.  
-% Now citing a book reference \citep{ref-book1,ref-book2} or other reference types 
-% \citep{ref-unpublish,ref-url}. Please use the command \citep{ref-proceeding,ref-thesis} 
-% for the following MDPI journals, which use author--date citation: Administrative Sciences, 
-% Arts, Behavioral Sciences, Businesses, Econometrics, Economies, Education Sciences, 
-% European Journal of Investigation in Health, Psychology and Education, Games, Genealogy, 
-% Histories, Humanities, Humans, IJFS, Journal of Intelligence, Journalism and Media, JRFM, 
-% Languages, Laws, Literature, Psychology International, Publications, Religions, Risks, 
-% Social Sciences, Tourism and Hospitality, Youth. 
+\subsection{The Problem of Plant Counting}
 
 Plant counting is a critical operation in precision agriculture, plant breeding, 
 and agronomical evaluation. 
 Accurate plant counts can provide valuable information for both farmers and researchers.
 This task was often performed manually by human operators. 
-Now a days this process can be automated by the use of computer vision algorithms.
+Today, this process can be automated by the use of computer vision algorithms.
 To validate a method for counting, it is critical to set a benchmark for accuracy. 
 A benchamrk can be defined by the accuracy of manual counting, international standards, 
-or by comparison with other methods.
-Accuracy of plant manual counting depends on human performance, so difficult to 
-define, but it is often taken as golden sample. 
+or by comparison with other already accepted methods.
+Accuracy of plant manual counting depends on human performance, so variable, but often taken as golden sample. 
 According to the European Plant Protection Organization, the benchmark for acceptance is 
 a coefficient of determination (r squared) of 0.85 when compared to manual counting \cite{PP13332024}.
 This corresponds to a Root Mean Square Error (RMSE) of approximately 0.39.
 Also scientific literature mention a r-squared value of 0.85 with ground truth (manual counting) 
 as a benchmark for acceptance \cite{zouMaizeTasselsDetection2020}.
+
+\subsection{Case study: Maize Seedling Counting}
+
 Litterature shows that benchmark for acceptance can be achieved with computer vision object detection
  \cite{liuIntegrateNetDeepLearning2022,davidPlantDetectionCounting2021,barretoAutomaticUAVbasedCounting2021}
 or regression models \cite{liuEstimatingMaizeSeedling2022,EstimatesMaizePlant}.
@@ -249,48 +228,103 @@ A superiority of object detection over regression models in terms of accuracy wa
 regression models, because, object detection model inference on georeferenced orthomosaics can be used to
 verify plant presence through its coordinates throughout the vegetative phases.
 This is not possible with regression models, because they can only predict the number of plants in an image.
-
 The ability to identify and locate the objects within an image are the main features of object detection models.
 The validation of this ability rely on metrics as Intersection over Union (IoU),
 Average Precision (AP), and Average Recall (AR) \cite{linMicrosoftCOCOCommon2015} rather than
 the coefficient of determination. 
 Identification supports are usually bounding boxes, which are rectangles that enclose
-the object of interest, but they can also be points or other kind of polygons.
-Counting of plants is then commonly performed by counting the number of bounding boxes 
+the object of interest, but they can also be points or other kind of geometries.
+Counting of plants is then commonly performed by counting the number of geometries 
 that enclose the objects of interest (the plant) in a image area.
 Georeferenced orthomosaics are images created through aerial photogrammetry, a process 
-that involves capturing overlapping aerial georeferenced images taken by nadiral view
-(and/or picturing georeferenced ground control points), and performing boundle adjustment to form 
+that involves capturing overlapping georeferenced images taken by nadiral view 
+picturing georeferenced ground control points, and performing boundle adjustment to form 
 a single, seamless image \cite{krausPhotogrammetryGeometryImages2011}.
 Georeferenced orthomosaics are scaled and oriented to a geographical coordinate system.
-It implies that the pixel coordinates and size correspond to 
+It implies that the pixel coordinates corresponds to 
 geographical coordinates and are projectables in a metric system.
 Using georeferenced orthomosaics in seedling counting makes object detection 
 easier, because the metric scale can be used to locate the objects 
 in the image and prospective variance is reduced to zero.
 
+Plant counting is affected, as many object detection application fields, from data scarcity: public datasets
+are rare and often not suitable for the task because of the large environmental
+variability and their images are not orthorectified or scale is unknown. 
+Even so we can find some datasets that can be used for training a plant counting object detector \cite{heiderSurveyDatasetsComputer2025}.
+Select a specific crop at a specific growth stage can reduce the variability that 
+the model should learn and make it possible to better study the other variables
+that can affect the dataset size and quality requirements. 
+For this study we choose grain maize seedlings
+(Zea mais L.) at the V3-V5 (BBCH 13-15) growth stage \cite{meierBBCHSystemCoding2009},
+because it is the most represented plant in scientific \cite{davidPlantDetectionCounting2021,liuIntegrateNetDeepLearning2022}
+and not scientific \cite{Maize_seedingDatasetOverview,MaizeseedlingdetectionDatasetOverview}
+open datasets from aerial photogrammetry. 
+Maize is a comodity crop that is widely grown in the world and is the most important
+crop in the world by production \cite{fao2024}. Grain maize seedlings in that stage are easy to
+count because of their low overlapping and fixed intra-row and inter-row spacing, 
+differently by silo-mais seedling that is seeded with extremly low inter-row spacing.
+This particular outfit that makes grain maize seedlings a good candidate for object detection,
+is shared with other crops that are seeded in rows with inter-row spacing such as sunflower (Helianthus annuus L.)
+or sugarbeet (Beta vulgaris L.). 
+
+\subsection{Object Detection approaches}
+\label{subsec:object_detection_approaches}
+
 The development of object detection algorithms has evolved from not machine learning methods, 
 here named handcrafted methods (HC), to modern deep learning-based (DL) techniques.
-Pratically all the state-of-the-art object detection methods are based on DL models
-now a days. Nethertheless, HC methods are still used in some cases \cite{davidPlantDetectionCounting2021}. 
-Modern DL object detection uses CNN-based frameworks (e.g., Faster R-CNN \cite{FasterRCNNRealTime}, YOLO \cite{YouOnlyLook}) 
-and Transformer-based approaches (e.g., DETR \cite{carionEndtoEndObjectDetection2020}).
+Today, all the state-of-the-art object detection methods are based on DL models. 
+Nethertheless, HC methods are still used in some cases 
+\cite{davidPlantDetectionCounting2021,garcia-martinezDigitalCountCorn2020}. 
+Most of modern DL object detection uses convolutional neural networks (CNN) \cite{lecunDeepLearning2015} based 
+frameworks (e.g., Faster R-CNN \cite{FasterRCNNRealTime}, YOLO \cite{YouOnlyLook}) 
+or Transformer \cite{vaswaniAttentionAllYou2017} based approaches (e.g., DETR \cite{carionEndtoEndObjectDetection2020})
+or mixuters of both approaches.
 The main difference between CNN-based and Transformer-based models is the way they
-process the image. CNN-based models process the image in a grid-like fashion,
-while Transformer-based models process the image as a sequence of patches.
+process the image. CNN-based models process the image in a grid-like fashion (convolutions),
+while Transformer-based models process the image as a sequence of patches (attention mechanisms) \cite{dosovitskiyImageWorth16x162021}.
 On common benchmarks as COCO \cite{linMicrosoftCOCOCommon2015}, PASCAL VOC \cite{jingSelfsupervisedVisualFeature2019}, 
 and ImageNet \cite{14090575ImageNetLarge}, Transformer-based models have shown 
 to be more accurate than CNN-based models \cite{zongDETRsCollaborativeHybrid2023} .
-Nethertheless CNN-based models are still widely used in object detection, because they are
-more efficient in processing small images and have a lower computational cost \cite{khanSurveyVisionTransformers2023}.
 One of the critical challenges in training effective DL object detection models is 
 the availability of a sufficiently large and high-quality dataset. 
+CNN-based models are still widely used in object detection, because they are
+more efficient in processing small images and have a lower computational cost \cite{khanSurveyVisionTransformers2023}.
+However, when fine-tuning with scarce data, Transformer-based object detectors generally 
+perform better than CNN-based detectors, provided they are pretrained on large datasets \cite{rekavandiTransformersSmallObject2023,liTransformerObjectDetection2023,amjoudObjectDetectionUsing2023}.
+
+To rapresent the categories and compare performance between pure-CNN and Transformer-mixed architectures
+that are effectivelly used as object detectors in real plant counting applications,
+YOLOv5 and YOLOv8 can be taken as pure-CNN architecture rapresentatives for their 
+large use in agriculture \cite{badgujarAgriculturalObjectDetection2024}.
+Their large diffusion in agriculture applications is justified by the fact that they leverage good precision
+and the low need in terms of dataset size in respect other CNN architectures \cite{tanEfficientDetScalableEfficient2020,linFocalLossDense2018,zhangComparisonYOLObasedSorghum2025}.
+YOLOv5 \cite{YOLOv5YOLOv8YOLOv10} is a pure CNN-based architecture that represents a significant optimization 
+over previous YOLO versions with improved speed-accuracy tradeoffs and enhanced training stability. 
+It employs a CSPDarknet53 \cite{bochkovskiyYOLOv4OptimalSpeed2020} backbone that uses cross-stage partial connections to reduce computational 
+costs while maintaining feature representation power. YOLOv8 \cite{YOLOv5YOLOv8YOLOv10} introduced 
+architectural modifications including a decoupled detection head, a C2f module for feature processing, and several 
+advanced augmentation techniques, resulting in better performance in respect to YOLOv5. 
+Its backbone is an improved CSPDarknet with enhanced SPPF (Spatial Pyramid Pooling - Fast) modules for 
+multi-scale feature extraction.
+Real-Time-DETR (RT-DETR) is a recent Transformer-mixed architecture that outperforms
+YOLOv5 and YOLOv8 \cite{zhaoDETRsBeatYOLOs2024}. 
+RT-DETR \cite{zhaoDETRsBeatYOLOs2024} is a real-time transformer-based detector 
+that combines CNN backbone features (the ResNet-based CSPResNet50 and CSPResNet101 
+backbones \cite{wangCSPNetNewBackbone2019}) with a streamlined transformer decoder. 
+YOLO11 has been recently proposed as a
+Transformer-mixed YOLO architecture that outperforms RT-DETR \cite{khanamYOLOv11OverviewKey2024}.
+YOLO11 \cite{khanamYOLOv11OverviewKey2024} introduced several architectural
+innovations including adaptable block and module designs, adaptive head assignments, and enhanced 
+loss functions for optimizing detection at various scales. YOLO11 uses an advanced adaptable backbone with 
+improved feature pyramid networks for efficient multi-scale detection.  
+
 Recently, zero-shot and few-shot object detection have emerged as promising paradigms
-to alleviate the need for large annotated datasets .
+to alleviate the need for large annotated datasets.
 While traditional object detection models (many-shots object detectors) require extensive labeled data for training, 
 few-shot and zero-shot object detection aim to detect novel objects with little to 
-no labeled examples respectivelly. The term "shot" refers to the number of annotations (plants for this study) 
-used to train the model over all the images.
+no labeled examples respectivelly. The term "shot" refers to the number of annotations 
+used to train the model over all the images. Each shot corresponds to an individual, 
+that in the case of few-shots, is used to prototype the object of interest.
 Zero and few-shots approaches often leverage feature transfer or meta-learning components to generalize 
 across classes under extreme data scarcity \cite{liMetaSGDLearningLearn2017}. This approach reduces the annotation 
 burden and is especially beneficial in domains where collecting exhaustive training 
@@ -302,25 +336,49 @@ Meta learning is a common approach in few-shot object detection
 \cite{MetaLearningBasedIncrementalFewShot,wuMetaRCNNMetaLearning2020,fuMetaSSDFastAdaptation2019,zhangMetaDETRFewShotObject2021}, 
 while Cross-Domain Few-Shot Object Detection (CD-FSOD) has recently surpassed this
 approach by leveraging domain adaptation techniques \cite{saBroaderStudyCrossdomain2023}.
-% Some prominent zero-shot models include LSDA, ViLD, and ZSD; among the few-shot methods, 
-% TFA, FSCE, and Meta R-CNN/DETR are commonly cited for their strong performance 
-% under data-scarce conditions.
-Zero-shot actual state-of-the-art object detector models are YOLO-World \cite{kangFewshotObjectDetection2019} , 
-OWLv2 \cite{mindererScalingOpenVocabularyObject2023} , and Grounding DINO \cite{liuGroundingDINOMarrying2025} .  
 DE-ViT \cite{xuDeViTDecomposingVision2023}  and CD-ViTO \cite{fuCrossDomainFewShotObject2024}  
 are the latest models that have shown promising results in few-shot object detection.
+CD-ViTO is a few-shot object detection model that specifically addresses the challenges of domain shift 
+between base and novel classes.
+The backbone consists of a modified Vision Transformer (ViT) \cite{dosovitskiyImageWorth16x162021}
+structure with domain-invariant attention layers that help extract features robust to domain variations. 
+CD-ViTO builds upon an open-set detector framework by incorporating several key 
+modules to mitigate domain discrepancies. In particular, it enhances the baseline 
+model by making the instance features learnable (MLIF), which adapts fixed, pretrained 
+features to better capture the target semantics. This is complemented by an instance 
+reweighting module (MIR) that assigns higher importance to high-quality samples—those 
+with clear, unambiguous boundaries—thereby forming more robust class prototypes. 
+Furthermore, a domain prompter (MDP) is introduced to simulate virtual domain shifts, 
+forcing the network to produce consistent representations despite changes in visual styles. 
+Finally, a lightweight fine-tuning step is applied to critical detector components, 
+further refining the model's ability to generalize with minimal annotated examples. 
+Together, these innovations enable CD-ViTO to effectively bridge the gap between 
+base and novel domains, achieving state-of-the-art performance in few-shot object 
+detection tasks across varied target datasets.
+Zero-shot actual state-of-the-art object detector models are YOLO-World \cite{kangFewshotObjectDetection2019} , 
+OWLv2 \cite{mindererScalingOpenVocabularyObject2023} , and Grounding DINO \cite{liuGroundingDINOMarrying2025}.
+OWLv2 (Open-World Localization v2) is an zero-shot object detector that represented a significant 
+evolution in open-vocabulary detection capabilities. It employs a vision-language foundation model approach that 
+enables detecting objects described by arbitrary text prompts without specific training data for those categories. 
+The model uses a dual-encoder architecture with a vision encoder (based on a scalable ViT backbone) and a text 
+encoder (based on BERT \cite{devlinBERTPretrainingDeep2019}), connected through contrastive learning objectives. OWLv2's design includes multi-scale 
+feature fusion, region-text contrastive alignment, and localization refinement modules that allow it to accurately 
+detect objects across various sizes and contexts. Unlike traditional detectors requiring class-specific training, 
+OWLv2 leverages its pre-trained knowledge of visual concepts and their textual descriptions to generalize to 
+novel object classes. 
+
+\subsection{Dataset Size and Quality Requirements}
 
 Many studies have been conducted on object detection for plants in open field
 \cite{barretoAutomaticUAVbasedCounting2021,gengResearchSegmentationMethod2024,jiangDeepSeedlingDeepConvolutional2019,katariIntegratingAutomatedLabeling2024,kitanoCornPlantCounting2019,liDCYOLOImprovedField2024,liSeedlingMaizeCounting2022,liuIntegrateNetDeepLearning2022,liuEstimatingMaizeSeedling2022,luTasselNetCountingMaize2017,macheferMaskRCNNRefitting2020,velumaniEstimatesMaizePlant2021,wangPlotLevelMaizeEarly2023,zhaoStudyLightweightModel2023},
 but few have focused on dataset minimum requirements for training a robust plant object detector
 \cite{davidPlantDetectionCounting2021,andvaagCountingCanolaGeneralizable2024},
-Some study focused on few-shots approach for plant counting 
-CiteHere(One to All: Toward a Unified Model for Counting Cereal Crop Heads Based on Few-Shot Learning)
-CiteHere(AdaTreeFormer: Few shot domain adaptation for tree counting from a single high-resolution image)
-but only two specifically accounting on few-shots method for maize seedling counting \cite{karamiAutomaticPlantCounting2020}
-CiteHere(Advancing Image Recognition: Towards Lightweight Few-shot Learning Model for Maize Seedling Detection).
-These lasts set the few-shot benchmark for maize seedling counting at 600 examples.
-No zero-shot benchmark for maize seedling counting has been set yet, and no research has been done yet.
+Some study focused on few-shots approach for plant counting \cite{wangPlotLevelMaizeEarly2023,amirkolaeeAdaTreeFormerFewShot2024},
+but only two specifically accounting on few-shots method for maize seedling counting \cite{karamiAutomaticPlantCounting2020,wangAdvancingImageRecognition2024}.
+Unfortunately, the lonely two studies evaluating few-shot performance on maize seedling counting 
+by orthomosaics do not achieve the benchmark and do not clearly
+specify the number of shots used. Also no zero-shot benchmark for maize seedling counting 
+has been set yet, and no research on this application has been done yet.
 
 Even if no research has been made in order to minimize or set a benchamrk for the dataset size and quality
 required to train a maize seedling object detector,
@@ -336,30 +394,36 @@ The importance of using a domain specific backbone has been proven also
 for plant/leaves segmentation on orthomosaics \cite{roggiolaniDomainSpecificPreTraining2023},
 but backbone training is still proibitive for many applications.
 No backbone weights specialized on agricultural orthomosaics has been published yet,
-as for the most of the specialized domains. So, because of limited resourches, 
-ùonly the use of a general backbone is possible for this study, 
+as for the most of the specialized domains. Even if a so specialized backbone exists,
+some concern will came out about its out-of-distribution generalization capability \cite{hendrycksManyFacesRobustness2020}.
+So, because of limited resourches, today only the use of a general backbone is 
+possible in practical sense \cite{jeevanWhichBackboneUse2024},
 even if a decreasing in dataset size requirements is expected with a domain specific 
-backbone \cite{roggiolaniDomainSpecificPreTraining2023}.
+backbone because of the out-of-distribution generalization \cite{goldblumBattleBackbonesLargeScale2023}.
+Another factor that can affect the dataset size and quality requirements other than 
+the already cited model architecture and use of pre-trained backbones, is the training data
+augmentation strategy. Some studies proposed hightly computationally expensive data augmentation
+such as trainable data augmentation \cite{cubukAutoAugmentLearningAugmentation2019} or
+data augmentation with generative adversarial networks \cite{antoniouDataAugmentationGenerative2018}.
+Other studies proposed to use less computationally expensive data augmentation strategies
+\cite{shortenSurveyImageData2019,chadebecDataAugmentationVariational2021} and someone
+even proved that random image augmentation can provide equivalent results to more
+expensive technics \cite{mullerTrivialAugmentTuningfreeStateoftheArt2021}.
 
-Nethertheless, the most important factor affecting the dataset size for a plant counting
-object detector is the dataset source \cite{davidPlantDetectionCounting2021,andvaagCountingCanolaGeneralizable2024}. 
+Nethertheless, the most important factor affecting DL training is the dataset himself 
+\cite{sunRevisitingUnreasonableEffectiveness2017} and its source. 
 It has been observed that using training samples from the same
-dataset as the inference (in-domain dataset) increases accuracy and reduce the need 
+dataset as the inference (in-domain dataset) drammatically increases accuracy and reduce the need 
 for a large dataset in respect to collecting training samples from other 
 datasets (out-of-distribution dataset) \cite{davidPlantDetectionCounting2021,andvaagCountingCanolaGeneralizable2024}. 
+From comparison of the studies here mentioned, dataset source seems to be the most 
+important factor in determining the dataset size and quality needed to achieve the benchmark 
+for acceptance.
 
-Plant counting is affected as many DL application fields from data scarcity: public datasets
-are rare and often not suitable for the task because of the large environmental
-variability CiteHere , their images are not orthorectified or scale is unknown CiteHere . 
-Even so we can find some datasets that can be used for training a plant counting object detector CiteHere .
-We can reduce the variability that the model should learn by constrain the dataset
-to a specific crop at a specific growth stage. For this study we choose maize seedlings
-(Zea mais L.) at the V3-V5 (BBCH 13-15) growth stage. It is a common crop 
-that in this particular growth stage is easy to count because of low overlapping
-and fixed intra-row and inter-row spacing.
+\subsection{Study Aim}
 
 This study aims to determine the minimum dataset size and quality required to train 
-a benchmark reaching object detection model for identifying maize seedlings in georeferenced orthomosaics,
+the benchmark reaching object detection model for identifying maize seedlings in georeferenced orthomosaics,
 where the dataset size and quality are respectivelly defined by the amount of annotated 
 images in the training set, and the accuracy of the annotations.
 Also the effect of training dataset source will be evaluated in this study.
@@ -373,52 +437,29 @@ We will also discuss the need for HC method in a DL object detection pipeline.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Materials and Methods}
 
-% Materials and Methods should be described with sufficient details to allow others 
-% to replicate and build on published results. Please note that publication of your 
-% manuscript implicates that you must make all materials, data, computer code, and 
-% protocols associated with the publication available to readers. Please disclose 
-% at the submission stage any restrictions on the availability of materials or information. 
-% New methods and protocols should be described in detail while well-established methods 
-% can be briefly described and appropriately cited.
-
-% Research manuscripts reporting large datasets that are deposited in a publicly avail-able 
-% database should specify where the data have been deposited and provide the relevant 
-% accession numbers. If the accession numbers have not yet been obtained at the time 
-% of submission, please state that they will be provided during review. They must 
-% be provided prior to publication.
-
-% Interventionary studies involving animals or humans, and other studies require ethical 
-% approval must list the authority that provided approval and the corresponding ethical 
-% approval code.
-% \begin{quote}
-% This is an example of a quote.
-% \end{quote}
-
-In order to investigate the minimum size and quality of the dataset required to train 
-a robust object detection model for maize seedlings, we conducted a series of experiments
-where with recursivelly fit a series of models with increasing dataset size and quality.
-In this section we will first define the datasets used in the experiments, divided by 
-in-domain and out-of-distribution training datasets. 
-Then we will describe the architectures chosen to rapresent the 
-many-shots, few-shots, and zero-shots approaches.
-Finally we will describe a HC object detection algorithm to evaluate 
-it as a strategy to get the training datasets.
-
 \subsection{Datasets}
 
 The datasets used in this study to train the object detection models for maize seedlings
-counting are nadiral or supposedly nadiral images of maize seedlings at the V3-V5 growth stage.
+counting are nadiral or supposedly nadiral images of maize seedlings at the V3-V5 growth stage
+or estimated so.
 The V3-V5 growth stage is defined by the BBCH scale as the stage where the third to fifth
-leaf is unfolded and the plant is 15-30 cm tall \cite{meierBBCHMonograph2018}.
-This growth stage is easy to determine, even from above because of the low overlapping
-of the leafs. 
+leaf is unfolded and the plant is 15-30 cm tall \cite{meierBBCHSystemCoding2009}.
 
 This study uses two dataset sources as training sets: the out-of-distribution dataset (OOD)
 and the in-domain dataset (ID). The ID datasets are from the same source as the
 testing dataset, while the OOD datasets are not.
 The OOD datasets are composed of images from scientific literature \cite{liuEstimatingMaizeSeedling2022,davidPlantDetectionCounting2021}
 and from internet repositories \cite{Maize_seedingDatasetOverview,MaizeseedlingdetectionDatasetOverview}.
-The ID datasets were collected during this study.
+The ID datasets were collected during this study. This ID dataset creation consisted in
+capturing nadiral images of three study areas with a Phantom 4 Pro v2.0 (DJI, Shenzhen, China)
+drone equipped with its default series RGB camera @ ~10 m AGL (above the ground level).
+The number of images captured depends on the study area size that was about 2 hectares
+for ID\_1 location and about 1 ha for the other two.
+For each location, an orthomosaic was created using a photogrammetric software.
+Bundle adjustment error was estimated as 38 mm using the ground control points
+surveyed by GNSS operating in VRS-NRTK mode. The orthomosaics were generated with an 
+average ground sampling distance of 5 mm/pixel in the WGS84/UTM 32 N reference system.
+
 The OOD scientific datasets and the ID datasets are composed by patches of georeferenced orthomosaics 
 of known scale, while the OOD internet datasets are simple RGB images of unknown scale.
 The all OOD datasets came with annotations, while the ID datasets were manually annotated.
@@ -431,270 +472,475 @@ The all OOD datasets came with annotations, while the ID datasets were manually 
 \toprule
 \textbf{Dataset} & \textbf{Description} \\
 \midrule
-OOD Scientific & Composed of tiles of georeferenced orthomosaics of maize seedlings from scientific literature \cite{liuEstimatingMaizeSeedling2022,davidPlantDetectionCounting2021}. \\
-OOD Internet & Composed of RGB images of maize seedlings from internet repositories \cite{Maize_seedingDatasetOverview,MaizeseedlingdetectionDatasetOverview}. \\
+OOD Scientific & Composed of tiles of georeferenced orthomosaics of maize seedlings from scientific literature. \\
+& - DavidEtAl.2021 \cite{davidPlantDetectionCounting2021} 182 tiles\\
+& - LiuEtAl.2022 \cite{liuEstimatingMaizeSeedling2022} 596 tiles\\
+OOD Internet & Composed of RGB images of maize seedlings from internet repositories. \\
+& - Maize stage V3 \cite{Maize_seedingDatasetOverview} 216 tiles\\
+& - Maize stage V5 \cite{MaizeseedlingdetectionDatasetOverview} 174 tiles\\
 ID & Collected during this study, composed of tiles of georeferenced orthomosaics of maize seedlings of known scale. \\
+& - ID\_1 Maize stage V3, tiles: 150 training, 20 testing\\
+& - ID\_2 Maize stage V3, tiles: 150 training, 20 testing\\
+& - ID\_3 Maize stage V5, tiles: 150 training, 20 testing\\
 \bottomrule
 \end{tabularx}
 \end{table}
 
+\begin{figure}[H]
+  \centering
+  \begin{adjustwidth}{-\extralength}{0cm}
+  \subfloat[\centering]{\includegraphics[width=4.5cm]{Plots/DavidEtAl.png}}
+  \subfloat[\centering]{\includegraphics[width=4.5cm]{Plots/LiuEtAl.png}}
+  \subfloat[\centering]{\includegraphics[width=4.5cm]{Plots/maize_seedling.png}}
+  \subfloat[\centering]{\includegraphics[width=4.5cm]{Plots/maize_seedling_detection.png}}\\
+  \subfloat[\centering]{\includegraphics[width=6cm]{Plots/ID_1.png}}
+  \subfloat[\centering]{\includegraphics[width=6cm]{Plots/ID_2.png}}
+  \subfloat[\centering]{\includegraphics[width=6cm]{Plots/ID_3.png}}
+  \caption{\textbf{(a)} DavidEtAl.2021,
+  \textbf{(b)} LiuEtAl.2022, 
+  \textbf{(c)} Internet Maize stage V3,
+  \textbf{(d)} Internet Maize stage V5,
+  \textbf{(e)} ID\_1,
+  \textbf{(f)} ID\_2,
+  \textbf{(g)} ID\_3.}
+  \label{fig:datasets}  
+\end{adjustwidth}
+\end{figure}
+
+
 To make the two kind of dataset comparables we chose to rescale the images to a scale of 0.005 m/pixel
 where the scale was known (scientific OOD and ID datasets), obtaining orthomosaics of different sizes.
-All the datasets were then cropped to 224*224 pixels tiles.
-Also the annotations were rescaled where needed and cropped.  
-
-The testing dataset is composed by a subset of the ID dataset tiles, not included in the training dataset.
-
-\subsection{many-shots object detectors}
-
-To rapresent the category and compare performance between pure-CNN and Transformer-mixed architectures
-that are effectivelly used as object detectors in real use-cases for their accuracy and efficiency,
-we chose to use three versions of YOLO and the real-time version of DETR in the Ultralytics implementation.
-The YOLO versions are YOLOv5, YOLOv8, and YOLO11, while the DETR version is RT-DETR.
-
-YOLOv5 CiteHere is a pure CNN-based architecture that represents a significant optimization 
-over previous YOLO versions with improved speed-accuracy tradeoffs and enhanced training stability. 
-It employs a CSPDarknet53 backbone that uses cross-stage partial connections to reduce computational 
-costs while maintaining feature representation power. YOLOv8 CiteHere introduced 
-architectural modifications including a decoupled detection head, a C2f module for feature processing, and several 
-advanced augmentation techniques, resulting in better performance on small objects like seedlings. 
-Its backbone is an improved CSPDarknet with enhanced SPPF (Spatial Pyramid Pooling - Fast) modules for 
-multi-scale feature extraction. YOLO11 CiteHere represents the latest evolution with significant 
-improvements in accuracy through adaptable block and module designs, adaptive head assignments, and enhanced 
-loss functions for optimizing detection at various scales. YOLO11 uses an advanced adaptable backbone with 
-improved feature pyramid networks for efficient multi-scale detection. RT-DETR CiteHere is a real-time 
-transformer-based detector that combines CNN backbone features (ResNet-based) with a streamlined 
-transformer decoder, striking a balance between the global reasoning capabilities of transformers and the efficiency 
-of CNN architectures, making it particularly effective for detecting objects with varying sizes and densities 
-in complex agricultural scenes.
-
-We used here the Ultralytics implementation of these models because the implementation is open-source CiteHere
-and it is widely used in the scientific community CiteHere.
-
-MakeTableHere
-
-\subsection{few-shots object detectors}
-
-Differently from the many-shots approach, the few-shots one was not deeply studied to tackle the problem of plant counting.
-In fact
-To test if few-shot approach can effectivelly reduce the amount of training samples to train a plant counting object detector
-we decided to use the state-of-the-art disputed cross-domain method few-shot model that have shown promising results in the literature.
-CD-ViTO is an advanced few-shot object detection model that specifically addresses the challenges of domain shift 
-between base and novel classes. The model employs a dual-branch vision transformer backbone that separately processes 
-visual and textual information, with a specialized feature fusion mechanism to integrate these modalities. CD-ViTO's architecture 
-contains a domain-adaptive feature alignment module that minimizes the distribution discrepancy between source and target 
-domains through adversarial learning techniques. Unlike previous few-shot approaches that rely primarily on meta-learning, 
-CD-ViTO leverages cross-domain adaptation strategies to better generalize from base to novel classes with minimal 
-examples (typically 1-10 shots). The backbone consists of a modified ViT (Vision Transformer) structure with domain-invariant 
-attention layers that help extract features robust to domain variations. In benchmark evaluations, CD-ViTO has demonstrated 
-superior performance compared to previous few-shot object detection methods, achieving up to 15\% higher AP scores on 
-cross-domain detection tasks and showing particular strength in agricultural applications where domain shifts are 
-common due to variations in growth conditions, illumination, and plant morphology.
-
-
-\subsection{zero-shots object detectors}
+All the orthomosaics were then cropped to 224*224 pixels tiles.
+Also the annotations were rescaled and cropped where needed.
+Figure \ref{fig:datasets} shows a sample for each dataset.
+Each ID dataset has 20 tiles to be used as testing dataset, while other 
+150 tiles are used as training dataset.
 
 \subsection{Handcrafted object detector}
 
-Many HC object detectors for maize seedlings count have been proposed 
-in the literature. Unlike other works \cite{davidPlantDetectionCounting2021} 
-we wrote an HC algorithm to get accurate annotated dataset, 
-sacrifing the amount of images succesfully detected
-for the quality of the annotations. 
+Like other works \cite{davidPlantDetectionCounting2021,garcia-martinezDigitalCountCorn2020,liuEstimatingMaizeSeedling2022} 
+we wrote an HC algorithm to get annotated tiles from the orthomosaics, 
+basing it on agronomical knowledge and color thresholding.
+Hue, saturation and value (HSV) color space was used here to threshold the image,
+to get green pixels, but other color spaces can be used.
+For the execution of this algorithm, the following graphical and agronomical 
+parameters must be set: color minimum and maximum thresholds (color threshold), the minimum and maxiumum 
+leaf area for plant (leaf area range), the minimum distance between plants on rows (intra-row distance),
+and the the distance between rows (inter-rows distance). 
+The algorithm is expected to works: on orthomosaics of maize seedlings at the V3-V5 growth stage,
+with low weeds infestation, with rows having roughtly the same angle with meridian and distance between them.
+The algoritm is divided in two parts. The first part,
+named HC1 \cref{alg:H1}, that take as input the orthomosaic and gives back a list of
+region polygons that enclose the supposed plants.
+HC1 is expected to give a poor accuracy plant count on all the processed tiles. 
+Thus we implemented a second process named HC2 \cref{alg:H2} that is intended to filter in only the 
+tiles with an accurate plant count.
+Algorithm pseudocode is provided in appendix.
 
-This HC algorithm is havelly based on agronomical knowledge and color thresholding.
-For the execution of this algorithm, the user must set the following parameters:
+\subsection{Deep Learning object detectors}
+
+The many-shots object detectors used in this study are YOLOv5, YOLOv8, RT-DETR and YOLO11.
+We chose them for the considerations made in Introduction \cref{subsec:object_detection_approaches}.
+We used here the Ultralytics implementation of these models because the implementation is open-source \cite{jocherGitHubUltralyticsYOLO2023},
+and it makes it possible to tune parameters size coerently across all tested architectures.
+
+For all the many-shots models we used the same hyperparameters and augmentations as the
+library default, with the following exceptions:
 
 \begin{itemize}
-    \item HSV minimum and maximum thresholds
-    \item minimum and maxiumum leaf area for plant
-    \item minimum distance between plants on rows
-    \item distance inter rows
+  \item batch size: 16
+  \item maximum training epochs: 200
+  \item maximum training epochs without improvement: 15
+  \item precision: mixed
 \end{itemize}
 
-In summary, the HC algorithm is based on color thresholding, that rely on the
-manual setting of Hue, Saturation, and Value (HSV) color minimum and maximum
-thresholding. Thresholding creates a binary image that is subsequently regionalized
-by connected components. The connected components are then filtered by area.
-Centers of the areas are fitted with RANSAC to get the slope of the lines where
-plants lie. Only the tiles where the slope is within the interquartile range are
-considered for further processing. The centers of the filtered tiles are then fitted
-again with RANSAC to get the lines on the neighboring of the first line detected.
 
-This as most of HC algoritm is intrinsically limited by the color thresholding.
-Our HC is based on the color of the maize seedlings, which is green.
+All the many-shots models were trained with a training dataset split of 90\% training and 10\% validation. 
+To avoid miss-predictions due to object on the border of the tile, the predicting
+image was extended by a buffer of half the size of the tile around the tile.
+The trained models were tested on the testing dataset tiles with the SAHI method \cite{akyonSlicingAidedHyper2022}.
+The SAHI method is a method that slices the testing image in patches of the same size of the training tiles
+and then tests the model on each of them. The model outputs of each patch are then
+merged by non-maximum suppression and cropped by the original tile extension.
 
+To test the few-shot approach we trained CD-ViTO with multiple model sizes.
+The size of this model is determined by the backbone used, which can be ViT-S, ViT-B, or ViT-L \cite{oquabDINOv2LearningRobust2024}. 
+We used the implementation of CD-ViTO provided by the authors \cite{fuCrossDomainFewShotObject2024}.
+In the context of this study a 'shot' correspond to an image with a single annotated plant. 
+We used 1, 5, 10, 30, and 50 shots to train the model.
+The shots were randomly selected from the ID manually labeled dataset, then a 
+random annotation was selected from the same image to be used as prototype.
+
+For testing the zero-shot approach we used OWLv2.
+We took this architecture as zero-shot object detector example as it is the most stable 
+state-of-the-art model for this task \cite{mindererScalingOpenVocabularyObject2023,liuGroundingDINOMarrying2025}.
+For test OWLv2 we used the implementation of the transformer library \cite{wolfTransformersStateoftheArtNatural2020}
+with the parameters published by the authors.
+We tested the encoder sizes ViT-B/16, ViT-L/14 with the following three pre-training 
+strategies:
+
+\begin{itemize}
+    \item \textbf{Base models}: Trained using self-supervised learning with the OWL-ST method, which generates pseudo-box annotations from web-scale image-text datasets
+    \item \textbf{Fine-tuned models}: Further trained on human-annotated object detection datasets
+    \item \textbf{Ensemble models}: Combining multiple weight-trained versions to balance open-vocabulary generalization and task-specific performance
+\end{itemize}
+
+For all the OWLv2 variants, we tested multiple text prompts to describe maize seedlings:
+\begin{itemize}
+    \item "maize"
+    \item "seedling"
+    \item "plant"
+    \item "aerial view of maize seedlings"
+    \item "corn seedlings in rows"
+    \item "young maize plants from above"
+    \item "crop rows with corn seedlings"
+    \item "maize seedlings with regular spacing"
+    \item "top-down view of corn plants"
+    \item "agricultural field with maize seedlings"
+    \item "orthomosaic of corn plants in rows"
+\end{itemize}
+
+The best performing prompt was selected for each model variant based on validation performance.
+
+\cref{tab:architectures} shows the architectures used in the study 
+with the parameter size specifics.
+
+\begin{table}[H]
+  \caption{Summary of Tested Architectures and Model Sizes\textsuperscript{1}}
+  \label{tab:architectures}
+  \centering
+  \begin{tabularx}{\textwidth}{lXXXXXX}
+  \toprule
+  \textbf{Architecture} &\textbf{Shots} & \textbf{n} & \textbf{s or S} & \textbf{m or B} & \textbf{l or L} & \textbf{e} \\
+  \midrule
+  YOLOv5 & many & 1.9 & 7.2 & 21.2 & 46.5 & 86.7 \\
+  YOLOv8 & many & 3.2 & 11.2 & 25.9 & 43.7 & 68.2 \\
+  YOLO11 & many & 4.0 & 12.5 & 28.0 & 50.0 & 75.0 \\
+  RT-DETR & many & - & - & - & 60.0 & 80.0 \\
+  CD-VITO & few & - & 22.0 \textsuperscript{2} & 86.0 \textsuperscript{3} & 307.0 \textsuperscript{4} & - \\
+  OWLv2 & zero & - & - & 86.0 \textsuperscript{5} & 307.0 \textsuperscript{4} & - \\
+  \bottomrule
+  \end{tabularx}
+  \footnotesize{\textsuperscript{1} Values represent millions of parameters or used backbone.\\
+  \textsuperscript{2} ViT-S
+  \textsuperscript{3} ViT-B
+  \textsuperscript{4} ViT-L}
+\end{table}
+
+\subsection{Minimum dataset size and quality modelling}
+In order to investigate the minimum size and quality of the dataset required to train 
+a robust object detection model for maize seedlings counting, we conducted a series of experiments
+where the above mentioned DL models were recursivelly fitted with increasing dataset size and quality.
+For many-shots models we consider a training 
+dataset split of 10\% validation and 90\% training, while for few-shots the number of shots
+determined the amount of training samples. Zero-shots relied only on descriptions 
+in natural language of the objects to be detected.
+For what concerns only the dataset size evaluation, for many-shots models we considered
+sizes from 10 to 150 images in 15 steps of 10 images, while for few-shots models we considered
+1, 5, 10, 30, and 50 shots.
+For what concerns the dataset quality, we evaluated the annotation quality by
+
+For all the models we evaluated the relationship between dataset size or quality and model performance
+using R-squared and mAP, respectivelly for plant countig and plant detection. Wheter 
+R-squared provided values below -1 we also considered RMSE as metric for counting.
+MAPE was considered for few-shots and zero-shots models only to evaluate the 
+quality of the annotations produced by the prediction of these models.
+We list here the metrics formulas for clarity:
+
+\begin{align}
+R^2 &= 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}
+\end{align}
+
+where $y_i$ is the ground truth count for the $i$-th image, $\hat{y}_i$ is the 
+predicted count, and $\bar{y}$ is the mean of all ground truth counts. $R^2$ ranges 
+from $-\infty$ to 1, with 1 indicating perfect prediction, 0 indicating that the 
+model predictions are no better than simply predicting the mean, and negative 
+values indicating that the model performs worse than predicting the mean.
+
+\begin{align}
+\text{RMSE} &= \sqrt{\frac{1}{n}\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}
+\end{align}
+
+where RMSE measures the average magnitude of prediction errors in the original 
+units (number of plants).
+
+\begin{align}
+\text{MAPE} &= \frac{100\%}{n}\sum_{i=1}^{n} \left| \frac{y_i - \hat{y}_i}{y_i} \right|
+\end{align}
+
+where MAPE measures the percentage error relative to the actual values, providing a scale-independent 
+measure of accuracy. It is expressed as a percentage, with lower values indicating lower
+percentage of false positive or false negative.
+Thus it was reported as an index of the quality of the annotations.
+Note that MAPE is only calculated for cases where $y_i \neq 0$ to avoid division by zero.
+It is particular useful for counting as testing tiles never have zero plants.
+
+For object detection performance, we used the standard COCO evaluation metric:
+
+\begin{align}
+\text{mAP} &= \frac{1}{|IoU|}\sum_{t \in IoU}\text{AP}_t
+\end{align}
+
+where mAP (mean Average Precision) is calculated at a single IoU (Intersection over Union) 
+threshold of 0.5.
+AP at the IoU threshold is the area under the precision-recall curve for detections 
+that meet that IoU threshold criterion.
+
+To test the predictability minimum dataset size and quality required to train a robust
+(achieving benchmark) object detector for maize seedlings counting through empirical 
+models, we test the logarithmic, arctan and algebraic root functions to fit the 
+dataset size or quality versus performance relationships as suggested by previous
+studies \cite{mahmoodHowMuchMore2022}. 
+For clarity we list here the functions tested:
+
+
+\begin{align}
+\text{Logarithmic: } f(x) &= a \ln(x) + b
+\end{align}
+
+\begin{align}
+\text{Arctan: } f(x) &= a \arctan(bx) + c
+\end{align}
+
+\begin{align}
+\text{Algebraic Root: } f(x) &= a x^{1/b} + c
+\end{align}
+
+For the model fits to dataset size versus performance relationships, we evaluated 
+multiple fitting functions and selected the one with the highest goodness-of-fit:
+
+\begin{align}
+\text{GoF} &= R^2_{\text{fit}} = 1 - \frac{\sum_{i=1}^{n} (y_i - f(x_i))^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}
+\end{align}
+
+where $y_i$ is the observed metric (either R-squared or mAP), $f(x_i)$ is the 
+fitted value at dataset size $x_i$, and $\bar{y}$ is the mean of the observed 
+metrics.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
 
-% This section may be divided by subheadings. It should provide a concise and precise 
-% description of the experimental results, their interpretation as well as the experimental 
-% conclusions that can be drawn.
+\subsection{Handcrafted object detector}
 
-% \subsection{Subsection}
-% \subsubsection{Subsubsection}
+To evaluate the HC object detector as a training dataset extractor from the ID dataset,
+we measure amount of annotated tiles that the HC algorithm can extract from the orthomosaics
+and the accuracy it deliver in compare to handmade annotations.
+The table \ref{tab:HC_results} shows the performance of the HC object detector on the ID datasets 
+by enumerating metrics and succesfully annotated tiles. The metrics were computed
+on the testing dataset tiles.
 
-% Bulleted lists look like this:
-% \begin{itemize}
-% \item	First bullet;
-% \item	Second bullet;
-% \item	Third bullet.
-% \end{itemize}
+\begin{table}[H]
+  \caption{HC Object Detector Performance}
+  \label{tab:HC_results}
+  \centering
+  \begin{tabularx}{\textwidth}{lXXXXXX}
+  \toprule
+  \textbf{Dataset} & \textbf{R-squared} & \textbf{RMSE} & \textbf{MAPE} & \textbf{mAP} & \textbf{tiles} & \textbf{dataset \%} \\
+  \midrule
+  ID\_1 & 0.95 & 0.12 & 9\% & 0.87 & 1184 & 7.8\% \\
+  ID\_2 & 0.93 & 0.11 & 12\% & 0.81 & 279 &  4.2\% \\
+  ID\_3 & 0.87 & 0.18 & 16\% & 0.73 & 158 & 1.8\% \\
+  \bottomrule
+  \end{tabularx}
+  \end{table}
 
-% Numbered lists can be added as follows:
-% \begin{enumerate}
-% \item	First item; 
-% \item	Second item;
-% \item	Third item.
-% \end{enumerate}
+\subsection{many-shots object detectors}
 
-% The text continues here.
+The models were evaluated with the following metrics: R-squared, RMSE, IoU, AP, and AR.
+All the metrics were computed for eight different score thresholds for the same model
+to evaluate the model performance at different confidence levels.
+The values to thresholds bounding boxes score were: 0, 0.29, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95.
+The highest R-squared value within the eigth probability thresholded was considered as the model 
+performance for that experiment.
 
-% \subsection{Figures, Tables and Schemes}
+\subsubsection{OOD training}
 
-% All figures and tables should be cited in the main text as Figure~\ref{fig1}, Table~\ref{tab1}, etc.
+The OOD scientific datasaets "DavidEtAl.2021" and "LiuEtAl.2022" were tested singolarly 
+and in combination in the experiment named "scientific OOD". The OOD internet datasets "internet OOD"
+was tested singolarly and in combination with the OOD scientific datasets in the experiment named "All OOD".
+No one of the dataset combinations reached the benchmark R-squared value of 0.85 with the any model.
+The coefficients of determinations and the root mean square errors 
+for all the OOD experiments count tests are shown in \ref{fig:metrics_OOD_datasets}.
 
-% \begin{figure}[H]
-% %\isPreprints{\centering}{} % Only used for preprints
-% \includegraphics[width=7 cm]{Definitions/logo-mdpi}
-% \caption{This is a figure. Schemes follow the same formatting.\label{fig1}}
-% \end{figure}   
-% \unskip
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Plots/metrics_OOD_datasets.pdf}
+\caption{R-squared and RMSE values versus dataset source for all model variants. Red dashed line on r-squared indicates the benchmark threshold of 0.85.}
+\label{fig:metrics_OOD_datasets}
+\end{figure}
 
-% \begin{table}[H] 
-% %\small % Change table font size
-% \caption{This is a table caption. Tables should be placed in the main text near to the first time they are~cited.\label{tab1}}
-% %\isPreprints{\centering}{} % Only used for preprints
-% \begin{tabularx}{\textwidth}{CCC}
-% \toprule
-% \textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}\\
-% \midrule
-% Entry 1		& Data			& Data\\
-% Entry 2		& Data			& Data \textsuperscript{1}\\
-% \bottomrule
-% \end{tabularx}
+As no model achieved the benchmark no study was done on the dataset quality requirements.
 
-% \noindent{\footnotesize{\textsuperscript{1} Tables may have a footer.}}
-% \end{table}
+\subsubsection{ID training}
 
-% The text continues here (Figure~\ref{fig2} and Table~\ref{tab2}).
-
-% % Example of a figure that spans the whole page width and with subfigures. The same concept works for tables, too.
-% \begin{figure}[H]
-% \centering
-% %\isPreprints{}{% This command is only used for ``preprints''.
-% \begin{adjustwidth}{-\extralength}{0cm}
-% %} % If the paper is ``preprints'', please uncomment this parenthesis.
-% \subfloat[\centering]{\includegraphics[width=7.7cm]{Definitions/logo-mdpi}}
-% \hfill
-% \subfloat[\centering]{\includegraphics[width=7.7cm]{Definitions/logo-mdpi}}\\
-% \subfloat[\centering]{\includegraphics[width=7.7cm]{Definitions/logo-mdpi}}
-% \hfill
-% \subfloat[\centering]{\includegraphics[width=7.7cm]{Definitions/logo-mdpi}}
-% %\isPreprints{}{% This command is only used for ``preprints''.
-% \end{adjustwidth}
-% %} % If the paper is ``preprints'', please uncomment this parenthesis.
-% \caption{This is a wide figure. Schemes follow the same formatting. If there are multiple panels, they should be listed as: (\textbf{a}) Description of what is contained in the first panel. (\textbf{b}) Description of what is contained in the second panel. (\textbf{c}) Description of what is contained in the third panel. (\textbf{d}) Description of what is contained in the fourth panel. Figures should be placed in the main text near to the first time they are cited. A caption on a single line should be centered.\label{fig2}}
-% \end{figure} 
-
-% \begin{table}[H]
-% \caption{This is a wide table.\label{tab2}}
-% %\isPreprints{\centering}{% This command is only used for ``preprints''.
-% 	\begin{adjustwidth}{-\extralength}{0cm}
-% %} % If the paper is ``preprints'', please uncomment this parenthesis.
-% %\isPreprints{\begin{tabularx}{\textwidth}{CCCC}}{% This command is only used for ``preprints''.
-% 		\begin{tabularx}{\fulllength}{CCCC}
-% %} % If the paper is ``preprints'', please uncomment this parenthesis.
-% 			\toprule
-% 			\textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}     & \textbf{Title 4}\\
-% 			\midrule
-% \multirow[m]{3}{*}{Entry 1 *}	& Data			& Data			& Data\\
-% 			  	                   & Data			& Data			& Data\\
-% 			             	      & Data			& Data			& Data\\
-%                    \midrule
-% \multirow[m]{3}{*}{Entry 2}    & Data			& Data			& Data\\
-% 			  	                  & Data			& Data			& Data\\
-% 			             	     & Data			& Data			& Data\\
-% 			\bottomrule
-% 		\end{tabularx}
-% %		\isPreprints{}{% This command is only used for ``preprints''.
-% 	\end{adjustwidth}
-% %} % If the paper is ``preprints'', please uncomment this parenthesis.
-% 	\noindent{\footnotesize{* Tables may have a footer.}}
-% \end{table}
-
-% %\begin{listing}[H]
-% %\caption{Title of the listing}
-% %\rule{\columnwidth}{1pt}
-% %\raggedright Text of the listing. In font size footnotesize, small, or normalsize. Preferred format: left aligned and single spaced. Preferred border format: top border line and bottom border line.
-% %\rule{\columnwidth}{1pt}
-% %\end{listing}
-
-% Text.
-
-% Text.
-
-% \subsection{Formatting of Mathematical Components}
-
-% This is the example 1 of equation:
-% \begin{linenomath}
-% \begin{equation}
-% a = 1,
-% \end{equation}
-% \end{linenomath}
-% the text following an equation need not be a new paragraph. Please punctuate equations as regular text.
-% %% If the documentclass option "submit" is chosen, please insert a blank line before and after any math environment (equation and eqnarray environments). This ensures correct linenumbering. The blank line should be removed when the documentclass option is changed to "accept" because the text following an equation should not be a new paragraph.
-
-% This is the example 2 of equation:
-% %\isPreprints{}{% This command is only used for ``preprints''.
-% \begin{adjustwidth}{-\extralength}{0cm}
-% %} % If the paper is ``preprints'', please uncomment this parenthesis.
-% \begin{equation}
-% a = b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + w + x + y + z
-% \end{equation}
-% %\isPreprints{}{% This command is only used for ``preprints''.
-% \end{adjustwidth}
-% %} % If the paper is ``preprints'', please uncomment this parenthesis.
-
-% % Example of a page in landscape format (with table and table footnote).
-% \startlandscape
-% \begin{table}[H] %% Table in wide page
-% %\isPreprints{\centering}{} % This command is only used for ``preprints''.
-% \caption{This is a very wide table.\label{tab3}}
-% 	\begin{tabularx}{\textwidth}{CCCC}
-% 		\toprule
-% 		\textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}	& \textbf{Title 4}\\
-% 		\midrule
-% 		Entry 1		& Data			& Data			& This cell has some longer content that runs over two lines.\\
-% 		Entry 2		& Data			& Data			& Data\textsuperscript{1}\\
-% 		\bottomrule
-% 	\end{tabularx}
-% %\isPreprints{}{% This command is only used for ``preprints''.
-% 	\begin{adjustwidth}{+\extralength}{0cm}
-% %} % If the paper is ``preprints'', please uncomment this parenthesis.
-% 		\noindent\footnotesize{\textsuperscript{1} This is a table footnote.}
-% %\isPreprints{}{% This command is only used for ``preprints''.
-% 	\end{adjustwidth}
-% %} % If the paper is ``preprints'', please uncomment this parenthesis.
-% \end{table}
-% \finishlandscape
+The relationship between ID training dataset size and model performance was evaluated 
+for all model architectures and sizes as shown in Figure~\ref{fig:dataset_size_vs_performance}. 
+The three performances of each model for a given dataset size correspond to the 
+test on the three ID datasets. For some test, the resulting R-squared value of counting 
+was below 0 (data not shown). Where it was not the case, it has been possible to
+calculate the mean and the interval of the R-squared values. It has been always possible 
+for mAP.
+The R-squared values of the counting and the mAP values for all models were regressed 
+against the dataset size using a logarithmic, root or arctan model. The goodness-of-fit (GoF), estimated 
+as the coefficient of determination of these models, was also calculated. 
+A high GoF value indicates that model performance is highly predictable by dataset size. 
+Conversely, a poor GoF could indicate that other variables play a more important 
+role in determining model performance, or that the chosen dataset size interval is 
+too narrow to achieve a good fit.
 
 
-% Please punctuate equations as regular text. Theorem-type environments (including propositions, 
-% lemmas, corollaries etc.) can be formatted as follows:
-% %% Example of a theorem:
-% \begin{Theorem}
-% Example text of a theorem.
-% \end{Theorem}
+\begin{figure}[H]
+  \centering
+  \begin{adjustwidth}{-\extralength}{0cm}
+  \subfloat[\centering]{\includegraphics[width=18cm]{Plots/r2_ap_vs_dataset_size_yolov5.pdf}}\\
+  \subfloat[\centering]{\includegraphics[width=18cm]{Plots/r2_ap_vs_dataset_size_yolov8.pdf}}\\
+  \subfloat[\centering]{\includegraphics[width=18cm]{Plots/r2_ap_vs_dataset_size_yolo11.pdf}}\\
+  \subfloat[\centering]{\includegraphics[width=18cm]{Plots/r2_ap_vs_dataset_size_rtdetr.pdf}}\\
+  \caption{Relationship between dataset size and model performance 
+  for different object detection models (YOLOv5 \textbf{(a)}, YOLOv8 \textbf{(b)}, 
+  YOLO11 \textbf{(c)}, and RT-DETR \textbf{(d)}) trained and tested on ID datasets. 
+  On the same line, each subplot represents a different parameters size of the model,
+  increasing from the left to the right. The x-axis represents the dataset size, while
+  the left and right y-axis represents the R-squared and mAP values respectivelly. 
+  The solid lines represent the mean values, while the dashed lines indicate the logarithmic fit.
+  The shaded area around the solid lines represents the confidence interval (standard
+  deviation) of R-squared or mAP.
+  The red dashed horizontal line represents the benchmark R-squared value of 0.85. The combined
+  legend in the lower right corner of each subplot shows the goodness of fit (GoF) for both R-squared
+  and mAP.}
+  \label{fig:dataset_size_vs_performance}  
+\end{adjustwidth}
+\end{figure}
 
-% The text continues here. Proofs must be formatted as follows:
+For the combinations model-archicture/dataset-size that achieved the benchmark,
+the minimum dataset quality required to achieve the benchmark was evaluated as
+shown in Figure~\ref{fig:dataset_quality}.
 
-% %% Example of a proof:
-% \begin{proof}[Proof of Theorem 1]
-% Text of the proof. Note that the phrase ``of Theorem 1'' is optional if it is clear 
-% which theorem is being referred to.
-% \end{proof}
-% The text continues here.
+\begin{figure}[H]
+  \centering
+  \begin{adjustwidth}{-\extralength}{0cm}
+  \includegraphics[width=18cm]{Plots/r2_ap_vs_dataset_quality.pdf}
+  \caption{Relationship between dataset quality and model performance for all object detection models
+  that achieved the benchmark. The x-axis represents the dataset quality, while 
+  the left y-axis represents the R-squared values.
+  The red dashed horizontal line represents the benchmark R-squared value of 0.85. The
+  legend in the lower right corner of the subplot shows the goodness of fit (GoF) for R-squared.}
+  \label{fig:dataset_quality}
+  \end{adjustwidth}   
+\end{figure}
+
+Whithin YOLO models YOLOv5n, YOLOv5s and YOLOv8n achieve the benchmark R-squared 
+value of 0.85 with 130, 130 and 110 samples, respectively, if considered the dataset
+sizes where all the three model performances were above 0.85 r-squared and the logarithmic
+model predicted over-benchmark values for that dataset size.
+RT-DETR l and RT-DETR x achieve the benchmark R-squared value of 0.85 with 60 and 100 samples
+respectivelly, with the same assumptions as for YOLO models.
+For these models the GoF was above 0.3, while for the models that did
+not reach the benchmark R-squared value the GoF was always below this value.
+The mAP seems to follow the same trend as the R-squared values.
+All the models show a clear trend of increasing R-squared and mAP
+values as the dataset size increases, as expected.
+It is also clear that increasing number of parameters and model complexity for
+mostly CNN like models (YOLOs) leads to increasing need for dataset size.
+For the mostly transformer like models (RT-DETRs) it is not that clear, also because of
+the low amount of model parameter size tested.
+The confidence interval reduction in function of the dataset size indicate that 
+variability in performance decreases significantly as dataset size increases for 
+all models.
+Taking into account the dataset quality in the same way as done for the dataset size,
+both quality tests and quality models achieved the benchmark with the 85\%, 90\%, 85\% and
+65\% of the original dataset quality for YOLOv5n, YOLOv5s, YOLOv8n and RT-DETR x, respectivelly.
+RT-DETR l did not achieve the benchmark for any dataset quality reduction tested.
+
+\subsection{few-shots object detectors}
+
+The few-shots models were evaluated with the following metrics: R-squared and RMSE
+beacause no one of the models reached the benchmark.
+
+\begin{figure}[H]
+  \centering
+  \begin{adjustwidth}{-\extralength}{0cm}
+  \subfloat[\centering]{\includegraphics[width=18cm]{Plots/r2_ap_vs_shots_cdvito.pdf}}\\
+  \subfloat[\centering]{\includegraphics[width=18cm]{Plots/rmse_ap_vs_shots_cdvito.pdf}}\\
+  \caption{The figure shows the relationship between shots and model performance
+  for the CD-ViTO model trained and tested on ID datasets.
+  The x-axis represents the number of shots.
+  The solid lines represent the mean values, while the dashed lines indicate the shots amount/metric 
+  prediction model.
+  The shaded area around the solid lines represents the confidence interval (standard deviation) of the metric.
+  \textbf{(a)} The left and right y-axis represents the R-squared and mAP values respectivelly.
+  The red dashed horizontal line represents the benchmark R-squared value of 0.85. The combined
+  legend in the lower right corner of each subplot shows the goodness of fit (GoF) for both R-squared
+  and mAP.
+  \textbf{(b)} The left and right y-axis represents the RMSE and MAPE values respectivelly.
+  The red dashed horizontal line represents the benchmark RMSE value of 0.39. The combined
+  legend in the upper right corner of each subplot shows the goodness of fit (GoF) for both RMSE
+  and MAPE.
+  }
+  \label{fig:shots_vs_performance}
+\end{adjustwidth}
+\end{figure}
+
+The best result achieved by the CD-ViTO model was a RMSE of 3.9 with ViT-B backbone and 
+50 shots to build the prototypes. It corresponds to a MAPE on counting of about 25\% 
+and a mAP of about 0.5 (Figure~\ref{fig:shots_vs_performance}).
+Some of the best predictions of this model are shown in Figure~\ref{fig:annotations_few-shots}.
+The models fitted on metrics show a reliable GoF for all
+the metrics, indicating that the model performance is highly predictable by the number of shots.
+These also show that any CD-ViTO size model would not achieve the
+benchmark with any shot amount.
+
+\begin{figure}[H]
+  \begin{adjustwidth}{-\extralength}{0cm}
+  \includegraphics[width=18cm]{Plots/few_shot_annotations.pdf}
+  \caption{50 shots CD-ViTO with ViT-B backbone predictions on the 
+  1, 2 and 3 ID test datasets tile examples, respectivelly from the left hand side to the right.
+   Black bounding boxes are the ground truth annotations, while the bounding boxes 
+   in viridis color scale are the model predictions.}
+  \label{fig:annotations_few-shots}
+\end{adjustwidth}
+\end{figure}
+
+\subsection{zero-shots object detectors}
+
+Figure \ref{fig:zeroshots_vs_performance} shows the relationship between the OWLv2 model settings and model performance
+for the OWLv2 model tested on ID testing datasets. A real dataset size relation 
+with metrics could not be established as zero-shots models do not require fine-tuning 
+training data. 
+No one of the zero-shots model settings reached the benchmark. This is particularly 
+true for the R-squared values that were always below 0. 
+The RMSE and MAPE were higher than the observed in the few-shots models. 
+The mAP values were always above 0.5, but never reached the benchmark.
+
+\begin{figure}[H]
+  \centering
+  \begin{adjustwidth}{-\extralength}{0cm}
+  \subfloat[\centering]{\includegraphics[width=18cm]{Plots/zeroshot.pdf}}
+  \caption{The figure shows the relationship between the OWLv2 model size, used prompt 
+  and model performance.
+  The x-axis represents the model settings and the model size.
+  Colors represent the different prompts used.
+  The four subplots show the mAP (upper left corner), R-squared (upper right corner),
+  RMSE (lower left corner), and MAPE (lower right corner) values.
+  The red dashed horizontal line in the R-squared and the RMSE subplots represents 
+  respectivelly the benchmark of 0.85 and 0.39. 
+  }
+  \label{fig:zeroshots_vs_performance}
+\end{adjustwidth}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{adjustwidth}{-\extralength}{0cm}
+  \includegraphics[width=18cm]{Plots/zeroshot_images.pdf}
+  \caption{The best predictions with the OWLv2 model.  
+  The ID\_1, ID\_2 and ID\_3 datasets respectivelly from the left hand side to the right.
+  Prediction with owlv2-base-patch16-ensemble model of the ID\_1 dataset,
+  and with owlv2-base-patch16 model on the other two datasets.
+  All the predictions are made with the prompt "seedling".
+  Black bounding boxes are the ground truth annotations, while the bounding boxes 
+  in viridis color scale are the model predictions.}
+  \label{fig:annotations_zero-shots}
+\end{adjustwidth}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
@@ -703,6 +949,11 @@ Our HC is based on the color of the maize seedlings, which is green.
 % of previous studies and of the working hypotheses. The findings and their implications 
 % should be discussed in the broadest context possible. Future research directions 
 % may also be highlighted.
+
+% PERHAPS IN DISCUSSION
+The CD-ViTO model did not achieve the benchmark
+beacuse of the high variability of the errors as testify the high RMSE values.
+Still the best model was able to to predict the number of plants with a MAPE of 25\%.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
@@ -847,25 +1098,101 @@ LD & Linear dichroism
 \appendix
 \section[\appendixname~\thesection]{}
 \subsection[\appendixname~\thesubsection]{}
-The appendix is an optional section that can contain details and data supplemental 
-to the main text---for example, explanations of experimental details that would disrupt 
-the flow of the main text but nonetheless remain crucial to understanding and reproducing 
-the research shown; figures of replicates for experiments of which representative 
-data are shown in the main text can be added here if brief, or as Supplementary Data. 
-Mathematical proofs of results not central to the paper can be added as an appendix.
+In summary, the HC algorithm is based on color thresholding, that rely on the
+manual setting of Hue, Saturation, and Value (HSV) color minimum and maximum
+thresholding. Thresholding creates a binary image that is subsequently regionalized
+by connected components. The connected components are then filtered by area.
+Centers of the areas are fitted with RANSAC to get the slope of the lines where
+plants lie. Only the tiles where the slope is within the interquartile range are
+considered for further processing. The centers of the filtered tiles are then fitted
+again with RANSAC to get the lines on the neighboring of the first line detected.
 
-\begin{table}[H] 
-\caption{This is a table caption.\label{tab5}}
-%\newcolumntype{C}{>{\centering\arraybackslash}X}
-\begin{tabularx}{\textwidth}{CCC}
-\toprule
-\textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}\\
-\midrule
-Entry 1		& Data			& Data\\
-Entry 2		& Data			& Data\\
-\bottomrule
-\end{tabularx}
-\end{table}
+This as most of HC algoritm is intrinsically limited by the color thresholding.
+Our HC is based on the color of the maize seedlings, which is green.
+
+
+\begin{algorithm}
+  \caption{H1}
+  \label{alg:H1}
+  \begin{algorithmic}[1]
+  \Require $tiles$ \Comment{Orthomosaic tiles}
+  \Require $col\_range$ \Comment{Color space thresholds}
+  \Require $leaf\_area\_range$ \Comment{Leaf area range in pixels}
+  \Ensure $plants$ \Comment{List of polygons}
+  
+  \Function{connected\_components}{$binary\_image$} \cite{wuOptimizingConnectedComponent2005} 
+      \State \Return $regions$
+  \EndFunction
+  
+  \For{$tile$ in $tiles$}
+    \State $mask \gets \{p \in tile \mid color(p) \in col\_range\}$
+    \State $regions \gets connected\_components(mask)$
+    \State $plants \gets \{region \mid region \in regions \land region.area \in leaf\_area\_range\}$
+  \EndFor
+  \State \Return $plants$
+  \end{algorithmic}
+  \end{algorithm}
+  
+  
+  \begin{algorithm}
+  \caption{H2}
+  \label{alg:H2}
+  \begin{algorithmic}[1]
+  \Function{process\_tiles}{$intra-row\_dist$}
+    \State $observations \gets \{\}$
+    \State $plants \gets \Call{HC1}{tiles}$
+    \For{$tile$ in $tiles$}
+      \State $regions \gets plants[tile]$
+      \State $centroids \gets \Call{region\_centroids}{regions}$
+      \State $clust\_cen \gets \Call{agglomerate\_regions}{regions, min\_dist}$
+      \State $inlier\_points, model \gets \Call{extract\_ransac\_line}{clust\_cen, intra-row\_dist}$
+      \State $line\_length \gets \Call{get\_line\_length}{model}$
+      \State $expected\_number\_of\_plants \gets \frac{line\_length}{intra\_row\_dist}$
+      \If {$inlier\_points \equiv expected\_number\_of\_plants}$
+        \State $observations[tile] \gets (clust\_cen,inlier\_points,model)$
+      \EndIf
+    \EndFor
+    \State \Return $observations$
+  \EndFunction
+  \Function{Filter\_observations\_by\_slope}{}
+    \State $filtered\_observations \gets \{\}$
+    \For{$tile \in observations$}
+      \State $slope \gets observations[tile][\text{'model'}]$
+      \If{$model.slope \approx MEAN\_SLOPE$}
+        \State $filtered\_observations[tile] \gets observations[tile]$
+      \EndIf
+    \EndFor
+    \State \Return $filtered\_observations$
+  \EndFunction
+  \Function{process\_observations}{$observations,inter-row\_dist$}
+    \State $objects \gets \{\}$
+    \For{$tile \in observations$}
+      \State $tile\_centers \gets observations[tile][\text{'clust\_cen'}]$
+      \State $first\_row\_centers \gets observations[tile][\text{'inlier\_points'}]$
+      \State $first\_row\_model \gets observations[tile][\text{'model'}]$
+      \State $centers \gets \{p \mid p \in tile\_centers \land p \notin first\_row\_centers\}$
+      \State $second\_row\_centers, second\_row\_model \gets \Call{extract\_ransac\_line}{centers, intra-row\_dist}$
+      \State $line\_length \gets \Call{get\_line\_length}{second\_row\_model}$
+      \State $expected\_number\_of\_plants \gets \frac{line\_length}{intra\_row\_dist}$
+      \If {$second\_row\_model.slope \approx first\_row\_model.slope$}
+        \If {$abs(second\_row\_model.intercept - first\_row\_model.intercept) \approx inter-row\_dist$}
+          \If {$second\_row\_centers \equiv expected\_number\_of\_plants}$
+            \State $objects[tile] \gets (first\_row\_centers, second\_row\_centers)$
+          \EndIf
+        \EndIf
+      \EndIf
+    \EndFor
+    \State \Return $objects$
+  \EndFunction
+  \Function{main}{}
+    \State $observations \gets \Call{process\_tiles}{intra-row\_dist}$
+    \State $MEAN\_SLOPE \gets \Call{mean}{observations[\text{'model'}]}$
+    \State $observations \gets \Call{Filter\_observations\_by\_slope}{observations,MEAN\_SLOPE}$
+    \State $objects \gets \Call{process\_observations}{observations,inter-row\_dist}$
+    \State \Return $objects$
+  \EndFunction
+  \end{algorithmic}
+  \end{algorithm}
 
 \section[\appendixname~\thesection]{}
 All appendix sections must be cited in the main text. In the appendices, Figures, 

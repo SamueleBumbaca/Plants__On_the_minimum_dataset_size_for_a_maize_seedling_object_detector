@@ -1,384 +1,64 @@
 \begin{thebibliography}{999}
 
 \bibitem[PP1(2024)]{PP13332024}
-{{{\textsc{PP}}}} 1/333 (1) {{Adoption}} of Digital Technology for Data
-  Generation for the Efficacy Evaluation of Plant Protection Products.
+{{{\textsc{PP}}}} 1/333 (1) {{Adoption}} of Digital Technology for Data Generation for the Efficacy Evaluation of Plant Protection Products.
 \newblock {\em EPPO Bulletin} {\bf 2024}, p. epp.13037.
 \newblock {\url{https://doi.org/10.1111/epp.13037}}.
 
-\bibitem[Zou et~al.(2020)Zou, Lu, Li, Liu, and
-  Cao]{zouMaizeTasselsDetection2020}
+\bibitem[Zou et~al.(2020)Zou, Lu, Li, Liu, and Cao]{zouMaizeTasselsDetection2020}
 Zou, H.; Lu, H.; Li, Y.; Liu, L.; Cao, Z.
 \newblock Maize Tassels Detection: A Benchmark of the State of the Art.
 \newblock {\em Plant Methods} {\bf 2020}, {\em 16},~108.
 \newblock {\url{https://doi.org/10.1186/s13007-020-00651-z}}.
 
-\bibitem[Liu et~al.(2022)Liu, Zhou, Wang, Costa, Kaeppler, and
-  Zhang]{liuIntegrateNetDeepLearning2022}
+\bibitem[Liu et~al.(2022)Liu, Zhou, Wang, Costa, Kaeppler, and Zhang]{liuIntegrateNetDeepLearning2022}
 Liu, W.; Zhou, J.; Wang, B.; Costa, M.; Kaeppler, S.M.; Zhang, Z.
-\newblock {{IntegrateNet}}: {{A Deep Learning Network}} for {{Maize Stand
-  Counting From UAV Imagery}} by {{Integrating Density}} and {{Local Count
-  Maps}}.
-\newblock {\em IEEE Geoscience and Remote Sensing Letters} {\bf 2022}, {\em
-  19},~1--5.
+\newblock {{IntegrateNet}}: {{A Deep Learning Network}} for {{Maize Stand Counting From UAV Imagery}} by {{Integrating Density}} and {{Local Count Maps}}.
+\newblock {\em IEEE Geoscience and Remote Sensing Letters} {\bf 2022}, {\em 19},~1--5.
 \newblock {\url{https://doi.org/10.1109/LGRS.2022.3186544}}.
 
-\bibitem[David et~al.(2021)David, Daubige, Joudelat, Burger, Comar, {de Solan},
-  and Baret]{davidPlantDetectionCounting2021}
-David, E.; Daubige, G.; Joudelat, F.; Burger, P.; Comar, A.; {de Solan}, B.;
-  Baret, F.
-\newblock Plant Detection and Counting from High-Resolution {{RGB}} Images
-  Acquired from {{UAVs}}: Comparison between Deep-Learning and Handcrafted
-  Methods with Application to Maize, Sugar Beet, and Sunflowe,  2021.
+\bibitem[David et~al.(2021)David, Daubige, Joudelat, Burger, Comar, {de Solan}, and Baret]{davidPlantDetectionCounting2021}
+David, E.; Daubige, G.; Joudelat, F.; Burger, P.; Comar, A.; {de Solan}, B.; Baret, F.
+\newblock Plant Detection and Counting from High-Resolution {{RGB}} Images Acquired from {{UAVs}}: Comparison between Deep-Learning and Handcrafted Methods with Application to Maize, Sugar Beet, and Sunflowe,  2021.
 \newblock {\url{https://doi.org/10.1101/2021.04.27.441631}}.
 
-\bibitem[Barreto et~al.(2021)Barreto, Lottes, Ispizua~Yamati, Baumgarten, Wolf,
-  Stachniss, Mahlein, and Paulus]{barretoAutomaticUAVbasedCounting2021}
-Barreto, A.; Lottes, P.; Ispizua~Yamati, F.R.; Baumgarten, S.; Wolf, N.A.;
-  Stachniss, C.; Mahlein, A.K.; Paulus, S.
-\newblock Automatic {{UAV-based}} Counting of Seedlings in Sugar-Beet Field and
-  Extension to Maize and Strawberry.
-\newblock {\em Computers and Electronics in Agriculture} {\bf 2021}, {\em
-  191},~106493.
+\bibitem[Barreto et~al.(2021)Barreto, Lottes, Ispizua~Yamati, Baumgarten, Wolf, Stachniss, Mahlein, and Paulus]{barretoAutomaticUAVbasedCounting2021}
+Barreto, A.; Lottes, P.; Ispizua~Yamati, F.R.; Baumgarten, S.; Wolf, N.A.; Stachniss, C.; Mahlein, A.K.; Paulus, S.
+\newblock Automatic {{UAV-based}} Counting of Seedlings in Sugar-Beet Field and Extension to Maize and Strawberry.
+\newblock {\em Computers and Electronics in Agriculture} {\bf 2021}, {\em 191},~106493.
 \newblock {\url{https://doi.org/10.1016/j.compag.2021.106493}}.
 
-\bibitem[Liu et~al.(2022)Liu, Yin, Feng, Li, Xu, Shi, and
-  Jin]{liuEstimatingMaizeSeedling2022}
+\bibitem[Liu et~al.(2022)Liu, Yin, Feng, Li, Xu, Shi, and Jin]{liuEstimatingMaizeSeedling2022}
 Liu, S.; Yin, D.; Feng, H.; Li, Z.; Xu, X.; Shi, L.; Jin, X.
-\newblock Estimating Maize Seedling Number with {{UAV RGB}} Images and Advanced
-  Image Processing Methods.
+\newblock Estimating Maize Seedling Number with {{UAV RGB}} Images and Advanced Image Processing Methods.
 \newblock {\em Precision Agriculture} {\bf 2022}, {\em 23},~1604--1632.
 \newblock {\url{https://doi.org/10.1007/s11119-022-09899-y}}.
 
 \bibitem[Est()]{EstimatesMaizePlant}
-Estimates of {{Maize Plant Density}} from {{UAV RGB Images Using Faster-RCNN
-  Detection Model}}: {{Impact}} of the {{Spatial Resolution}}.
+Estimates of {{Maize Plant Density}} from {{UAV RGB Images Using Faster-RCNN Detection Model}}: {{Impact}} of the {{Spatial Resolution}}.
 \newblock https://spj.science.org/doi/10.34133/2021/9824843.
 \newblock {\url{https://doi.org/10.34133/2021/9824843}}.
 
-\bibitem[Lin et~al.(2015)Lin, Maire, Belongie, Bourdev, Girshick, Hays, Perona,
-  Ramanan, Zitnick, and Doll{\'a}r]{linMicrosoftCOCOCommon2015}
-Lin, T.Y.; Maire, M.; Belongie, S.; Bourdev, L.; Girshick, R.; Hays, J.;
-  Perona, P.; Ramanan, D.; Zitnick, C.L.; Doll{\'a}r, P.
-\newblock Microsoft {{COCO}}: {{Common Objects}} in {{Context}},  2015,
-  \href{http://arxiv.org/abs/1405.0312}{{\normalfont [arXiv:cs/1405.0312]}}.
+\bibitem[Lin et~al.(2015)Lin, Maire, Belongie, Bourdev, Girshick, Hays, Perona, Ramanan, Zitnick, and Doll{\'a}r]{linMicrosoftCOCOCommon2015}
+Lin, T.Y.; Maire, M.; Belongie, S.; Bourdev, L.; Girshick, R.; Hays, J.; Perona, P.; Ramanan, D.; Zitnick, C.L.; Doll{\'a}r, P.
+\newblock Microsoft {{COCO}}: {{Common Objects}} in {{Context}},  2015,  \href{http://arxiv.org/abs/1405.0312}{{\normalfont [arXiv:cs/1405.0312]}}.
 \newblock {\url{https://doi.org/10.48550/arXiv.1405.0312}}.
 
 \bibitem[Kraus(2011)]{krausPhotogrammetryGeometryImages2011}
 Kraus, K.
-\newblock {\em Photogrammetry: {{Geometry}} from {{Images}} and {{Laser
-  Scans}}}; De Gruyter,  2011.
+\newblock {\em Photogrammetry: {{Geometry}} from {{Images}} and {{Laser Scans}}}; De Gruyter,  2011.
 \newblock {\url{https://doi.org/10.1515/9783110892871}}.
 
-\bibitem[Fas()]{FasterRCNNRealTime}
-Faster {{R-CNN}}: {{Towards Real-Time Object Detection}} with {{Region Proposal
-  Networks}} {\textbar} {{IEEE Journals}} \& {{Magazine}} {\textbar} {{IEEE
-  Xplore}}.
-\newblock https://ieeexplore-ieee-org.bibliopass.unito.it/document/7485869.
+\bibitem[Heider et~al.(2025)Heider, Gunreben, Z{\"u}rner, and Schieck]{heiderSurveyDatasetsComputer2025}
+Heider, N.; Gunreben, L.; Z{\"u}rner, S.; Schieck, M.
+\newblock A {{Survey}} of {{Datasets}} for {{Computer Vision}} in {{Agriculture}}: {{A}} Catalogue of High-Quality {{RGB}} Image Datasets of Natural Field Scenes.
+\newblock {\em 45. GIL-Jahrestagung, Digitale Infrastrukturen f{\"u}r eine nachhaltige Land-, Forst und Ern{\"a}hrungswirtschaft} {\bf 2025}, pp. 35--47.
 
-\bibitem[You()]{YouOnlyLook}
-You {{Only Look Once}}: {{Unified}}, {{Real-Time Object Detection}} {\textbar}
-  {{IEEE Conference Publication}} {\textbar} {{IEEE Xplore}}.
-\newblock https://ieeexplore-ieee-org.bibliopass.unito.it/document/7780460.
-
-\bibitem[Carion et~al.(2020)Carion, Massa, Synnaeve, Usunier, Kirillov, and
-  Zagoruyko]{carionEndtoEndObjectDetection2020}
-Carion, N.; Massa, F.; Synnaeve, G.; Usunier, N.; Kirillov, A.; Zagoruyko, S.
-\newblock End-to-{{End Object Detection}} with {{Transformers}},  2020,
-  \href{http://arxiv.org/abs/2005.12872}{{\normalfont [arXiv:cs/2005.12872]}}.
-\newblock {\url{https://doi.org/10.48550/arXiv.2005.12872}}.
-
-\bibitem[Jing and Tian(2019)]{jingSelfsupervisedVisualFeature2019}
-Jing, L.; Tian, Y.
-\newblock Self-Supervised {{Visual Feature Learning}} with {{Deep Neural
-  Networks}}: {{A Survey}},  2019,
-  \href{http://arxiv.org/abs/1902.06162}{{\normalfont [arXiv:cs/1902.06162]}}.
-\newblock {\url{https://doi.org/10.48550/arXiv.1902.06162}}.
-
-\bibitem[140()]{14090575ImageNetLarge}
-[1409.0575] {{ImageNet Large Scale Visual Recognition Challenge}}.
-\newblock
-  https://web.archive.org/web/20190320194904/https://arxiv.org/abs/1409.0575.
-
-\bibitem[Zong et~al.(2023)Zong, Song, and
-  Liu]{zongDETRsCollaborativeHybrid2023}
-Zong, Z.; Song, G.; Liu, Y.
-\newblock {{DETRs}} with {{Collaborative Hybrid Assignments Training}}.
-\newblock In Proceedings of the 2023 {{IEEE}}/{{CVF International Conference}}
-  on {{Computer Vision}} ({{ICCV}}), Paris, France,  2023; pp. 6725--6735.
-\newblock {\url{https://doi.org/10.1109/ICCV51070.2023.00621}}.
-
-\bibitem[Khan et~al.(2023)Khan, Rauf, Sohail, Khan, Asif, Asif, and
-  Farooq]{khanSurveyVisionTransformers2023}
-Khan, A.; Rauf, Z.; Sohail, A.; Khan, A.R.; Asif, H.; Asif, A.; Farooq, U.
-\newblock A Survey of the Vision Transformers and Their {{CNN-transformer}}
-  Based Variants.
-\newblock {\em Artificial Intelligence Review} {\bf 2023}, {\em
-  56},~2917--2970.
-\newblock {\url{https://doi.org/10.1007/s10462-023-10595-0}}.
-
-\bibitem[Li et~al.(2017)Li, Zhou, Chen, and Li]{liMetaSGDLearningLearn2017}
-Li, Z.; Zhou, F.; Chen, F.; Li, H.
-\newblock Meta-{{SGD}}: {{Learning}} to {{Learn Quickly}} for {{Few-Shot
-  Learning}},  2017,  \href{http://arxiv.org/abs/1707.09835}{{\normalfont
-  [arXiv:cs/1707.09835]}}.
-\newblock {\url{https://doi.org/10.48550/arXiv.1707.09835}}.
-
-\bibitem[Bansal et~al.(2018)Bansal, Sikka, Sharma, Chellappa, and
-  Divakaran]{bansalZeroShotObjectDetection2018}
-Bansal, A.; Sikka, K.; Sharma, G.; Chellappa, R.; Divakaran, A.
-\newblock Zero-{{Shot Object Detection}}.
-\newblock In Proceedings of the Proceedings of the {{European Conference}} on
-  {{Computer Vision}} ({{ECCV}}),  2018, pp. 384--400.
-
-\bibitem[Huang et~al.(2022)Huang, Laradji, Vazquez, {Lacoste-Julien}, and
-  Rodriguez]{huangSurveySelfSupervisedFewShot2022}
-Huang, G.; Laradji, I.; Vazquez, D.; {Lacoste-Julien}, S.; Rodriguez, P.
-\newblock A {{Survey}} of {{Self-Supervised}} and {{Few-Shot Object
-  Detection}},  2022,  \href{http://arxiv.org/abs/2110.14711}{{\normalfont
-  [arXiv:cs/2110.14711]}}.
-\newblock {\url{https://doi.org/10.48550/arXiv.2110.14711}}.
-
-\bibitem[Met()]{MetaLearningBasedIncrementalFewShot}
-Meta-{{Learning-Based Incremental Few-Shot Object Detection}} {\textbar} {{IEEE
-  Journals}} \& {{Magazine}} {\textbar} {{IEEE Xplore}}.
-\newblock
-  https://ieeexplore-ieee-org.bibliopass.unito.it/abstract/document/9452164.
-
-\bibitem[Wu et~al.(2020)Wu, Sahoo, and Hoi]{wuMetaRCNNMetaLearning2020}
-Wu, X.; Sahoo, D.; Hoi, S.
-\newblock Meta-{{RCNN}}: {{Meta Learning}} for {{Few-Shot Object Detection}}.
-\newblock In Proceedings of the Proceedings of the 28th {{ACM International
-  Conference}} on {{Multimedia}}, New York, NY, USA,  2020; {{MM}} '20, pp.
-  1679--1687.
-\newblock {\url{https://doi.org/10.1145/3394171.3413832}}.
-
-\bibitem[Fu et~al.(2019)Fu, Zhang, Zhang, Yan, Chang, Zhang, and
-  Sun]{fuMetaSSDFastAdaptation2019}
-Fu, K.; Zhang, T.; Zhang, Y.; Yan, M.; Chang, Z.; Zhang, Z.; Sun, X.
-\newblock Meta-{{SSD}}: {{Towards Fast Adaptation}} for {{Few-Shot Object
-  Detection With Meta-Learning}}.
-\newblock {\em IEEE Access} {\bf 2019}, {\em 7},~77597--77606.
-\newblock {\url{https://doi.org/10.1109/ACCESS.2019.2922438}}.
-
-\bibitem[Zhang et~al.(2021)Zhang, Luo, Cui, and
-  Lu]{zhangMetaDETRFewShotObject2021}
-Zhang, G.; Luo, Z.; Cui, K.; Lu, S.
-\newblock {\em Meta-{{DETR}}: {{Few-Shot Object Detection}} via {{Unified
-  Image-Level Meta-Learning}}};  2021.
-\newblock {\url{https://doi.org/10.48550/arXiv.2103.11731}}.
-
-\bibitem[Sa et~al.(2023)Sa, Yu, Hong, Zheng, and
-  Liu]{saBroaderStudyCrossdomain2023}
-Sa, L.; Yu, C.; Hong, Z.; Zheng, T.; Liu, S.
-\newblock A Broader Study of Cross-Domain Few-Shot Object Detection.
-\newblock {\em Applied Intelligence} {\bf 2023}, {\em 53},~29465--29485.
-\newblock {\url{https://doi.org/10.1007/s10489-023-05082-6}}.
-
-\bibitem[Kang et~al.(2019)Kang, Liu, Wang, Yu, Feng, and
-  Darrell]{kangFewshotObjectDetection2019}
-Kang, B.; Liu, Z.; Wang, X.; Yu, F.; Feng, J.; Darrell, T.
-\newblock Few-Shot {{Object Detection}} via {{Feature Reweighting}},  2019,
-  \href{http://arxiv.org/abs/1812.01866}{{\normalfont [arXiv:cs/1812.01866]}}.
-\newblock {\url{https://doi.org/10.48550/arXiv.1812.01866}}.
-
-\bibitem[Minderer et~al.(2023)Minderer, Gritsenko, and
-  Houlsby]{mindererScalingOpenVocabularyObject2023}
-Minderer, M.; Gritsenko, A.; Houlsby, N.
-\newblock Scaling {{Open-Vocabulary Object Detection}}.
-\newblock {\em Advances in Neural Information Processing Systems} {\bf 2023},
-  {\em 36},~72983--73007.
-
-\bibitem[Liu et~al.(2025)Liu, Zeng, Ren, Li, Zhang, Yang, Jiang, Li, Yang, Su,
-  Zhu, and Zhang]{liuGroundingDINOMarrying2025}
-Liu, S.; Zeng, Z.; Ren, T.; Li, F.; Zhang, H.; Yang, J.; Jiang, Q.; Li, C.;
-  Yang, J.; Su, H.;  et~al.
-\newblock Grounding {{DINO}}: {{Marrying DINO}} with~{{Grounded Pre-training}}
-  for~{{Open-Set Object Detection}}.
-\newblock In Proceedings of the Computer {{Vision}} -- {{ECCV}} 2024;
-  Leonardis, A.; Ricci, E.; Roth, S.; Russakovsky, O.; Sattler, T.; Varol, G.,
-  Eds., Cham,  2025; pp. 38--55.
-\newblock {\url{https://doi.org/10.1007/978-3-031-72970-6_3}}.
-
-\bibitem[Xu et~al.(2023)Xu, Hao, Luo, Hu, An, and
-  Mao]{xuDeViTDecomposingVision2023}
-Xu, G.; Hao, Z.; Luo, Y.; Hu, H.; An, J.; Mao, S.
-\newblock {{DeViT}}: {{Decomposing Vision Transformers}} for {{Collaborative
-  Inference}} in {{Edge Devices}},  2023,
-  \href{http://arxiv.org/abs/2309.05015}{{\normalfont [arXiv:cs/2309.05015]}}.
-\newblock {\url{https://doi.org/10.48550/arXiv.2309.05015}}.
-
-\bibitem[Fu et~al.(2024)Fu, Wang, Pan, Huai, Qiu, Shangguan, Liu, Fu, Gool, and
-  Jiang]{fuCrossDomainFewShotObject2024}
-Fu, Y.; Wang, Y.; Pan, Y.; Huai, L.; Qiu, X.; Shangguan, Z.; Liu, T.; Fu, Y.;
-  Gool, L.V.; Jiang, X.
-\newblock Cross-{{Domain Few-Shot Object Detection}} via {{Enhanced Open-Set
-  Object Detector}},  2024,
-  \href{http://arxiv.org/abs/2402.03094}{{\normalfont [arXiv:cs/2402.03094]}}.
-\newblock {\url{https://doi.org/10.48550/arXiv.2402.03094}}.
-
-\bibitem[Geng et~al.(2024)Geng, Yu, Yuan, Ma, and
-  Li]{gengResearchSegmentationMethod2024}
-Geng, T.; Yu, H.; Yuan, X.; Ma, R.; Li, P.
-\newblock Research on {{Segmentation Method}} of {{Maize Seedling Plant
-  Instances Based}} on {{UAV Multispectral Remote Sensing Images}}.
-\newblock {\em Plants} {\bf 2024}, {\em 13},~1842.
-\newblock {\url{https://doi.org/10.3390/plants13131842}}.
-
-\bibitem[Jiang et~al.(2019)Jiang, Li, Paterson, and
-  Robertson]{jiangDeepSeedlingDeepConvolutional2019}
-Jiang, Y.; Li, C.; Paterson, A.H.; Robertson, J.S.
-\newblock {{DeepSeedling}}: Deep Convolutional Network and {{Kalman}} Filter
-  for Plant Seedling Detection and Counting in the Field.
-\newblock {\em Plant Methods} {\bf 2019}, {\em 15},~141.
-\newblock {\url{https://doi.org/10.1186/s13007-019-0528-3}}.
-
-\bibitem[Katari et~al.(2024)Katari, Venkatesh, Stewart, and
-  Khanal]{katariIntegratingAutomatedLabeling2024}
-Katari, S.; Venkatesh, S.; Stewart, C.; Khanal, S.
-\newblock Integrating {{Automated Labeling Framework}} for {{Enhancing Deep
-  Learning Models}} to {{Count Corn Plants Using UAS Imagery}}.
-\newblock {\em Sensors} {\bf 2024}, {\em 24},~6467.
-\newblock {\url{https://doi.org/10.3390/s24196467}}.
-
-\bibitem[Kitano et~al.(2019)Kitano, Mendes, Geus, Oliveira, and
-  Souza]{kitanoCornPlantCounting2019}
-Kitano, B.T.; Mendes, C.C.T.; Geus, A.R.; Oliveira, H.C.; Souza, J.R.
-\newblock Corn {{Plant Counting Using Deep Learning}} and {{UAV Images}}.
-\newblock {\em IEEE Geoscience and Remote Sensing Letters} {\bf 2019}, pp.
-  1--5.
-\newblock {\url{https://doi.org/10.1109/LGRS.2019.2930549}}.
-
-\bibitem[Li and Zhang(2024)]{liDCYOLOImprovedField2024}
-Li, W.; Zhang, Y.
-\newblock {{DC-YOLO}}: An Improved Field Plant Detection Algorithm Based on
-  {{YOLOv7-tiny}}.
-\newblock {\em Scientific Reports} {\bf 2024}, {\em 14},~26430.
-\newblock {\url{https://doi.org/10.1038/s41598-024-77865-x}}.
-
-\bibitem[Li et~al.(2022)Li, Bao, and Qi]{liSeedlingMaizeCounting2022}
-Li, Y.; Bao, Z.; Qi, J.
-\newblock Seedling Maize Counting Method in Complex Backgrounds Based on
-  {{YOLOV5}} and {{Kalman}} Filter Tracking Algorithm.
-\newblock {\em Frontiers in Plant Science} {\bf 2022}, {\em 13}.
-\newblock {\url{https://doi.org/10.3389/fpls.2022.1030962}}.
-
-\bibitem[Lu et~al.(2017)Lu, Cao, Xiao, Zhuang, and
-  Shen]{luTasselNetCountingMaize2017}
-Lu, H.; Cao, Z.; Xiao, Y.; Zhuang, B.; Shen, C.
-\newblock {{TasselNet}}: Counting Maize Tassels in the Wild via Local Counts
-  Regression Network.
-\newblock {\em Plant Methods} {\bf 2017}, {\em 13},~79.
-\newblock {\url{https://doi.org/10.1186/s13007-017-0224-0}}.
-
-\bibitem[Machefer et~al.(2020)Machefer, Lemarchand, Bonnefond, Hitchins, and
-  Sidiropoulos]{macheferMaskRCNNRefitting2020}
-Machefer, M.; Lemarchand, F.; Bonnefond, V.; Hitchins, A.; Sidiropoulos, P.
-\newblock Mask {{R-CNN Refitting Strategy}} for {{Plant Counting}} and
-  {{Sizing}} in {{UAV Imagery}}.
-\newblock {\em Remote Sensing} {\bf 2020}, {\em 12},~3015.
-\newblock {\url{https://doi.org/10.3390/rs12183015}}.
-
-\bibitem[Wang et~al.(2023)Wang, Zhou, Costa, Kaeppler, and
-  Zhang]{wangPlotLevelMaizeEarly2023}
-Wang, B.; Zhou, J.; Costa, M.; Kaeppler, S.M.; Zhang, Z.
-\newblock Plot-{{Level Maize Early Stage Stand Counting}} and {{Spacing
-  Detection Using Advanced Deep Learning Algorithms Based}} on {{UAV Imagery}}.
-\newblock {\em Agronomy} {\bf 2023}, {\em 13},~1728.
-\newblock {\url{https://doi.org/10.3390/agronomy13071728}}.
-
-\bibitem[Zhao et~al.(2023)Zhao, Zhao, Zhao, and
-  Deng]{zhaoStudyLightweightModel2023}
-Zhao, K.; Zhao, L.; Zhao, Y.; Deng, H.
-\newblock Study on {{Lightweight Model}} of {{Maize Seedling Object Detection
-  Based}} on {{YOLOv7}}.
-\newblock {\em Applied Sciences} {\bf 2023}, {\em 13},~7731.
-\newblock {\url{https://doi.org/10.3390/app13137731}}.
-
-\bibitem[Andvaag et~al.(2024)Andvaag, Krys, Shirtliffe, and
-  Stavness]{andvaagCountingCanolaGeneralizable2024}
-Andvaag, E.; Krys, K.; Shirtliffe, S.J.; Stavness, I.
-\newblock Counting {{Canola}}: {{Toward Generalizable Aerial Plant Detection
-  Models}}.
-\newblock {\em Plant Phenomics} {\bf 2024}, {\em 6},~0268.
-\newblock {\url{https://doi.org/10.34133/plantphenomics.0268}}.
-
-\bibitem[Karami et~al.(2020)Karami, Crawford, and
-  Delp]{karamiAutomaticPlantCounting2020}
-Karami, A.; Crawford, M.; Delp, E.J.
-\newblock Automatic {{Plant Counting}} and {{Location Based}} on a {{Few-Shot
-  Learning Technique}}.
-\newblock {\em IEEE Journal of Selected Topics in Applied Earth Observations
-  and Remote Sensing} {\bf 2020}, {\em 13},~5872--5886.
-\newblock {\url{https://doi.org/10.1109/JSTARS.2020.3025790}}.
-
-\bibitem[Sun et~al.(2017)Sun, Shrivastava, Singh, and
-  Gupta]{sunRevisitingUnreasonableEffectiveness2017}
-Sun, C.; Shrivastava, A.; Singh, S.; Gupta, A.
-\newblock Revisiting {{Unreasonable Effectiveness}} of {{Data}} in {{Deep
-  Learning Era}},  2017,  \href{http://arxiv.org/abs/1707.02968}{{\normalfont
-  [arXiv:cs/1707.02968]}}.
-\newblock {\url{https://doi.org/10.48550/arXiv.1707.02968}}.
-
-\bibitem[Alhazmi et~al.(2021)Alhazmi, Alsumari, Seppo, Podkuiko, and
-  Simon]{alhazmiEffectsAnnotationQuality2021}
-Alhazmi, K.; Alsumari, W.; Seppo, I.; Podkuiko, L.; Simon, M.
-\newblock Effects of Annotation Quality on Model Performance.
-\newblock In Proceedings of the 2021 {{International Conference}} on
-  {{Artificial Intelligence}} in {{Information}} and {{Communication}}
-  ({{ICAIIC}}),  2021, pp. 063--067.
-\newblock {\url{https://doi.org/10.1109/ICAIIC51459.2021.9415271}}.
-
-\bibitem[Hestness et~al.(2017)Hestness, Narang, Ardalani, Diamos, Jun,
-  Kianinejad, Patwary, Yang, and Zhou]{hestnessDeepLearningScaling2017}
-Hestness, J.; Narang, S.; Ardalani, N.; Diamos, G.; Jun, H.; Kianinejad, H.;
-  Patwary, M.M.A.; Yang, Y.; Zhou, Y.
-\newblock Deep {{Learning Scaling}} Is {{Predictable}}, {{Empirically}},  2017,
-   \href{http://arxiv.org/abs/1712.00409}{{\normalfont [arXiv:cs/1712.00409]}}.
-\newblock {\url{https://doi.org/10.48550/arXiv.1712.00409}}.
-
-\bibitem[Mahmood et~al.(2022)Mahmood, Lucas, Acuna, Li, Philion, Alvarez, Yu,
-  Fidler, and Law]{mahmoodHowMuchMore2022}
-Mahmood, R.; Lucas, J.; Acuna, D.; Li, D.; Philion, J.; Alvarez, J.M.; Yu, Z.;
-  Fidler, S.; Law, M.T.
-\newblock How {{Much More Data Do I Need}}? {{Estimating Requirements}} for
-  {{Downstream Tasks}}.
-\newblock In Proceedings of the 2022 {{IEEE}}/{{CVF Conference}} on {{Computer
-  Vision}} and {{Pattern Recognition}} ({{CVPR}}), New Orleans, LA, USA,  2022;
-  pp. 275--284.
-\newblock {\url{https://doi.org/10.1109/CVPR52688.2022.00037}}.
-
-\bibitem[Nguyen et~al.(2020)Nguyen, Do, Ngo, Le, and
-  Valenti]{nguyenEvaluationDeepLearning2020}
-Nguyen, N.D.; Do, T.; Ngo, T.D.; Le, D.D.; Valenti, C.F.
-\newblock An {{Evaluation}} of {{Deep Learning Methods}} for {{Small Object
-  Detection}}.
-\newblock {\em JECE} {\bf 2020}, {\em 2020}.
-\newblock {\url{https://doi.org/10.1155/2020/3189691}}.
-
-\bibitem[Brigato and Iocchi(2020)]{brigatoCloseLookDeep2020}
-Brigato, L.; Iocchi, L.
-\newblock A {{Close Look}} at {{Deep Learning}} with {{Small Data}},  2020,
-  \href{http://arxiv.org/abs/2003.12843}{{\normalfont [arXiv:cs/2003.12843]}}.
-\newblock {\url{https://doi.org/10.48550/arXiv.2003.12843}}.
-
-\bibitem[Du et~al.(2020)Du, Lin, Jin, Ghiasi, Tan, Cui, Le, and
-  Song]{duSpineNetLearningScalePermuted2020}
-Du, X.; Lin, T.Y.; Jin, P.; Ghiasi, G.; Tan, M.; Cui, Y.; Le, Q.V.; Song, X.
-\newblock {{SpineNet}}: {{Learning Scale-Permuted Backbone}} for
-  {{Recognition}} and {{Localization}}.
-\newblock In Proceedings of the Proceedings of the {{IEEE}}/{{CVF Conference}}
-  on {{Computer Vision}} and {{Pattern Recognition}},  2020, pp. 11592--11601.
-
-\bibitem[Roggiolani et~al.(2023)Roggiolani, Magistri, Guadagnino, Weyler,
-  Grisetti, Stachniss, and Behley]{roggiolaniDomainSpecificPreTraining2023}
-Roggiolani, G.; Magistri, F.; Guadagnino, T.; Weyler, J.; Grisetti, G.;
-  Stachniss, C.; Behley, J.
-\newblock On {{Domain-Specific Pre- Training}} for {{Effective Semantic
-  Perception}} in {{Agricultural Robotics}}.
-\newblock In Proceedings of the 2023 {{IEEE International Conference}} on
-  {{Robotics}} and {{Automation}} ({{ICRA}}),  2023, pp. 11786--11793.
-\newblock {\url{https://doi.org/10.1109/ICRA48891.2023.10160624}}.
+\bibitem[Meier et~al.(2009)Meier, Bleiholder, Buhr, Feller, Hack, He{\ss}, Lancashire, Schnock, Stau{\ss}, van~den Boom, Weber, and Zwerger]{meierBBCHSystemCoding2009}
+Meier, U.; Bleiholder, H.; Buhr, L.; Feller, C.; Hack, H.; He{\ss}, M.; Lancashire, P.D.; Schnock, U.; Stau{\ss}, R.; van~den Boom, T.;  et~al.
+\newblock The {{BBCH}} System to Coding the Phenological Growth Stages of Plants -- History and Publications --.
+\newblock {\em Journal f{\"u}r Kulturpflanzen} {\bf 2009}, {\em 61},~41--52.
+\newblock {\url{https://doi.org/10.5073/JfK.2009.02.01}}.
 
 \bibitem[Mai({\natexlab{a}})]{Maize_seedingDatasetOverview}
 Maize\_seeding {{Dataset}} {$>$} {{Overview}}.
@@ -386,7 +66,402 @@ Maize\_seeding {{Dataset}} {$>$} {{Overview}}.
 
 \bibitem[Mai({\natexlab{b}})]{MaizeseedlingdetectionDatasetOverview}
 Maize-Seedling-Detection {{Dataset}} {$>$} {{Overview}}.
-\newblock
-  https://universe.roboflow.com/fyxdds-icloud-com/maize-seedling-detection.
+\newblock https://universe.roboflow.com/fyxdds-icloud-com/maize-seedling-detection.
+
+\bibitem[{FAO}(2024)]{fao2024}
+{FAO}.
+\newblock In {\em Agricultural Production Statistics 2010--2023}; FAOSTAT: Rome,  2024; Vol. Analytical Briefs.
+
+\bibitem[{Garc{\'i}a-Mart{\'i}nez} et~al.(2020){Garc{\'i}a-Mart{\'i}nez}, {Flores-Magdaleno}, {Khalil-Gardezi}, {Ascencio-Hern{\'a}ndez}, {Tijerina-Ch{\'a}vez}, {V{\'a}zquez-Pe{\~n}a}, and {Mancilla-Villa}]{garcia-martinezDigitalCountCorn2020}
+{Garc{\'i}a-Mart{\'i}nez}, H.; {Flores-Magdaleno}, H.; {Khalil-Gardezi}, A.; {Ascencio-Hern{\'a}ndez}, R.; {Tijerina-Ch{\'a}vez}, L.; {V{\'a}zquez-Pe{\~n}a}, M.A.; {Mancilla-Villa}, O.R.
+\newblock Digital {{Count}} of {{Corn Plants Using Images Taken}} by {{Unmanned Aerial Vehicles}} and {{Cross Correlation}} of {{Templates}}.
+\newblock {\em Agronomy} {\bf 2020}, {\em 10},~469.
+\newblock {\url{https://doi.org/10.3390/agronomy10040469}}.
+
+\bibitem[LeCun et~al.(2015)LeCun, Bengio, and Hinton]{lecunDeepLearning2015}
+LeCun, Y.; Bengio, Y.; Hinton, G.
+\newblock Deep Learning.
+\newblock {\em Nature} {\bf 2015}, {\em 521},~436--444.
+\newblock {\url{https://doi.org/10.1038/nature14539}}.
+
+\bibitem[Fas()]{FasterRCNNRealTime}
+Faster {{R-CNN}}: {{Towards Real-Time Object Detection}} with {{Region Proposal Networks}} {\textbar} {{IEEE Journals}} \& {{Magazine}} {\textbar} {{IEEE Xplore}}.
+\newblock https://ieeexplore-ieee-org.bibliopass.unito.it/document/7485869.
+
+\bibitem[You()]{YouOnlyLook}
+You {{Only Look Once}}: {{Unified}}, {{Real-Time Object Detection}} {\textbar} {{IEEE Conference Publication}} {\textbar} {{IEEE Xplore}}.
+\newblock https://ieeexplore-ieee-org.bibliopass.unito.it/document/7780460.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin]{vaswaniAttentionAllYou2017}
+Vaswani, A.; Shazeer, N.; Parmar, N.; Uszkoreit, J.; Jones, L.; Gomez, A.N.; Kaiser, {\L}.; Polosukhin, I.
+\newblock Attention Is All You Need.
+\newblock In Proceedings of the Proceedings of the 31st {{International Conference}} on {{Neural Information Processing Systems}}, Red Hook, NY, USA,  2017; {{NIPS}}'17, pp. 6000--6010.
+
+\bibitem[Carion et~al.(2020)Carion, Massa, Synnaeve, Usunier, Kirillov, and Zagoruyko]{carionEndtoEndObjectDetection2020}
+Carion, N.; Massa, F.; Synnaeve, G.; Usunier, N.; Kirillov, A.; Zagoruyko, S.
+\newblock End-to-{{End Object Detection}} with {{Transformers}},  2020,  \href{http://arxiv.org/abs/2005.12872}{{\normalfont [arXiv:cs/2005.12872]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2005.12872}}.
+
+\bibitem[Dosovitskiy et~al.(2021)Dosovitskiy, Beyer, Kolesnikov, Weissenborn, Zhai, Unterthiner, Dehghani, Minderer, Heigold, Gelly, Uszkoreit, and Houlsby]{dosovitskiyImageWorth16x162021}
+Dosovitskiy, A.; Beyer, L.; Kolesnikov, A.; Weissenborn, D.; Zhai, X.; Unterthiner, T.; Dehghani, M.; Minderer, M.; Heigold, G.; Gelly, S.;  et~al.
+\newblock An {{Image}} Is {{Worth}} 16x16 {{Words}}: {{Transformers}} for {{Image Recognition}} at {{Scale}},  2021,  \href{http://arxiv.org/abs/2010.11929}{{\normalfont [arXiv:cs/2010.11929]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2010.11929}}.
+
+\bibitem[Jing and Tian(2019)]{jingSelfsupervisedVisualFeature2019}
+Jing, L.; Tian, Y.
+\newblock Self-Supervised {{Visual Feature Learning}} with {{Deep Neural Networks}}: {{A Survey}},  2019,  \href{http://arxiv.org/abs/1902.06162}{{\normalfont [arXiv:cs/1902.06162]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.1902.06162}}.
+
+\bibitem[140()]{14090575ImageNetLarge}
+[1409.0575] {{ImageNet Large Scale Visual Recognition Challenge}}.
+\newblock https://web.archive.org/web/20190320194904/https://arxiv.org/abs/1409.0575.
+
+\bibitem[Zong et~al.(2023)Zong, Song, and Liu]{zongDETRsCollaborativeHybrid2023}
+Zong, Z.; Song, G.; Liu, Y.
+\newblock {{DETRs}} with {{Collaborative Hybrid Assignments Training}}.
+\newblock In Proceedings of the 2023 {{IEEE}}/{{CVF International Conference}} on {{Computer Vision}} ({{ICCV}}), Paris, France,  2023; pp. 6725--6735.
+\newblock {\url{https://doi.org/10.1109/ICCV51070.2023.00621}}.
+
+\bibitem[Khan et~al.(2023)Khan, Rauf, Sohail, Khan, Asif, Asif, and Farooq]{khanSurveyVisionTransformers2023}
+Khan, A.; Rauf, Z.; Sohail, A.; Khan, A.R.; Asif, H.; Asif, A.; Farooq, U.
+\newblock A Survey of the Vision Transformers and Their {{CNN-transformer}} Based Variants.
+\newblock {\em Artificial Intelligence Review} {\bf 2023}, {\em 56},~2917--2970.
+\newblock {\url{https://doi.org/10.1007/s10462-023-10595-0}}.
+
+\bibitem[Rekavandi et~al.(2023)Rekavandi, Rashidi, Boussaid, Hoefs, Akbas, and {bennamoun}]{rekavandiTransformersSmallObject2023}
+Rekavandi, A.M.; Rashidi, S.; Boussaid, F.; Hoefs, S.; Akbas, E.; {bennamoun}, M.
+\newblock Transformers in {{Small Object Detection}}: {{A Benchmark}} and {{Survey}} of {{State-of-the-Art}},  2023,  \href{http://arxiv.org/abs/2309.04902}{{\normalfont [arXiv:cs/2309.04902]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2309.04902}}.
+
+\bibitem[Li et~al.(2023)Li, Miao, Ma, Shuang, and Huang]{liTransformerObjectDetection2023}
+Li, Y.; Miao, N.; Ma, L.; Shuang, F.; Huang, X.
+\newblock Transformer for Object Detection: {{Review}} and Benchmark.
+\newblock {\em Engineering Applications of Artificial Intelligence} {\bf 2023}, {\em 126},~107021.
+\newblock {\url{https://doi.org/10.1016/j.engappai.2023.107021}}.
+
+\bibitem[Amjoud and Amrouch(2023)]{amjoudObjectDetectionUsing2023}
+Amjoud, A.B.; Amrouch, M.
+\newblock Object {{Detection Using Deep Learning}}, {{CNNs}} and {{Vision Transformers}}: {{A Review}}.
+\newblock {\em IEEE Access} {\bf 2023}, {\em 11},~35479--35516.
+\newblock {\url{https://doi.org/10.1109/ACCESS.2023.3266093}}.
+
+\bibitem[Badgujar et~al.(2024)Badgujar, Poulose, and Gan]{badgujarAgriculturalObjectDetection2024}
+Badgujar, C.M.; Poulose, A.; Gan, H.
+\newblock Agricultural Object Detection with {{You Only Look Once}} ({{YOLO}}) {{Algorithm}}: {{A}} Bibliometric and Systematic Literature Review.
+\newblock {\em Computers and Electronics in Agriculture} {\bf 2024}, {\em 223},~109090.
+\newblock {\url{https://doi.org/10.1016/j.compag.2024.109090}}.
+
+\bibitem[Tan et~al.(2020)Tan, Pang, and Le]{tanEfficientDetScalableEfficient2020}
+Tan, M.; Pang, R.; Le, Q.V.
+\newblock {{EfficientDet}}: {{Scalable}} and {{Efficient Object Detection}},  2020,  \href{http://arxiv.org/abs/1911.09070}{{\normalfont [arXiv:cs/1911.09070]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.1911.09070}}.
+
+\bibitem[Lin et~al.(2018)Lin, Goyal, Girshick, He, and Doll{\'a}r]{linFocalLossDense2018}
+Lin, T.Y.; Goyal, P.; Girshick, R.; He, K.; Doll{\'a}r, P.
+\newblock Focal {{Loss}} for {{Dense Object Detection}},  2018,  \href{http://arxiv.org/abs/1708.02002}{{\normalfont [arXiv:cs/1708.02002]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.1708.02002}}.
+
+\bibitem[Zhang et~al.(2025)Zhang, Yang, Tu, Fu, Chen, Cen, Yang, Zhao, Gao, and He]{zhangComparisonYOLObasedSorghum2025}
+Zhang, S.; Yang, Y.; Tu, L.; Fu, T.; Chen, S.; Cen, F.; Yang, S.; Zhao, Q.; Gao, Z.; He, T.
+\newblock Comparison of {{YOLO-based}} Sorghum Spike Identification Detection Models and Monitoring at the Flowering Stage.
+\newblock {\em Plant Methods} {\bf 2025}, {\em 21},~20.
+\newblock {\url{https://doi.org/10.1186/s13007-025-01338-z}}.
+
+\bibitem[YOL()]{YOLOv5YOLOv8YOLOv10}
+{{YOLOv5}}, {{YOLOv8}} and {{YOLOv10}}: {{The Go-To Detectors}} for {{Real-time Vision}}.
+\newblock https://arxiv.org/html/2407.02988v1\#S5.
+
+\bibitem[Bochkovskiy et~al.(2020)Bochkovskiy, Wang, and Liao]{bochkovskiyYOLOv4OptimalSpeed2020}
+Bochkovskiy, A.; Wang, C.Y.; Liao, H.Y.M.
+\newblock {{YOLOv4}}: {{Optimal Speed}} and {{Accuracy}} of {{Object Detection}},  2020,  \href{http://arxiv.org/abs/2004.10934}{{\normalfont [arXiv:cs/2004.10934]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2004.10934}}.
+
+\bibitem[Zhao et~al.(2024)Zhao, Lv, Xu, Wei, Wang, Dang, Liu, and Chen]{zhaoDETRsBeatYOLOs2024}
+Zhao, Y.; Lv, W.; Xu, S.; Wei, J.; Wang, G.; Dang, Q.; Liu, Y.; Chen, J.
+\newblock {{DETRs Beat YOLOs}} on {{Real-time Object Detection}},  2024,  \href{http://arxiv.org/abs/2304.08069}{{\normalfont [arXiv:cs/2304.08069]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2304.08069}}.
+
+\bibitem[Wang et~al.(2019)Wang, Liao, Yeh, Wu, Chen, and Hsieh]{wangCSPNetNewBackbone2019}
+Wang, C.Y.; Liao, H.Y.M.; Yeh, I.H.; Wu, Y.H.; Chen, P.Y.; Hsieh, J.W.
+\newblock {{CSPNet}}: {{A New Backbone}} That Can {{Enhance Learning Capability}} of {{CNN}},  2019,  \href{http://arxiv.org/abs/1911.11929}{{\normalfont [arXiv:cs/1911.11929]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.1911.11929}}.
+
+\bibitem[Khanam and Hussain(2024)]{khanamYOLOv11OverviewKey2024}
+Khanam, R.; Hussain, M.
+\newblock {{YOLOv11}}: {{An Overview}} of the {{Key Architectural Enhancements}},  2024,  \href{http://arxiv.org/abs/2410.17725}{{\normalfont [arXiv:cs/2410.17725]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2410.17725}}.
+
+\bibitem[Li et~al.(2017)Li, Zhou, Chen, and Li]{liMetaSGDLearningLearn2017}
+Li, Z.; Zhou, F.; Chen, F.; Li, H.
+\newblock Meta-{{SGD}}: {{Learning}} to {{Learn Quickly}} for {{Few-Shot Learning}},  2017,  \href{http://arxiv.org/abs/1707.09835}{{\normalfont [arXiv:cs/1707.09835]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.1707.09835}}.
+
+\bibitem[Bansal et~al.(2018)Bansal, Sikka, Sharma, Chellappa, and Divakaran]{bansalZeroShotObjectDetection2018}
+Bansal, A.; Sikka, K.; Sharma, G.; Chellappa, R.; Divakaran, A.
+\newblock Zero-{{Shot Object Detection}}.
+\newblock In Proceedings of the Proceedings of the {{European Conference}} on {{Computer Vision}} ({{ECCV}}),  2018, pp. 384--400.
+
+\bibitem[Huang et~al.(2022)Huang, Laradji, Vazquez, {Lacoste-Julien}, and Rodriguez]{huangSurveySelfSupervisedFewShot2022}
+Huang, G.; Laradji, I.; Vazquez, D.; {Lacoste-Julien}, S.; Rodriguez, P.
+\newblock A {{Survey}} of {{Self-Supervised}} and {{Few-Shot Object Detection}},  2022,  \href{http://arxiv.org/abs/2110.14711}{{\normalfont [arXiv:cs/2110.14711]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2110.14711}}.
+
+\bibitem[Met()]{MetaLearningBasedIncrementalFewShot}
+Meta-{{Learning-Based Incremental Few-Shot Object Detection}} {\textbar} {{IEEE Journals}} \& {{Magazine}} {\textbar} {{IEEE Xplore}}.
+\newblock https://ieeexplore-ieee-org.bibliopass.unito.it/abstract/document/9452164.
+
+\bibitem[Wu et~al.(2020)Wu, Sahoo, and Hoi]{wuMetaRCNNMetaLearning2020}
+Wu, X.; Sahoo, D.; Hoi, S.
+\newblock Meta-{{RCNN}}: {{Meta Learning}} for {{Few-Shot Object Detection}}.
+\newblock In Proceedings of the Proceedings of the 28th {{ACM International Conference}} on {{Multimedia}}, New York, NY, USA,  2020; {{MM}} '20, pp. 1679--1687.
+\newblock {\url{https://doi.org/10.1145/3394171.3413832}}.
+
+\bibitem[Fu et~al.(2019)Fu, Zhang, Zhang, Yan, Chang, Zhang, and Sun]{fuMetaSSDFastAdaptation2019}
+Fu, K.; Zhang, T.; Zhang, Y.; Yan, M.; Chang, Z.; Zhang, Z.; Sun, X.
+\newblock Meta-{{SSD}}: {{Towards Fast Adaptation}} for {{Few-Shot Object Detection With Meta-Learning}}.
+\newblock {\em IEEE Access} {\bf 2019}, {\em 7},~77597--77606.
+\newblock {\url{https://doi.org/10.1109/ACCESS.2019.2922438}}.
+
+\bibitem[Zhang et~al.(2021)Zhang, Luo, Cui, and Lu]{zhangMetaDETRFewShotObject2021}
+Zhang, G.; Luo, Z.; Cui, K.; Lu, S.
+\newblock {\em Meta-{{DETR}}: {{Few-Shot Object Detection}} via {{Unified Image-Level Meta-Learning}}};  2021.
+\newblock {\url{https://doi.org/10.48550/arXiv.2103.11731}}.
+
+\bibitem[Sa et~al.(2023)Sa, Yu, Hong, Zheng, and Liu]{saBroaderStudyCrossdomain2023}
+Sa, L.; Yu, C.; Hong, Z.; Zheng, T.; Liu, S.
+\newblock A Broader Study of Cross-Domain Few-Shot Object Detection.
+\newblock {\em Applied Intelligence} {\bf 2023}, {\em 53},~29465--29485.
+\newblock {\url{https://doi.org/10.1007/s10489-023-05082-6}}.
+
+\bibitem[Xu et~al.(2023)Xu, Hao, Luo, Hu, An, and Mao]{xuDeViTDecomposingVision2023}
+Xu, G.; Hao, Z.; Luo, Y.; Hu, H.; An, J.; Mao, S.
+\newblock {{DeViT}}: {{Decomposing Vision Transformers}} for {{Collaborative Inference}} in {{Edge Devices}},  2023,  \href{http://arxiv.org/abs/2309.05015}{{\normalfont [arXiv:cs/2309.05015]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2309.05015}}.
+
+\bibitem[Fu et~al.(2024)Fu, Wang, Pan, Huai, Qiu, Shangguan, Liu, Fu, Gool, and Jiang]{fuCrossDomainFewShotObject2024}
+Fu, Y.; Wang, Y.; Pan, Y.; Huai, L.; Qiu, X.; Shangguan, Z.; Liu, T.; Fu, Y.; Gool, L.V.; Jiang, X.
+\newblock Cross-{{Domain Few-Shot Object Detection}} via {{Enhanced Open-Set Object Detector}},  2024,  \href{http://arxiv.org/abs/2402.03094}{{\normalfont [arXiv:cs/2402.03094]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2402.03094}}.
+
+\bibitem[Kang et~al.(2019)Kang, Liu, Wang, Yu, Feng, and Darrell]{kangFewshotObjectDetection2019}
+Kang, B.; Liu, Z.; Wang, X.; Yu, F.; Feng, J.; Darrell, T.
+\newblock Few-Shot {{Object Detection}} via {{Feature Reweighting}},  2019,  \href{http://arxiv.org/abs/1812.01866}{{\normalfont [arXiv:cs/1812.01866]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.1812.01866}}.
+
+\bibitem[Minderer et~al.(2023)Minderer, Gritsenko, and Houlsby]{mindererScalingOpenVocabularyObject2023}
+Minderer, M.; Gritsenko, A.; Houlsby, N.
+\newblock Scaling {{Open-Vocabulary Object Detection}}.
+\newblock {\em Advances in Neural Information Processing Systems} {\bf 2023}, {\em 36},~72983--73007.
+
+\bibitem[Liu et~al.(2025)Liu, Zeng, Ren, Li, Zhang, Yang, Jiang, Li, Yang, Su, Zhu, and Zhang]{liuGroundingDINOMarrying2025}
+Liu, S.; Zeng, Z.; Ren, T.; Li, F.; Zhang, H.; Yang, J.; Jiang, Q.; Li, C.; Yang, J.; Su, H.;  et~al.
+\newblock Grounding {{DINO}}: {{Marrying DINO}} with~{{Grounded Pre-training}} for~{{Open-Set Object Detection}}.
+\newblock In Proceedings of the Computer {{Vision}} -- {{ECCV}} 2024; Leonardis, A.; Ricci, E.; Roth, S.; Russakovsky, O.; Sattler, T.; Varol, G., Eds., Cham,  2025; pp. 38--55.
+\newblock {\url{https://doi.org/10.1007/978-3-031-72970-6_3}}.
+
+\bibitem[Devlin et~al.(2019)Devlin, Chang, Lee, and Toutanova]{devlinBERTPretrainingDeep2019}
+Devlin, J.; Chang, M.W.; Lee, K.; Toutanova, K.
+\newblock {{BERT}}: {{Pre-training}} of {{Deep Bidirectional Transformers}} for {{Language Understanding}},  2019,  \href{http://arxiv.org/abs/1810.04805}{{\normalfont [arXiv:cs/1810.04805]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.1810.04805}}.
+
+\bibitem[Geng et~al.(2024)Geng, Yu, Yuan, Ma, and Li]{gengResearchSegmentationMethod2024}
+Geng, T.; Yu, H.; Yuan, X.; Ma, R.; Li, P.
+\newblock Research on {{Segmentation Method}} of {{Maize Seedling Plant Instances Based}} on {{UAV Multispectral Remote Sensing Images}}.
+\newblock {\em Plants} {\bf 2024}, {\em 13},~1842.
+\newblock {\url{https://doi.org/10.3390/plants13131842}}.
+
+\bibitem[Jiang et~al.(2019)Jiang, Li, Paterson, and Robertson]{jiangDeepSeedlingDeepConvolutional2019}
+Jiang, Y.; Li, C.; Paterson, A.H.; Robertson, J.S.
+\newblock {{DeepSeedling}}: Deep Convolutional Network and {{Kalman}} Filter for Plant Seedling Detection and Counting in the Field.
+\newblock {\em Plant Methods} {\bf 2019}, {\em 15},~141.
+\newblock {\url{https://doi.org/10.1186/s13007-019-0528-3}}.
+
+\bibitem[Katari et~al.(2024)Katari, Venkatesh, Stewart, and Khanal]{katariIntegratingAutomatedLabeling2024}
+Katari, S.; Venkatesh, S.; Stewart, C.; Khanal, S.
+\newblock Integrating {{Automated Labeling Framework}} for {{Enhancing Deep Learning Models}} to {{Count Corn Plants Using UAS Imagery}}.
+\newblock {\em Sensors} {\bf 2024}, {\em 24},~6467.
+\newblock {\url{https://doi.org/10.3390/s24196467}}.
+
+\bibitem[Kitano et~al.(2019)Kitano, Mendes, Geus, Oliveira, and Souza]{kitanoCornPlantCounting2019}
+Kitano, B.T.; Mendes, C.C.T.; Geus, A.R.; Oliveira, H.C.; Souza, J.R.
+\newblock Corn {{Plant Counting Using Deep Learning}} and {{UAV Images}}.
+\newblock {\em IEEE Geoscience and Remote Sensing Letters} {\bf 2019}, pp. 1--5.
+\newblock {\url{https://doi.org/10.1109/LGRS.2019.2930549}}.
+
+\bibitem[Li and Zhang(2024)]{liDCYOLOImprovedField2024}
+Li, W.; Zhang, Y.
+\newblock {{DC-YOLO}}: An Improved Field Plant Detection Algorithm Based on {{YOLOv7-tiny}}.
+\newblock {\em Scientific Reports} {\bf 2024}, {\em 14},~26430.
+\newblock {\url{https://doi.org/10.1038/s41598-024-77865-x}}.
+
+\bibitem[Li et~al.(2022)Li, Bao, and Qi]{liSeedlingMaizeCounting2022}
+Li, Y.; Bao, Z.; Qi, J.
+\newblock Seedling Maize Counting Method in Complex Backgrounds Based on {{YOLOV5}} and {{Kalman}} Filter Tracking Algorithm.
+\newblock {\em Frontiers in Plant Science} {\bf 2022}, {\em 13}.
+\newblock {\url{https://doi.org/10.3389/fpls.2022.1030962}}.
+
+\bibitem[Lu et~al.(2017)Lu, Cao, Xiao, Zhuang, and Shen]{luTasselNetCountingMaize2017}
+Lu, H.; Cao, Z.; Xiao, Y.; Zhuang, B.; Shen, C.
+\newblock {{TasselNet}}: Counting Maize Tassels in the Wild via Local Counts Regression Network.
+\newblock {\em Plant Methods} {\bf 2017}, {\em 13},~79.
+\newblock {\url{https://doi.org/10.1186/s13007-017-0224-0}}.
+
+\bibitem[Machefer et~al.(2020)Machefer, Lemarchand, Bonnefond, Hitchins, and Sidiropoulos]{macheferMaskRCNNRefitting2020}
+Machefer, M.; Lemarchand, F.; Bonnefond, V.; Hitchins, A.; Sidiropoulos, P.
+\newblock Mask {{R-CNN Refitting Strategy}} for {{Plant Counting}} and {{Sizing}} in {{UAV Imagery}}.
+\newblock {\em Remote Sensing} {\bf 2020}, {\em 12},~3015.
+\newblock {\url{https://doi.org/10.3390/rs12183015}}.
+
+\bibitem[Velumani et~al.(2021)Velumani, {Lopez-Lozano}, Madec, Guo, Gillet, Comar, and Baret]{velumaniEstimatesMaizePlant2021}
+Velumani, K.; {Lopez-Lozano}, R.; Madec, S.; Guo, W.; Gillet, J.; Comar, A.; Baret, F.
+\newblock Estimates of {{Maize Plant Density}} from {{UAV RGB Images Using Faster-RCNN Detection Model}}: {{Impact}} of the {{Spatial Resolution}}.
+\newblock {\em Plant Phenomics} {\bf 2021}, {\em 2021},~9824843.
+\newblock {\url{https://doi.org/10.34133/2021/9824843}}.
+
+\bibitem[Wang et~al.(2023)Wang, Zhou, Costa, Kaeppler, and Zhang]{wangPlotLevelMaizeEarly2023}
+Wang, B.; Zhou, J.; Costa, M.; Kaeppler, S.M.; Zhang, Z.
+\newblock Plot-{{Level Maize Early Stage Stand Counting}} and {{Spacing Detection Using Advanced Deep Learning Algorithms Based}} on {{UAV Imagery}}.
+\newblock {\em Agronomy} {\bf 2023}, {\em 13},~1728.
+\newblock {\url{https://doi.org/10.3390/agronomy13071728}}.
+
+\bibitem[Zhao et~al.(2023)Zhao, Zhao, Zhao, and Deng]{zhaoStudyLightweightModel2023}
+Zhao, K.; Zhao, L.; Zhao, Y.; Deng, H.
+\newblock Study on {{Lightweight Model}} of {{Maize Seedling Object Detection Based}} on {{YOLOv7}}.
+\newblock {\em Applied Sciences} {\bf 2023}, {\em 13},~7731.
+\newblock {\url{https://doi.org/10.3390/app13137731}}.
+
+\bibitem[Andvaag et~al.(2024)Andvaag, Krys, Shirtliffe, and Stavness]{andvaagCountingCanolaGeneralizable2024}
+Andvaag, E.; Krys, K.; Shirtliffe, S.J.; Stavness, I.
+\newblock Counting {{Canola}}: {{Toward Generalizable Aerial Plant Detection Models}}.
+\newblock {\em Plant Phenomics} {\bf 2024}, {\em 6},~0268.
+\newblock {\url{https://doi.org/10.34133/plantphenomics.0268}}.
+
+\bibitem[Amirkolaee et~al.(2024)Amirkolaee, Shi, He, and Mulligan]{amirkolaeeAdaTreeFormerFewShot2024}
+Amirkolaee, H.A.; Shi, M.; He, L.; Mulligan, M.
+\newblock {{AdaTreeFormer}}: {{Few}} Shot Domain Adaptation for Tree Counting from a Single High-Resolution Image.
+\newblock {\em ISPRS Journal of Photogrammetry and Remote Sensing} {\bf 2024}, {\em 214},~193--208.
+\newblock {\url{https://doi.org/10.1016/j.isprsjprs.2024.06.015}}.
+
+\bibitem[Karami et~al.(2020)Karami, Crawford, and Delp]{karamiAutomaticPlantCounting2020}
+Karami, A.; Crawford, M.; Delp, E.J.
+\newblock Automatic {{Plant Counting}} and {{Location Based}} on a {{Few-Shot Learning Technique}}.
+\newblock {\em IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing} {\bf 2020}, {\em 13},~5872--5886.
+\newblock {\url{https://doi.org/10.1109/JSTARS.2020.3025790}}.
+
+\bibitem[Wang et~al.(2024)Wang, Parthasarathy, and Pan]{wangAdvancingImageRecognition2024}
+Wang, D.; Parthasarathy, R.; Pan, X.
+\newblock Advancing {{Image Recognition}}: {{Towards Lightweight Few-shot Learning Model}} for {{Maize Seedling Detection}}.
+\newblock In Proceedings of the Proceedings of the 2024 {{International Conference}} on {{Smart City}} and {{Information System}}, New York, NY, USA,  2024; {{ICSCIS}} '24, pp. 635--639.
+\newblock {\url{https://doi.org/10.1145/3685088.3685198}}.
+
+\bibitem[Sun et~al.(2017)Sun, Shrivastava, Singh, and Gupta]{sunRevisitingUnreasonableEffectiveness2017}
+Sun, C.; Shrivastava, A.; Singh, S.; Gupta, A.
+\newblock Revisiting {{Unreasonable Effectiveness}} of {{Data}} in {{Deep Learning Era}},  2017,  \href{http://arxiv.org/abs/1707.02968}{{\normalfont [arXiv:cs/1707.02968]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.1707.02968}}.
+
+\bibitem[Alhazmi et~al.(2021)Alhazmi, Alsumari, Seppo, Podkuiko, and Simon]{alhazmiEffectsAnnotationQuality2021}
+Alhazmi, K.; Alsumari, W.; Seppo, I.; Podkuiko, L.; Simon, M.
+\newblock Effects of Annotation Quality on Model Performance.
+\newblock In Proceedings of the 2021 {{International Conference}} on {{Artificial Intelligence}} in {{Information}} and {{Communication}} ({{ICAIIC}}),  2021, pp. 063--067.
+\newblock {\url{https://doi.org/10.1109/ICAIIC51459.2021.9415271}}.
+
+\bibitem[Hestness et~al.(2017)Hestness, Narang, Ardalani, Diamos, Jun, Kianinejad, Patwary, Yang, and Zhou]{hestnessDeepLearningScaling2017}
+Hestness, J.; Narang, S.; Ardalani, N.; Diamos, G.; Jun, H.; Kianinejad, H.; Patwary, M.M.A.; Yang, Y.; Zhou, Y.
+\newblock Deep {{Learning Scaling}} Is {{Predictable}}, {{Empirically}},  2017,  \href{http://arxiv.org/abs/1712.00409}{{\normalfont [arXiv:cs/1712.00409]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.1712.00409}}.
+
+\bibitem[Mahmood et~al.(2022)Mahmood, Lucas, Acuna, Li, Philion, Alvarez, Yu, Fidler, and Law]{mahmoodHowMuchMore2022}
+Mahmood, R.; Lucas, J.; Acuna, D.; Li, D.; Philion, J.; Alvarez, J.M.; Yu, Z.; Fidler, S.; Law, M.T.
+\newblock How {{Much More Data Do I Need}}? {{Estimating Requirements}} for {{Downstream Tasks}}.
+\newblock In Proceedings of the 2022 {{IEEE}}/{{CVF Conference}} on {{Computer Vision}} and {{Pattern Recognition}} ({{CVPR}}), New Orleans, LA, USA,  2022; pp. 275--284.
+\newblock {\url{https://doi.org/10.1109/CVPR52688.2022.00037}}.
+
+\bibitem[Nguyen et~al.(2020)Nguyen, Do, Ngo, Le, and Valenti]{nguyenEvaluationDeepLearning2020}
+Nguyen, N.D.; Do, T.; Ngo, T.D.; Le, D.D.; Valenti, C.F.
+\newblock An {{Evaluation}} of {{Deep Learning Methods}} for {{Small Object Detection}}.
+\newblock {\em JECE} {\bf 2020}, {\em 2020}.
+\newblock {\url{https://doi.org/10.1155/2020/3189691}}.
+
+\bibitem[Brigato and Iocchi(2020)]{brigatoCloseLookDeep2020}
+Brigato, L.; Iocchi, L.
+\newblock A {{Close Look}} at {{Deep Learning}} with {{Small Data}},  2020,  \href{http://arxiv.org/abs/2003.12843}{{\normalfont [arXiv:cs/2003.12843]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2003.12843}}.
+
+\bibitem[Du et~al.(2020)Du, Lin, Jin, Ghiasi, Tan, Cui, Le, and Song]{duSpineNetLearningScalePermuted2020}
+Du, X.; Lin, T.Y.; Jin, P.; Ghiasi, G.; Tan, M.; Cui, Y.; Le, Q.V.; Song, X.
+\newblock {{SpineNet}}: {{Learning Scale-Permuted Backbone}} for {{Recognition}} and {{Localization}}.
+\newblock In Proceedings of the Proceedings of the {{IEEE}}/{{CVF Conference}} on {{Computer Vision}} and {{Pattern Recognition}},  2020, pp. 11592--11601.
+
+\bibitem[Roggiolani et~al.(2023)Roggiolani, Magistri, Guadagnino, Weyler, Grisetti, Stachniss, and Behley]{roggiolaniDomainSpecificPreTraining2023}
+Roggiolani, G.; Magistri, F.; Guadagnino, T.; Weyler, J.; Grisetti, G.; Stachniss, C.; Behley, J.
+\newblock On {{Domain-Specific Pre- Training}} for {{Effective Semantic Perception}} in {{Agricultural Robotics}}.
+\newblock In Proceedings of the 2023 {{IEEE International Conference}} on {{Robotics}} and {{Automation}} ({{ICRA}}),  2023, pp. 11786--11793.
+\newblock {\url{https://doi.org/10.1109/ICRA48891.2023.10160624}}.
+
+\bibitem[Hendrycks et~al.(2020)Hendrycks, Basart, Mu, Kadavath, Wang, Dorundo, Desai, Zhu, Parajuli, Guo, Song, Steinhardt, and Gilmer]{hendrycksManyFacesRobustness2020}
+Hendrycks, D.; Basart, S.; Mu, N.; Kadavath, S.; Wang, F.; Dorundo, E.; Desai, R.; Zhu, T.; Parajuli, S.; Guo, M.;  et~al.
+\newblock The {{Many Faces}} of {{Robustness}}: {{A Critical Analysis}} of {{Out-of-Distribution Generalization}},  2020,  \href{http://arxiv.org/abs/2006.16241}{{\normalfont [arXiv:cs/2006.16241]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2006.16241}}.
+
+\bibitem[Jeevan and Sethi(2024)]{jeevanWhichBackboneUse2024}
+Jeevan, P.; Sethi, A.
+\newblock Which {{Backbone}} to {{Use}}: {{A Resource-efficient Domain Specific Comparison}} for {{Computer Vision}},  2024,  \href{http://arxiv.org/abs/2406.05612}{{\normalfont [arXiv:cs/2406.05612]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2406.05612}}.
+
+\bibitem[Goldblum et~al.(2023)Goldblum, Souri, Ni, Shu, Prabhu, Somepalli, Chattopadhyay, Ibrahim, Bardes, Hoffman, Chellappa, Wilson, and Goldstein]{goldblumBattleBackbonesLargeScale2023}
+Goldblum, M.; Souri, H.; Ni, R.; Shu, M.; Prabhu, V.; Somepalli, G.; Chattopadhyay, P.; Ibrahim, M.; Bardes, A.; Hoffman, J.;  et~al.
+\newblock Battle of the {{Backbones}}: {{A Large-Scale Comparison}} of {{Pretrained Models}} across {{Computer Vision Tasks}},  2023,  \href{http://arxiv.org/abs/2310.19909}{{\normalfont [arXiv:cs/2310.19909]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2310.19909}}.
+
+\bibitem[Cubuk et~al.(2019)Cubuk, Zoph, Mane, Vasudevan, and Le]{cubukAutoAugmentLearningAugmentation2019}
+Cubuk, E.D.; Zoph, B.; Mane, D.; Vasudevan, V.; Le, Q.V.
+\newblock {{AutoAugment}}: {{Learning Augmentation Policies}} from {{Data}},  2019,  \href{http://arxiv.org/abs/1805.09501}{{\normalfont [arXiv:cs/1805.09501]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.1805.09501}}.
+
+\bibitem[Antoniou et~al.(2018)Antoniou, Storkey, and Edwards]{antoniouDataAugmentationGenerative2018}
+Antoniou, A.; Storkey, A.; Edwards, H.
+\newblock Data {{Augmentation Generative Adversarial Networks}},  2018,  \href{http://arxiv.org/abs/1711.04340}{{\normalfont [arXiv:stat/1711.04340]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.1711.04340}}.
+
+\bibitem[Shorten and Khoshgoftaar(2019)]{shortenSurveyImageData2019}
+Shorten, C.; Khoshgoftaar, T.M.
+\newblock A Survey on {{Image Data Augmentation}} for {{Deep Learning}}.
+\newblock {\em Journal of Big Data} {\bf 2019}, {\em 6},~60.
+\newblock {\url{https://doi.org/10.1186/s40537-019-0197-0}}.
+
+\bibitem[Chadebec and Allassonni{\`e}re(2021)]{chadebecDataAugmentationVariational2021}
+Chadebec, C.; Allassonni{\`e}re, S.
+\newblock Data {{Augmentation}} with {{Variational Autoencoders}} and {{Manifold Sampling}}.
+\newblock In Proceedings of the Deep {{Generative Models}}, and {{Data Augmentation}}, {{Labelling}}, and {{Imperfections}}; Engelhardt, S.; Oksuz, I.; Zhu, D.; Yuan, Y.; Mukhopadhyay, A.; Heller, N.; Huang, S.X.; Nguyen, H.; Sznitman, R.; Xue, Y., Eds., Cham,  2021; pp. 184--192.
+\newblock {\url{https://doi.org/10.1007/978-3-030-88210-5_17}}.
+
+\bibitem[M{\"u}ller and Hutter(2021)]{mullerTrivialAugmentTuningfreeStateoftheArt2021}
+M{\"u}ller, S.G.; Hutter, F.
+\newblock {{TrivialAugment}}: {{Tuning-free Yet State-of-the-Art Data Augmentation}},  2021,  \href{http://arxiv.org/abs/2103.10158}{{\normalfont [arXiv:cs/2103.10158]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2103.10158}}.
+
+\bibitem[Jocher et~al.(2023)Jocher, Qiu, and Chaurasia]{jocherGitHubUltralyticsYOLO2023}
+Jocher, G.; Qiu, J.; Chaurasia, A.
+\newblock {{GitHub Ultralytics YOLO}},  2023.
+
+\bibitem[Akyon et~al.(2022)Akyon, Altinuc, and Temizel]{akyonSlicingAidedHyper2022}
+Akyon, F.C.; Altinuc, S.O.; Temizel, A.
+\newblock Slicing {{Aided Hyper Inference}} and {{Fine-tuning}} for {{Small Object Detection}}.
+\newblock In Proceedings of the 2022 {{IEEE International Conference}} on {{Image Processing}} ({{ICIP}}),  2022, pp. 966--970,  \href{http://arxiv.org/abs/2202.06934}{{\normalfont [arXiv:cs/2202.06934]}}.
+\newblock {\url{https://doi.org/10.1109/ICIP46576.2022.9897990}}.
+
+\bibitem[Oquab et~al.(2024)Oquab, Darcet, Moutakanni, Vo, Szafraniec, Khalidov, Fernandez, Haziza, Massa, {El-Nouby}, Assran, Ballas, Galuba, Howes, Huang, Li, Misra, Rabbat, Sharma, Synnaeve, Xu, Jegou, Mairal, Labatut, Joulin, and Bojanowski]{oquabDINOv2LearningRobust2024}
+Oquab, M.; Darcet, T.; Moutakanni, T.; Vo, H.; Szafraniec, M.; Khalidov, V.; Fernandez, P.; Haziza, D.; Massa, F.; {El-Nouby}, A.;  et~al.
+\newblock {{DINOv2}}: {{Learning Robust Visual Features}} without {{Supervision}},  2024,  \href{http://arxiv.org/abs/2304.07193}{{\normalfont [arXiv:cs/2304.07193]}}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2304.07193}}.
+
+\bibitem[Wolf et~al.(2020)Wolf, Debut, Sanh, Chaumond, Delangue, Moi, Cistac, Rault, Louf, Funtowicz, Davison, Shleifer, von Platen, Ma, Jernite, Plu, Xu, Scao, Gugger, Drame, Lhoest, and Rush]{wolfTransformersStateoftheArtNatural2020}
+Wolf, T.; Debut, L.; Sanh, V.; Chaumond, J.; Delangue, C.; Moi, A.; Cistac, P.; Rault, T.; Louf, R.; Funtowicz, M.;  et~al.
+\newblock Transformers: {{State-of-the-Art Natural Language Processing}}.
+\newblock In Proceedings of the Proceedings of the 2020 {{Conference}} on {{Empirical Methods}} in {{Natural Language Processing}}: {{System Demonstrations}}, Online,  2020; pp. 38--45.
+
+\bibitem[Wu et~al.(2005)Wu, Otoo, and Shoshani]{wuOptimizingConnectedComponent2005}
+Wu, K.; Otoo, E.; Shoshani, A.
+\newblock Optimizing Connected Component Labeling Algorithms {\bf 2005}.
 
 \end{thebibliography}
