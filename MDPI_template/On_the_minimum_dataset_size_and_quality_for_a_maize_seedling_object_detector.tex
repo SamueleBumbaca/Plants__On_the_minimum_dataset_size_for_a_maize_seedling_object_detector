@@ -953,28 +953,41 @@ of architecture or parameter count—achieved the benchmark R-squared value of 0
 when trained on out-of-distribution (OOD) datasets. This aligns with previous findings 
 by David et al. \cite{davidPlantDetectionCounting2021}  and Andvaag et al. \cite{andvaagCountingCanolaGeneralizable2024}, 
 who similarly reported significantly 
-lower performance when using training samples from sources different from the inference domain.
+lower performance when using training samples from sources different from the inference dataset.
 
 This domain gap challenge is particularly pronounced in agricultural applications, 
 where environmental conditions, lighting, camera parameters, and plant growth stages 
 vary substantially across datasets. The failure of OOD training highlights that visual 
-features learned from one agricultural setting do not generalize well to others without 
-significant adaptation. This contrasts with domains like general object detection, where 
-pre-trained models on diverse datasets often transfer reasonably well to new settings.
+features learned from one orthomosaic do not generalize well to others without 
+significant adaptation. Higher performances of OOD internet datasets training in
+respect to the scientific datasets training could be due to the fact that the internet
+datasets are more similar to the ID datasets than the scientific datasets.
+In specific the dataset RGB means and standard deviations were closer to the ID\_2 and 
+the ID\_3 datasets for the internet datasets than for the scientific datasets.
+HERE TALK ABOUT THE CURVE DATASET-SIZE/R2
+This even highlights the importance of collecting in-domain training data, 
+as the minimum OOD dataset size and quality to train a object detector to
+count arable crops seedling that generalize to all the real-world cases
+is difficult to establish.
 
 \subsection{Many-Shot Object Detection: Architecture and Dataset Requirements}
-Our results reveal important relationships between model architecture, parameter count, 
+Our results reveal important relationships between model architecture, count metrics, 
 and minimum dataset requirements. Within YOLO-family models, we observed that the lightweight 
 YOLOv5n, YOLOv5s, and YOLOv8n achieved the benchmark with 130, 130, and 110 samples respectively. 
 Interestingly, increasing model complexity in CNN-based architectures corresponded to increased 
 dataset size requirements, which aligns with the general understanding that more complex models 
 with higher parameter counts typically require more training data to avoid overfitting.
 
-For transformer-mixed models like RT-DETR, we observed different patterns, with RT-DETR l achieving 
-the benchmark with only 60 samples while the larger RT-DETR x required 100 samples. This non-linear 
-relationship between model size and data requirements suggests that transformer-based architectures 
-may leverage attention mechanisms to more efficiently learn from limited data in certain configurations, 
-though this advantage does not consistently scale with model size.
+Conversely, for transformer-mixed models like RT-DETR, we observed different patterns, with RT-DETR l achieving 
+the benchmark with only 60 samples while the larger RT-DETR x required 100 samples. The
+empirical models of dataset size versus performance shown equiparable GoF RT-DETR and YOLO-family models,
+unless for YOLOv5n that shown a particularly high GoF. This suggests that transformer-based models have
+the same probability to reach the benchmark with the reported dataset size as the CNN-based models, unless
+for YOLOv5n that have a higher probability to reach the benchmark with the same dataset size.
+Overall, transformer-based models may require fewer samples to achieve the same performance as CNN-based models,
+potentially due to their ability to capture long-range dependencies and contextual information more effectively.
+A visible side-effect of the adoption of transformer-mixed models is the higher computational cost
+of the training phase in terms of time and memory, that could be a limitation for some applications.
 
 The predictability of model performance based on dataset size (as evidenced by GoF values exceeding 0.3 
 for successful models) provides practical guidance for practitioners. The logarithmic relationship between 
