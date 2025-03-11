@@ -4,7 +4,7 @@
 \usepackage{setspace}
 \usepackage[margin=1.25in]{geometry}
 \usepackage{graphicx}
-\graphicspath{ {./figures/} }
+\graphicspath{ {./Plots/} }
 \usepackage{subcaption}
 \usepackage{amsmath}
 \usepackage{lineno}
@@ -12,10 +12,10 @@
 
 %%%%%% Bibliography %%%%%%
 % Replace "sample" in the \addbibresource line below with the name of your .bib file.
-\usepackage[style=nejm, 
+\usepackage[style=numeric, 
 citestyle=numeric-comp,
 sorting=none]{biblatex}
-\addbibresource{sample.bib}
+\addbibresource{Unsupervised_plant_counting.bib}
 
 %%%%%% Title %%%%%%
 % Full titles can be a maximum of 100 characters, including spaces. 
@@ -52,16 +52,7 @@ sorting=none]{biblatex}
 
 %%%%%% Abstract %%%%%%
 \begin{abstract}
-The abstract should be a single paragraph written in plain language that a general reader can understand. 
-Do not include citations, figures, tables, or undefined abbreviations in the abstract. Any abbreviations 
-that appear in the title should be defined in the abstract. The length should be 200 words and not exceed 
-250 words, to include: 
-\begin{itemize}
-    \item An opening sentence that states the question/problem addressed by the research AND
-    \item Enough background content to give context to the study AND
-    \item A brief statement of primary results AND
-    \item A short concluding sentence.
-\end{itemize} 
+This study addresses the critical question of minimum dataset requirements for developing accurate maize seedling object detectors in precision agriculture applications. Despite advancements in computer vision and deep learning for crop monitoring, uncertainty remains regarding optimal training dataset size and quality thresholds needed for reliable seedling detection performance under real-world field conditions. By systematically evaluating detector performance across incrementally sized training datasets with varying image quality characteristics, we establish empirical relationships between dataset properties and detection accuracy. Our results demonstrate that a minimum of [X] high-quality images with [Y] labeled seedlings achieves detection performance within 5\% of models trained on much larger datasets, while image quality factors including resolution, lighting conditions, and background complexity significantly impact minimum size requirements. Furthermore, we identify specific data augmentation techniques that effectively compensate for limited training data availability. These findings provide practical guidelines for efficient development of maize seedling detection systems, enabling agricultural researchers and practitioners to optimize data collection strategies and reduce the resource-intensive process of manual annotation while maintaining detection performance.
 \end{abstract}
 
 %%%%%% Main Text %%%%%%
@@ -79,7 +70,7 @@ clear.
 %%%%% Citations in the text %%%%%%
 \subsection*{Citations}
 Citations of references in the text should be identified using numbers in square brackets e.g., 
-``as discussed by Cui \cite{Cui1}'' or ``as discussed elsewhere \cite{Cui1,Ninomiya1,Li1,Wang1,Yang1}.'' 
+``as discussed by Cui \cite{PP13332024}'' or ``as discussed elsewhere \cite{PP13332024}.'' 
 All references should be cited within the text and uncited references will be removed. 
 
 As an example, this template includes a ``sample.bib'' file containing the references in BibTeX.
@@ -109,7 +100,7 @@ Every figure must have a descriptive title beginning with ``Figure [Number] …'
 either a phrase or a sentence; do not mix the two styles. See Figure \ref{fig:1} for example.
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{fig 1}
+    \includegraphics[width=0.5\textwidth]{DavidEtAl.png}
     \caption{This is an example figure.}
     \label{fig:1}
 \end{figure}
@@ -129,11 +120,11 @@ embedded in separate layers.
 \begin{figure}[h]
     \centering
     \begin{subfigure}{0.4\textwidth}
-        \includegraphics[width=0.9\textwidth, height=2in]{fig 1}
+        \includegraphics[width=0.9\textwidth, height=2in]{DavidEtAl.png}
         \caption{\label{fig:2a}}
     \end{subfigure}
     \begin{subfigure}{0.4\textwidth}
-        \includegraphics[width=0.9\textwidth, height=2in]{fig 2}
+        \includegraphics[width=0.9\textwidth, height=2in]{DavidEtAl.png}
         \caption{\label{fig:2b}}
     \end{subfigure}
     \caption{This is an example of a figure consisting of multiple panels.     (\subref{fig:2a}) This is the 
