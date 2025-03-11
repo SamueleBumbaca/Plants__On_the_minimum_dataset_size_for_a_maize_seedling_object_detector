@@ -167,24 +167,10 @@ Zhang, S.; Yang, Y.; Tu, L.; Fu, T.; Chen, S.; Cen, F.; Yang, S.; Zhao, Q.; Gao,
 \newblock {\em Plant Methods} {\bf 2025}, {\em 21},~20.
 \newblock {\url{https://doi.org/10.1186/s13007-025-01338-z}}.
 
-\bibitem[YOL()]{YOLOv5YOLOv8YOLOv10}
-{{YOLOv5}}, {{YOLOv8}} and {{YOLOv10}}: {{The Go-To Detectors}} for {{Real-time Vision}}.
-\newblock https://arxiv.org/html/2407.02988v1\#S5.
-
-\bibitem[Bochkovskiy et~al.(2020)Bochkovskiy, Wang, and Liao]{bochkovskiyYOLOv4OptimalSpeed2020}
-Bochkovskiy, A.; Wang, C.Y.; Liao, H.Y.M.
-\newblock {{YOLOv4}}: {{Optimal Speed}} and {{Accuracy}} of {{Object Detection}},  2020,  \href{http://arxiv.org/abs/2004.10934}{{\normalfont [arXiv:cs/2004.10934]}}.
-\newblock {\url{https://doi.org/10.48550/arXiv.2004.10934}}.
-
 \bibitem[Zhao et~al.(2024)Zhao, Lv, Xu, Wei, Wang, Dang, Liu, and Chen]{zhaoDETRsBeatYOLOs2024}
 Zhao, Y.; Lv, W.; Xu, S.; Wei, J.; Wang, G.; Dang, Q.; Liu, Y.; Chen, J.
 \newblock {{DETRs Beat YOLOs}} on {{Real-time Object Detection}},  2024,  \href{http://arxiv.org/abs/2304.08069}{{\normalfont [arXiv:cs/2304.08069]}}.
 \newblock {\url{https://doi.org/10.48550/arXiv.2304.08069}}.
-
-\bibitem[Wang et~al.(2019)Wang, Liao, Yeh, Wu, Chen, and Hsieh]{wangCSPNetNewBackbone2019}
-Wang, C.Y.; Liao, H.Y.M.; Yeh, I.H.; Wu, Y.H.; Chen, P.Y.; Hsieh, J.W.
-\newblock {{CSPNet}}: {{A New Backbone}} That Can {{Enhance Learning Capability}} of {{CNN}},  2019,  \href{http://arxiv.org/abs/1911.11929}{{\normalfont [arXiv:cs/1911.11929]}}.
-\newblock {\url{https://doi.org/10.48550/arXiv.1911.11929}}.
 
 \bibitem[Khanam and Hussain(2024)]{khanamYOLOv11OverviewKey2024}
 Khanam, R.; Hussain, M.
@@ -258,11 +244,6 @@ Liu, S.; Zeng, Z.; Ren, T.; Li, F.; Zhang, H.; Yang, J.; Jiang, Q.; Li, C.; Yang
 \newblock Grounding {{DINO}}: {{Marrying DINO}} with~{{Grounded Pre-training}} for~{{Open-Set Object Detection}}.
 \newblock In Proceedings of the Computer {{Vision}} -- {{ECCV}} 2024; Leonardis, A.; Ricci, E.; Roth, S.; Russakovsky, O.; Sattler, T.; Varol, G., Eds., Cham,  2025; pp. 38--55.
 \newblock {\url{https://doi.org/10.1007/978-3-031-72970-6_3}}.
-
-\bibitem[Devlin et~al.(2019)Devlin, Chang, Lee, and Toutanova]{devlinBERTPretrainingDeep2019}
-Devlin, J.; Chang, M.W.; Lee, K.; Toutanova, K.
-\newblock {{BERT}}: {{Pre-training}} of {{Deep Bidirectional Transformers}} for {{Language Understanding}},  2019,  \href{http://arxiv.org/abs/1810.04805}{{\normalfont [arXiv:cs/1810.04805]}}.
-\newblock {\url{https://doi.org/10.48550/arXiv.1810.04805}}.
 
 \bibitem[Geng et~al.(2024)Geng, Yu, Yuan, Ma, and Li]{gengResearchSegmentationMethod2024}
 Geng, T.; Yu, H.; Yuan, X.; Ma, R.; Li, P.
@@ -440,15 +421,14 @@ M{\"u}ller, S.G.; Hutter, F.
 \newblock {{TrivialAugment}}: {{Tuning-free Yet State-of-the-Art Data Augmentation}},  2021,  \href{http://arxiv.org/abs/2103.10158}{{\normalfont [arXiv:cs/2103.10158]}}.
 \newblock {\url{https://doi.org/10.48550/arXiv.2103.10158}}.
 
+\bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and Hinton]{krizhevskyImageNetClassificationDeep2012}
+Krizhevsky, A.; Sutskever, I.; Hinton, G.E.
+\newblock {{ImageNet Classification}} with {{Deep Convolutional Neural Networks}}.
+\newblock In Proceedings of the Advances in {{Neural Information Processing Systems}}. Curran Associates, Inc.,  2012, Vol.~25.
+
 \bibitem[Jocher et~al.(2023)Jocher, Qiu, and Chaurasia]{jocherGitHubUltralyticsYOLO2023}
 Jocher, G.; Qiu, J.; Chaurasia, A.
 \newblock {{GitHub Ultralytics YOLO}},  2023.
-
-\bibitem[Akyon et~al.(2022)Akyon, Altinuc, and Temizel]{akyonSlicingAidedHyper2022}
-Akyon, F.C.; Altinuc, S.O.; Temizel, A.
-\newblock Slicing {{Aided Hyper Inference}} and {{Fine-tuning}} for {{Small Object Detection}}.
-\newblock In Proceedings of the 2022 {{IEEE International Conference}} on {{Image Processing}} ({{ICIP}}),  2022, pp. 966--970,  \href{http://arxiv.org/abs/2202.06934}{{\normalfont [arXiv:cs/2202.06934]}}.
-\newblock {\url{https://doi.org/10.1109/ICIP46576.2022.9897990}}.
 
 \bibitem[Oquab et~al.(2024)Oquab, Darcet, Moutakanni, Vo, Szafraniec, Khalidov, Fernandez, Haziza, Massa, {El-Nouby}, Assran, Ballas, Galuba, Howes, Huang, Li, Misra, Rabbat, Sharma, Synnaeve, Xu, Jegou, Mairal, Labatut, Joulin, and Bojanowski]{oquabDINOv2LearningRobust2024}
 Oquab, M.; Darcet, T.; Moutakanni, T.; Vo, H.; Szafraniec, M.; Khalidov, V.; Fernandez, P.; Haziza, D.; Massa, F.; {El-Nouby}, A.;  et~al.
@@ -460,8 +440,19 @@ Wolf, T.; Debut, L.; Sanh, V.; Chaumond, J.; Delangue, C.; Moi, A.; Cistac, P.; 
 \newblock Transformers: {{State-of-the-Art Natural Language Processing}}.
 \newblock In Proceedings of the Proceedings of the 2020 {{Conference}} on {{Empirical Methods}} in {{Natural Language Processing}}: {{System Demonstrations}}, Online,  2020; pp. 38--45.
 
+\bibitem[Akyon et~al.(2022)Akyon, Altinuc, and Temizel]{akyonSlicingAidedHyper2022}
+Akyon, F.C.; Altinuc, S.O.; Temizel, A.
+\newblock Slicing {{Aided Hyper Inference}} and {{Fine-tuning}} for {{Small Object Detection}}.
+\newblock In Proceedings of the 2022 {{IEEE International Conference}} on {{Image Processing}} ({{ICIP}}),  2022, pp. 966--970,  \href{http://arxiv.org/abs/2202.06934}{{\normalfont [arXiv:cs/2202.06934]}}.
+\newblock {\url{https://doi.org/10.1109/ICIP46576.2022.9897990}}.
+
 \bibitem[Wu et~al.(2005)Wu, Otoo, and Shoshani]{wuOptimizingConnectedComponent2005}
 Wu, K.; Otoo, E.; Shoshani, A.
 \newblock Optimizing Connected Component Labeling Algorithms {\bf 2005}.
+
+\bibitem[Fischler and Bolles(1987)]{fischlerRandomSampleConsensus1987}
+Fischler, M.A.; Bolles, R.C.
+\newblock Random {{Sample Consensus}}: {{A Paradigm}} for {{Model Fitting}} with {{Applications}} to {{Image Analysis}} and {{Automated Cartography}}. In {\em Readings in {{Computer Vision}}}; Fischler, M.A.; Firschein, O., Eds.; Morgan Kaufmann: San Francisco (CA),  1987; pp. 726--740.
+\newblock {\url{https://doi.org/10.1016/B978-0-08-051581-6.50070-2}}.
 
 \end{thebibliography}
