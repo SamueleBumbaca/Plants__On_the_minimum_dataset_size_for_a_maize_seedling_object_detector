@@ -1,0 +1,4 @@
+model_id,model_size,model_type,model_variant,threshold,dataset,image_id,image_file,prompt,pred_len,gt_len,count_accuracy,ap_iou_50_95,ap_iou_50,ap_iou_75,ap_small,ap_medium,ap_large,ar_max_1,ar_max_10,ar_max_100,ar_small,ar_medium,ar_large
+owlv2,base,patch16,ensemble,0,2,1,SAGIT22_C_4178_2022_04_29-35-15.tif,plant,1,8,0.125,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+owlv2,base,patch16,ensemble,0,2,1,SAGIT22_C_4178_2022_04_29-35-15.tif,maize,1,8,0.125,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+owlv2,base,patch16,ensemble,0,2,1,SAGIT22_C_4178_2022_04_29-35-15.tif,seedling,1,8,0.125,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0

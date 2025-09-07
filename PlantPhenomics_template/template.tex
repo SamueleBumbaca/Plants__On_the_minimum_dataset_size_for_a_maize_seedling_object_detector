@@ -11,11 +11,8 @@
 \linenumbers
 
 %%%%%% Bibliography %%%%%%
-% Replace "sample" in the \addbibresource line below with the name of your .bib file.
-\usepackage[style=numeric, 
-citestyle=numeric-comp,
-sorting=none]{biblatex}
-\addbibresource{Unsupervised_plant_counting.bib}
+% Replace "sample" in the \bibliography line below with the name of your .bib file.
+\usepackage[numbers,sort&compress]{natbib}
 
 %%%%%% Title %%%%%%
 % Full titles can be a maximum of 100 characters, including spaces. 
@@ -68,7 +65,7 @@ in other disciplines and provide enough context to ensure that the implications 
 clear. 
 
 %%%%% Citations in the text %%%%%%
-\subsection*{Citations}
+\subsection{Citations}
 Citations of references in the text should be identified using numbers in square brackets e.g., 
 ``as discussed by Cui \cite{PP13332024}'' or ``as discussed elsewhere \cite{PP13332024}.'' 
 All references should be cited within the text and uncited references will be removed. 
@@ -76,7 +73,7 @@ All references should be cited within the text and uncited references will be re
 As an example, this template includes a ``sample.bib'' file containing the references in BibTeX.
 
 %%%%%% Equations %%%%%%
-\subsection*{Equations}
+\subsection{Equations}
 Equations should be provided in a text format, rather than as an image. Equations should be numbered 
 consecutively, in round brackets, on the right-hand side of the page by using the 
 ``\textbackslash begin\{equation\}'' command. They should be referred to as Equation 1, etc. 
@@ -94,7 +91,7 @@ A & = \frac{\pi r^2}{2} \\
 \end{equation}
 
 %%%%%% Figures %%%%%%
-\subsection*{Figures}
+\subsection{Figures}
 Figures should be called out within the text and numbered in the order of their citation in the text. 
 Every figure must have a descriptive title beginning with ``Figure [Number] …'' All figure titles should be 
 either a phrase or a sentence; do not mix the two styles. See Figure \ref{fig:1} for example.
@@ -133,7 +130,7 @@ embedded in separate layers.
 \end{figure}
 
 %%%%%% Tables %%%%%%
-\subsection*{Tables}
+\subsection{Tables}
 Tables should supplement, not duplicate, the text. They should be called out consecutively within the text 
 and numbered in the order of their citation in the text. 
 
@@ -199,10 +196,10 @@ Include a Discussion that summarizes (but does not merely repeat) your conclusio
 \section*{Acknowledgments}
 Anyone who made a contribution to the research or manuscript, but who is not a listed author, should be acknowledged (with their permission). Types of acknowledgements include:
 
-\subsection*{General} 
+\subsection{General} 
 Thank others for any contributions, whether it be direct technical help or indirect assistance 
 
-\subsection*{Author Contributions} 
+\subsection{Author Contributions} 
 Describe contributions of each author to the paper, using the first initial and full last name. 
 
 \medskip Examples:
@@ -213,7 +210,7 @@ Describe contributions of each author to the paper, using the first initial and 
 
 ``All authors contributed equally to the writing of the manuscript.''
 
-\subsection*{Funding}
+\subsection{Funding}
 Name financially supporting bodies (written out in full), followed by the funding awardee and associated grant numbers (if applicable) in square brackets. 
 
 \medskip Example: 
@@ -223,14 +220,14 @@ Name financially supporting bodies (written out in full), followed by the fundin
 \medskip
 If the research did not receive specific funding, but was performed as part of the employment of the authors, please name this employer. If the funder was involved in the manuscript writing, editing, approval, or decision to publish, please declare this.
 
-\subsection*{Conflicts of Interest}
+\subsection{Conflicts of Interest}
 Conflicts of interest (COIs, also known as ``competing interests'') occur when issues outside research could be reasonably perceived to affect the neutrality or objectivity of the work or its assessment. 
 
 Authors must declare all potential interests – whether or not they actually had an influence – in a ‘Conflicts of Interest’ section, which should explain why the interest may be a conflict. Authors must declare current or recent funding (including for Article Processing Charges) and other payments, goods or services that might influence the work. All funding, whether a conflict or not, must be declared in a ``Funding Statement.'' The involvement of anyone other than the authors who 1) has an interest in the outcome of the work; 2) is affiliated to an organization with such an interest; or 3) was employed or paid by a funder, in the commissioning, conception, planning, design, conduct, or analysis of the work, the preparation or editing of the manuscript, or the decision to publish must be declared.
 
 If there are none, the authors should state ``The author(s) declare(s) that there is no conflict of interest regarding the publication of this article.'' Submitting authors are responsible for coauthors declaring their interests. Declared conflicts of interest will be considered by the editor and reviewers and included in the published article.
 
-\subsection*{Data Availability}
+\subsection{Data Availability}
 A data availability statement is compulsory for all research articles. This statement describes whether and how others can access the data supporting the findings of the paper, including 1) what the nature of the data is, 2) where the data can be accessed, and 3) any restrictions on data access and why.
 
 If data are in an archive, include the accession number or a placeholder for it. Also include any materials that must be obtained through a Material Transfer Agreements (MTA). 
@@ -269,6 +266,7 @@ Please do not include any extraneous language such as explanatory notes as part 
 
 DOIs, if available, should be included for each reference.
 
-\printbibliography
+\bibliographystyle{plainnat}
+\bibliography{./Unsupervised_plant_counting}
 
 \end{document}

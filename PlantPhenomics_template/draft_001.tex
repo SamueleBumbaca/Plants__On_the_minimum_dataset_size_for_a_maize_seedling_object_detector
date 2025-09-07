@@ -4,19 +4,15 @@
 \usepackage{setspace}
 \usepackage[margin=1.25in]{geometry}
 \usepackage{graphicx}
-\graphicspath{ {./Plots/} {./figures/} }
+\graphicspath{ {./Plots/} }
 \usepackage{subcaption}
 \usepackage{amsmath}
 \usepackage{lineno}
 \linenumbers
-\usepackage{algorithm}
-\usepackage{algpseudocode}
-\usepackage{textcomp} % For proper R\textsuperscript{2} symbol
-\usepackage[style=numeric, 
-citestyle=numeric-comp,
-sorting=none]{biblatex}  % Changed from nejm to numeric
-\addbibresource{Unsupervised_plant_counting.bib}
-\usepackage{url}
+
+%%%%%% Bibliography %%%%%%
+% Replace "sample" in the \bibliography line below with the name of your .bib file.
+\usepackage[numbers,sort&compress]{natbib}
 
 %%%%%% Title %%%%%%
 \title{On the minimum dataset requirements to fine-tune an object detector for arable crops plant counting: A downstream case study on maize seedlings}
@@ -865,6 +861,8 @@ The authors declare no conflict of interest.
 The code for all models training and handcrafted methods used in this study is available at \url{https://github.com/SamueleBumbaca/plant_count.git}. The datasets created during this study (ID datasets) are available from the corresponding author upon reasonable request. The other datasets used are available from their cited sources.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\printbibliography
+
+\bibliographystyle{plainnat}
+\bibliography{./Unsupervised_plant_counting}
 
 \end{document}

@@ -18,6 +18,11 @@ yolo11l.pt
 yolo11x.pt
 rtdetr-l.pt
 rtdetr-x.pt
-src_310/api_token.txt
 src/object_detection/config
-MDPI_template/Plots
+MDPI_template
+PlantPhenomics_template
+dataset_quality_analysis.ipynb
+dataset_size_analysis.ipynb
+Datasets_out_domain.ipynb
+few_shots.ipynb
+remotesensing-3622397.tex
