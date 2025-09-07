@@ -1,9 +1,0 @@
-# Fdb version 4
-["pdflatex"] 0 "template.tex" "template.pdf" "template" 0 -1
-  "template.aux" 0 -1 0 "pdflatex"
-  "template.tex" 0 -1 0 ""
-  (generated)
-  "template.aux"
-  "template.log"
-  "template.pdf"
-  (rewritten before read)
